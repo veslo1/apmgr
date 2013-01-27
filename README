@@ -34,7 +34,9 @@ I downloaded this and it isn't working
 ======================================
 Well, this is a *dead* project, and it was created using Zend (1.8 until 1.12 (?)).
 There is a new Zend version that I believe is quite different to this, so just go there and learn the new framework !
-If you really want this thing to make it work
+
+If you really want this thing to work
+=====================================
 Copy all the contents of extra outside the apmgr folder and name it library (or whatever I was using as the library folder)
 Copy the index.php located on extra into the folder public_html_apmgr, that is outside the apmgr folder too.
 
