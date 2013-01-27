@@ -1,0 +1,87 @@
+<?php
+/**
+ * Created on October 31, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit
+ * <p>
+ * Confirmation page of the wizard  (last page of wizard)
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+          ->headLink()->appendStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','cancellease','viewevictions','vieweviction','createeviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','viewmyleasebill','viewmypayments','createleasefee','viewleaselist','selectleasebills'),
+		 'target'=>array(array('action'=>'viewlease','queryString'=>'/leaseId/'.$this->leaseId))				   
+));
+
+echo $this->internazionalization($this->msg['msg'],$this->msg['type']);
+?>
+
+<?  if( $this->rentBills ) { ?>
+<table>
+    <caption><i18n>rentBills</i18n></caption>
+    <tr>
+	<th><i18n>rentDate</i18n></th>
+	<th><i18n>currentamountdue</i18n></th>
+	<th><i18n>dueDate</i18n></th>
+    </tr>
+    <? foreach( $this->rentBills as $bill ){ ?>        
+        <tr>
+		<td> <?php echo $this->dateFormat($bill['month'], 'fy' ); ?></td>
+	        <td> <?php echo $bill['currentAmountDue']; ?> </td>
+		<td> <?php echo $this->dateFormat($bill['dueDate'], 'mdy' ); ?></td>
+	</tr>	
+    <? } ?>
+</table>    
+<? } ?>
+
+<?  if( $this->leaseFeeBills ) { ?>
+<table>
+    <caption><i18n>leaseFeeBills</i18n></caption>
+    <tr>
+	<th><i18n>feeName</i18n></th>
+	<th><i18n>currentamountdue</i18n></th>
+	<th><i18n>dueDate</i18n></th>
+    </tr>
+    <? foreach( $this->leaseFeeBills as $bill ){ ?>        
+        <tr>
+		<td> <?php echo $bill['feeName']; ?></td>
+	        <td> <?php echo $bill['currentAmountDue']; ?> </td>
+		<td> <?php echo $this->dateFormat($bill['dueDate'], 'mdy' ); ?></td>
+	</tr>	
+    <? } ?>
+</table>    
+<? } ?>
+
+<?  if( $this->paymentInfo ) { ?>
+<table>
+    <caption><i18n>paymentInformation</i18n></caption>
+    <tr>
+	<th><i18n>totalAmount</i18n></th>
+	<td> <?php echo $this->paymentInfo['totalAmount']; ?></td>
+    </tr>
+    <tr>
+	<th><i18n>payor</i18n></th>
+	<td> <?php echo $this->paymentInfo['payor']; ?></td>
+    </tr>
+    <tr>
+	<th><i18n>datePosted</i18n></th>
+	<td> <?php echo $this->dateFormat($this->paymentInfo['datePosted'], 'mdy');?></td>
+    </tr>
+    <tr>
+	<th><i18n>paymentType</i18n></th>
+	<td><i18n><?php echo $this->paymentInfo['paymentType']; ?></i18n></td>
+    </tr>
+    <tr>
+	<th><i18n>comment</i18n></th>
+	<td> <?php echo $this->paymentInfo['comment']; ?></td>
+    </tr> 
+</table>
+<? } ?>
+
+
+<? echo $this->form; ?>

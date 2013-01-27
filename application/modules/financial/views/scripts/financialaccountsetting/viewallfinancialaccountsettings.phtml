@@ -1,0 +1,40 @@
+<?php
+/**
+ * Created on August 14, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts.view
+ * <p>
+ * Lists all financial account settings
+ * </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->appendFile('/javascript/tablecss/tablecss.js'); 	  
+?>
+
+<table id='currenttable'>
+	<caption><i18n>financialAccountSettings</i18n></caption>
+	<?php if( $this->paginator ) {?>
+	<tr>
+		<th><i18n>settingName</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) {  ?>
+	<tr>
+		<td><i18n><?php echo $row->getSettingName(); ?></i18n></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/financialaccountsetting/viewfinancialaccountsetting/id/'. $row->getId()); ?>">
+		<img width="24" height="24" title="<i18n>view</i18n>"
+			src="/images/search_48.png" /> </a> <a
+			href="<?php echo $this->serverUrl('/financial/financialaccountsetting/updatefinancialaccountsetting/id/'. $row->getId()); ?>">
+		<img width="24" height="24" title="<i18n>update</i18n>"
+			src="/images/onebit_20.png" /> </a></td>
+	</tr>
+	<?php } ?>
+
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>

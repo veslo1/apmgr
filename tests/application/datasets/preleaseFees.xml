@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<applicantPreleaseFeeBill id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="9" feeId="16" billId="16" amount="50"/>
+<applicantPreleaseFeeBill id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="12" feeId="5" billId="23" amount="10"/>
+<!-- used in prelease fee - needs unpaid bill-->
+<applicantPreleaseFeeBill id="3" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="13" feeId="5" billId="23" amount="10"/>
+<applicantPreleaseFeeBill id="4" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="13" feeId="5" billId="22" amount="10"/>
+<!-- used in prelease fee-->
+<applicantPreleaseFeeBill id="5" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="14" feeId="5" billId="19" amount="10"/>
+<applicantPreleaseFeeBill id="6" dateCreated="2010-05-01" dateUpdated="2010-05-01" applicantId="14" feeId="5" billId="25" amount="10"/>
+
+<applicantAppliance id="4" applicantId="13" unitId="1"
+		dateCreated="2010-09-27 12:11:30" />
+<applicantAppliance id="5" applicantId="14" unitId="1"
+		dateCreated="2010-09-27 12:11:30" />
+</dataset>

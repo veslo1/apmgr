@@ -1,0 +1,1 @@
+ALTER TABLE `applicantPersonalInfo` CHANGE `height` `height` FLOAT NULL DEFAULT NULL ,CHANGE `weight` `weight` FLOAT NULL DEFAULT NULL; 

@@ -1,0 +1,59 @@
+<?php
+/**
+ * Created on Dec 5, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The model for unit
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+						->appendFile('/javascript/tablecss/tablecss.js');
+ 
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('index','show','unitsforrent','updateunit','viewallunits','viewunit','viewunitgraphics'),		 
+));
+
+echo $this->internazionalization($this->msg,$this->type);
+
+?>
+
+<table id='currenttable'>
+	<caption><i18n>units</i18n></caption>
+	<?php if( $this->records ) {?>
+	<tr>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'viewallunits','by'=>'number','sort'=>$this->sort));?>"><i18n>unitNumber</i18n></a></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) { ?>
+	<tr>
+		<td><?php echo $row['number']; ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/unit/unit/viewunit/unitId/'. $row['id'] ); ?>">
+		<img width="24" height="24" title="<i18n>viewDetails</i18n>"
+			src="/images/search_48.png" /></a><a
+			href="<?php echo $this->serverUrl('/unit/lease/viewleaselist/unitId/'. $row['id'] ); ?>">
+		<img width="24" height="24" title="<i18n>viewLeaseList</i18n>"
+			src="/images/tabs_48.png" /></a><a
+			href="<?php echo $this->serverUrl('/unit/unit/updateunit/unitId/'. $row['id'] ); ?>">
+		<img width="24" height="24" title="<i18n>update</i18n>"
+			src="/images/onebit_20.png" /></a>
+		<?  if( !array_key_exists($row['id'], $this->attached )) {  ?>
+		    <a href="<?php echo $this->serverUrl('/unit/unit/remove/unitId/'. $row['id']); ?>">
+		    <img width="24" height="24" title="<i18n>remove</i18n>"
+			src="/images/24/cancel.gif" /></a>
+		<? } ?>		
+		</td>
+	</tr>
+	<?php } ?>
+
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+
+
+
+
+

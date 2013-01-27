@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created on Feb 15, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The model for unit
+ * </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unitmodel'),
+		 'hiddenElements'=>array('index', 'createunitmodel','updateunitmodel', 'viewunitmodel','viewunitmodel')		 
+));
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'modelrentschedule'),
+		 'hiddenElements'=>array('index', 'createmodelrentschedule', 'viewmodelrentschedule'),
+		 'target'=>array(array('action'=>'viewallmodelrentschedule','queryString'=>'/modelId/'.$this->modelId))	 				 
+));
+?>
+
+<table>
+	<caption><i18n>rentScheduleForUnitModel</i18n> <?php echo $this->unitmodel->getName(); ?>
+	<i18n>effectiveDate</i18n>: <?php echo $this->dateFormat($this->records[0]['effectiveDate'], 'mdy'); ?>
+	</caption>
+	<th><i18n>months</i18n></th>
+	<th><i18n>amount</i18n></th>
+	<?php
+	foreach(  $this->records as $id=>$record )  {
+		?>
+	<tr>
+		<td><?php echo $record['numMonths']; ?></td>
+		<td><?php echo $record['rentAmount']; ?></td>
+	</tr>
+	<?php
+	}
+	?>
+</table>
+
+
+

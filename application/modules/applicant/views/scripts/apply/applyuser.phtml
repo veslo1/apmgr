@@ -1,0 +1,15 @@
+<?php
+/**
+ * Provide the user a way to retrieve the user information of the person
+ * he is trying to add
+ * @author Jorge Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->appendStylesheet('/css/zendform2.css');		  
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+
+//echo $this->message($this->msg);
+echo $this->internazionalization($this->msg,$this->type);
+echo $this->form;
+?>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Holds deposits and fees
+-->
+
+<dataset>	
+	<fee id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee1" amount="30" debitAccountId="1" creditAccountId="2" enabled="1" refundable="0"/>
+	<fee id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee2" amount="50" debitAccountId="2" creditAccountId="1" enabled="1" refundable="0"/>
+	<fee id="3" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee3" amount="50" debitAccountId="3" creditAccountId="4" enabled="0" refundable="0"/>
+	<fee id="4" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee4" amount="50" debitAccountId="4" creditAccountId="3" enabled="1" refundable="0"/>
+	<fee id="5" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee4" amount="50" debitAccountId="4" creditAccountId="3" enabled="1" refundable="0"/>	
+	<!-- The following fees are used in the Financial_Model_Refund tests -->
+	<fee id="6" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee6" amount="10" debitAccountId="4" creditAccountId="3" enabled="1" refundable="0"/>
+	<fee id="7" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee7" amount="10" debitAccountId="4" creditAccountId="3" enabled="1" refundable="1"/>
+	<fee id="8" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee8" amount="10" debitAccountId="4" creditAccountId="3" enabled="1" refundable="1"/>
+	<fee id="9" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee9" amount="10" debitAccountId="9" creditAccountId="9" enabled="1" refundable="1"/>
+	<fee id="10" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee10" amount="10" debitAccountId="4" creditAccountId="3" enabled="1" refundable="1"/>
+        <fee id="11" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee11" amount="11" debitAccountId="9" creditAccountId="9" enabled="1" refundable="1"/>
+	<!-- bill 14 and 15 Used for refund helper test do not use -->
+	<fee id="14" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee14" amount="200" debitAccountId="9" creditAccountId="9" enabled="1" refundable="1"/>
+	<fee id="15" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee15" amount="200" debitAccountId="9" creditAccountId="9" enabled="1" refundable="1"/>
+	<!-- 16 and 17 used for the Applicant_Model_PreleaseFeeCreation -->
+	<fee id="16" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="petFeeTax" amount="40" debitAccountId="8" creditAccountId="9" enabled="1" refundable="1"/>
+	<fee id="17" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="petFeeTax2" amount="50" debitAccountId="8" creditAccountId="9" enabled="1" refundable="1"/>
+	<!-- 18 used in payment helper -->
+	<fee id="18" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="helperFee" amount="10" debitAccountId="8" creditAccountId="9" enabled="1" refundable="0"/>
+	<financialAccountSetting id="1" accountId="5" settingName="refundCashAccount" description="refundCashAccountDescription" dateCreated="2010-08-10 10:47:00"/>
+	<financialAccountSetting id="2" accountId="1" settingName="applicantFeeCashAccount" description="ApplicantFeeCashAccountDescription" dateCreated="2010-08-10 10:47:00"/>
+	<financialAccountSetting id="3" accountId="1" settingName="applicantPreleaseFeeCashAccount" description="ApplicantPreleaseFeeCashAccountDescription" dateCreated="2010-08-10 10:47:00"/>
+	<financialAccountSetting id="4" accountId="1" settingName="leaseRentCashAccount" description="leaseRentCashAccountDescription" dateCreated="2010-11-01 10:47:00"/>
+	<financialAccountSetting id="5" accountId="1" settingName="leaseFeeCashAccount" description="leaseFeeCashAccountDescription" dateCreated="2010-11-01 10:47:00"/>
+        <!-- The following are used in the Application Wizard -->
+	<applicantFeeSetting id="1" feeId="1" dateCreated="2010-08-10 10:47:00"/>
+	<applicantFeeSetting id="2" feeId="2" dateCreated="2010-08-10 10:47:00"/>
+</dataset>

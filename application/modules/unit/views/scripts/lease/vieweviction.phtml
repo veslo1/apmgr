@@ -1,0 +1,74 @@
+<?php
+/**
+ * Created on January 15, 2011 by rnelson
+ * @name apmgr
+ * @package application.modules.lease.views.scripts
+ * <p>
+ * View page for eviction
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/datatable.css');
+?>
+
+<script type="text/javascript">
+
+	function toggleDiv(obj){	    
+	    $(obj).toggle();
+	}
+</script>
+
+<?php
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','createleasefee','cancellease','viewleaselist','viewlease','createeviction','vieweviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments' ),
+		 'target'=>array(array('action'=>'viewevictions','queryString'=>'/leaseId/'.$this->leaseId)) 
+));
+
+?>
+<div class="details"><?php if( $this->eviction) { ?>
+<table id="box-table-a">
+	<caption><i18n>viewEviction</i18n></caption>
+	<tr>
+		<th><i18n>tenantName</i18n></th>
+		<td><?php echo $this->eviction['tenantName']; ?></td>
+	</tr>	
+	<tr>
+		<th><i18n>isEvicted</i18n></th>
+		<td><?php echo $this->eviction['isEvictedText']; ?></td>
+	</tr>	
+	<tr>
+		<th><i18n>dateCreated</i18n></th>
+		<td><?php echo $this->dateFormat($this->eviction['dateCreated'], 'mdy'); ?></td>
+	</tr>	
+</table>
+
+<table id="box-table-a">
+	<caption><i18n>comments</i18n></caption>
+	<?php if( isset($this->comments) ) {
+		foreach( $this->comments as $id=>$comment) { ?>
+	<tr>
+		<th rowspan="2"><i18n>comment</i18n> <?php echo $id+1; ?>:</th>
+		<td><?php echo $comment['firstName'] . ' ' . $comment['lastName']; ?></td>
+		<td><?php echo $this->dateFormat($comment['dateCreated'], 'mdy'); ?></td>
+	</tr>
+	<tr>
+		<td colspan="2"><?php echo $comment['comment']; ?></td>
+	</tr>
+	<?php } } else { ?>
+	<tr>
+		<td><i18n>noComments</i18n></td>
+	</tr>
+	<?php } ?>
+</table>
+
+<input type="image" src="/images/comment_add_48.png"
+	onClick="toggleDiv('testdiv')"> </input>
+<div id="testdiv"><?php echo $this->commentForm; ?></div>
+</div>
+	<?php } ?>
+
+

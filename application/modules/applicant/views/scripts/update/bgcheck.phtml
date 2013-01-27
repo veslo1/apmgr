@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created on October 17, 2010 by jvazquez
+ * @name apmgr
+ * @package application.modules.applicant.views.scripts
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headLink()->appendStylesheet('/css/roundError.css')
+	->appendStylesheet('/css/roundSuccess.css')
+	->appendStylesheet('/css/roundWarning.css')
+	->appendStylesheet('/css/zendform2.css');
+?>
+<h1><i18n>backgroundCheck</i18n></h1>
+<?php
+echo $this->results($this->restore,$this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallapplicants')));
+echo $this->form;
+echo $this->internazionalization($this->msg[0],$this->msg[1]);
+?>

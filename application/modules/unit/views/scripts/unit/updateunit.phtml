@@ -1,0 +1,36 @@
+<?php
+/**
+ * Created on Apr 17, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Update unit
+ * </p>
+ */
+$this->headLink()->appendStylesheet('/css/zendform2.css')
+                      ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+		      
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+           ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dateAvailable").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+		      
+<?
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('index','show','unitsforrent','updateunit', 'viewunit','viewunitgraphics'),		 
+));
+
+echo $this->internazionalization($this->msg,$this->type);
+	
+echo $this->form;
+echo $this->addPictures($this->id,$this->url(array('module'=>'unit','controller'=>'add','action'=>'addpicture','id'=>$this->id)),'addPictures');
+echo $this->viewPictures($this->id,$this->url(array('module'=>'unit','controller'=>'unit','action'=>'viewunitgraphics','id'=>$this->id)),'viewUnitPictures');
+?>

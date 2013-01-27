@@ -1,0 +1,18 @@
+<?php
+/**
+ * Authorization page
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->appendStylesheet('/css/roundError.css')
+	->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headLink();
+if( isset($this->msg) )
+{
+	var_dump($this->msg);
+	echo $this->message($this->msg);
+}
+else
+{
+	echo $this->form;
+}
+?>

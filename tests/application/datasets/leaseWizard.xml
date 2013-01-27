@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<lease id="1"
+       dateCreated="2010-05-01"
+       dateUpdated="2010-05-01"
+       leaseStartDate="2010-05-01"
+       leaseEndDate="2010-07-31"
+       apartmentId="1"
+       unitId="1"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2011-05-01"
+       isCancelled="0"/>
+<lease id="2"
+       dateCreated="2010-05-01"
+       dateUpdated="2010-05-01"
+       leaseStartDate="2010-05-01"
+       leaseEndDate="2010-07-31"
+       apartmentId="1"
+       unitId="2"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2011-05-01"
+       isCancelled="0"/>
+<lease id="3"
+       dateCreated="2010-05-01"
+       leaseStartDate="2010-05-01"
+       leaseEndDate="2010-07-31"
+       apartmentId="1"
+       unitId="1"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2100-07-01"
+       isCancelled="0" />
+<lease id="4"
+       dateCreated="2010-05-01"
+       leaseStartDate="2009-01-01"
+       leaseEndDate="2009-05-01"
+       apartmentId="1"
+       unitId="2"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2009-05-01"
+       isCancelled="0" />
+<lease id="5"
+       dateCreated="2010-05-01"       
+       leaseStartDate="2100-01-01"
+       leaseEndDate="2100-05-01"
+       apartmentId="1"
+       unitId="3"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2010-10-01"
+       isCancelled="1"
+       cancellationDate="2010-07-01"/>
+<!-- lease id 6 used for cancel lease - do not use elsewhere -->
+<lease id="6"
+       dateCreated="2010-05-01"       
+       leaseStartDate="2010-01-01"
+       leaseEndDate="2111-05-01"
+       apartmentId="1"
+       unitId="4"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2111-05-01"
+       isCancelled="0" />
+<lease id="10"
+       dateCreated="2010-05-01"      
+       leaseStartDate="2010-05-01"
+       leaseEndDate="2015-08-01"
+       apartmentId="1"
+       unitId="3"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2015-08-01"
+       isCancelled="0"/>
+
+<!-- lease id 7 used for bulk rent payment - do not use elsewhere -->
+<lease id="7"
+       dateCreated="2010-05-01"       
+       leaseStartDate="2010-01-01"
+       leaseEndDate="2111-05-01"
+       apartmentId="1"
+       unitId="6"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2111-05-01"
+       isCancelled="0" />
+<leaseSchedule id="7"
+               dateCreated="2010-04-01"
+               billId="12"
+               month="2010-05-01"
+               discount="0"
+               leaseId="7"/>
+<lease id="8"
+       dateCreated="2010-05-01"       
+       leaseStartDate="2010-01-01"
+       leaseEndDate="2111-05-01"
+       apartmentId="1"
+       unitId="7"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2111-05-01"
+       isCancelled="0" />
+<leaseSchedule id="8"
+               dateCreated="2010-04-01"
+               billId="13"
+               month="2010-05-01"
+               discount="0"
+               leaseId="8"/>
+
+<leaseSchedule id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="1" month="2011-05-01" discount="0" leaseId="1"/>
+<leaseSchedule id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="2" month="2011-05-01" discount="0" leaseId="2"/>
+<!-- 3 through 6 used for cancel lease do not use elsewhere -->
+<leaseSchedule id="3"
+               dateCreated="2010-01-01"
+               billId="1"
+               month="2010-05-01"
+               discount="0"
+               leaseId="6"/>
+<leaseSchedule id="4"
+               dateCreated="2010-01-01"
+               billId="2"
+               month="2010-06-01"
+               discount="0"
+               leaseId="6"/>
+<leaseSchedule id="5"
+               dateCreated="2010-01-01"
+               billId="3"
+               month="2010-07-01"
+               discount="15"
+               leaseId="6"/>
+<leaseSchedule id="6"
+               dateCreated="2010-04-01"
+               billId="4"
+               month="2010-04-01"
+               discount="0"
+               leaseId="6"/>
+
+<lease id="11"
+       dateCreated="2010-05-01"      
+       leaseStartDate="2010-01-01"
+       leaseEndDate="2111-05-01"
+       apartmentId="1"
+       unitId="1"
+       userId="1"
+       modelRentScheduleId="1"
+       modelRentScheduleItemId="1"
+       lastDay="2111-05-01"
+       isCancelled="0" />
+
+<leaseSchedule id="11"
+               dateCreated="2010-04-01"
+               billId="24"
+               month="2010-05-01"
+               discount="0"
+               leaseId="11"/>
+
+<leaseFee id="1" dateCreated="2010-04-01" leaseId="1" feeId="1" amount="30" billId="5" />
+<leaseFee id="2" dateCreated="2010-04-01" leaseId="11" feeId="1" amount="10" billId="25" />
+
+</dataset>

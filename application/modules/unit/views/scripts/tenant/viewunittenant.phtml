@@ -1,0 +1,31 @@
+<?php
+/**
+ * Created on Dec 11, 2009
+ * index.phtml
+ * @author rnelson
+ * @package application.modules.user.views.scripts.tenant
+ */
+echo $this->crudBar('unit');
+?>
+<div class="details">
+<h1>View Tenants for unit <?php echo $this->unit->getNumber(); ?></h1>
+<div class="form"><?php echo $this->form;?></div>
+</div>
+
+<?php
+$fields = array( 'FirstName'=> 'First Name',
+                 'LastName'=>'Last Name',
+);
+echo $this->testGrid(  'grd', $fields,$this->paginator,true,
+array('View' => array(
+                                                        'column'=>'Id',                                                        
+                                                        'module'=>'user',
+                                                        'controller'=>'view',
+                                                        'action'=>'index',
+                                                        'image'=>'onebit_02.png'                    
+                                                        
+                                                        )
+                                                        )
+
+                                                        ,false);
+                                                        ?>

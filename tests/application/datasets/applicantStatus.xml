@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>	
+	<applicantStatus id="1"  dateCreated="2010-05-01"  dateUpdated="2010-05-01"  name="passed"/>
+	<applicantStatus id="2"  dateCreated="2010-05-01"  dateUpdated="2010-05-01"  name="notrun"/>
+	<applicantStatus id="3"  dateCreated="2010-05-01"  dateUpdated="2010-05-01"  name="rejected"/>
+	<applicantWorkflowStatus id="1"  dateCreated="2010-05-01"  dateUpdated="2010-05-01"  applicantId="1" applicantStatusId="1" userId="1" comment="fffuuu" currentStatus="0"/>
+	<applicantWorkflowStatus id="2"  dateCreated="2010-05-01"  dateUpdated="2010-05-01"  applicantId="1" applicantStatusId="2" userId="1" comment="fffuuu" currentStatus="1"/>
+</dataset>

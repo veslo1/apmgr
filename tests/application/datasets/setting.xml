@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<settings id="1" dateCreated="2010-05-01" name="companyName" value="fakeSystem"/>
+    <settings id="2" dateCreated="2010-05-01" name="x_login" value="4td58YJq"/>
+    <settings id="3" dateCreated="2010-05-01" name="x_description" value="Application Fee"/>
+    <settings id="4" dateCreated="2010-05-01" name="transaction_key" value="4q8Ur5N3T498dvDg"/>
+    <settings id="5" dateCreated="2010-05-01" name="test_mode" value="false"/>
+    <settings id="6" dateCreated="2010-05-01" name="x_show_form" value="PAYMENT_FORM"/>
+    <settings id="7" dateCreated="2010-05-01" name="cc_payment" value="CC"/>
+    <settings id="8" dateCreated="2010-05-01" name="echeck_payment" value="ECHECK"/>
+    <settings id="9" dateCreated="2010-05-01" name="x_receipt_link_method" value="POST"/>
+    <settings id="10" dateCreated="2010-05-01" name="x_receipt_link_text" value="Go back to Apmgr"/>
+    <settings id="11" dateCreated="2010-05-01" name="x_receipt_link_url" value="http://apmgr.com/applicant/dashboard/paymentconfirmation"/>
+    <settings id="12" dateCreated="2010-05-01" name="authorize_url" value="https://test.authorize.net/gateway/transact.dll"/>
+    <settings id="13" dateCreated="2010-05-01" name="paymentSystem" value="1"/>
+</dataset>

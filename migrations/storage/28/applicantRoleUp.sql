@@ -1,0 +1,1 @@
+INSERT INTO `role` (`name`,`protected`,`dateCreated`,`dateUpdated`) VALUES ('applicant',1,NOW(),NOW())

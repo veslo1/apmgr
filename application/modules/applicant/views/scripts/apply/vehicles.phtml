@@ -1,0 +1,13 @@
+<?php
+/**
+ * Vehicles form
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+if( $this->msg ) {
+	echo $this->message($this->msg);
+} else {
+	echo $this->form;
+}
+?>

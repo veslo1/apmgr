@@ -1,0 +1,48 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ *
+ */
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	
+echo $this->headLink()->prependStylesheet('/css/paginator.css')
+	->headLink()->prependStylesheet('/css/zendform2.css');
+
+echo $this->bar(array('type'=>'action',
+					'destination'=>array('module'=>'applicant','controller'=>'view'),
+					'hiddenElements'=>array('index','bgcheckdetails','fees','completedapps','statuschange')
+					)
+				);
+
+
+echo $this->bar(array('type'=>'action',
+					'destination'=>array('module'=>'applicant','controller'=>'create'),
+					'hiddenElements'=>array('index','applicantemail','waitlistemail')
+					)
+				);
+//echo $this->form;
+?>
+<table class="hor-minimalist-a">
+	<caption><i18n>applicantFeeSettingsTitle</i18n></caption>
+	<?php if ( count($this->fees) ) { ?>
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'fees','module'=>'applicant','column'=>'name','sort'=>$this->sort));?>'><i18n>settingName</i18n></a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'fees','module'=>'applicant','column'=>'amount','sort'=>$this->sort));?>'><i18n>amount</i18n></a></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>	
+	<?php foreach($this->fees as $id=>$object) {?>
+		<tr>
+			<td><?=ucfirst($object['name']);?></td>
+			<td>$<?php echo $object['amount'];?></td>
+			<td><?php if( $object['id']!=1 ) // if not the required applicant fee, allow removal
+	echo $this->delete($object['id'],$this->url(array('controller'=>'delete','action'=>'fee','module'=>'applicant','id'=>$object['id']),null,true),'delete');
+	?></td>
+	</tr>
+	<?php } ?>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>

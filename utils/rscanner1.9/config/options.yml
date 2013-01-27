@@ -1,0 +1,10 @@
+options:
+  dbname: Database name
+  dbuser: Database username
+  dbpass: database password
+  dbhost: localhost
+  approot: Full path to the application root
+  target: controllers
+  loglevel: debug
+  logfile: /usr/local/www/apmgr/utils/rscanner1.9/logs/scannerRun.log
+  moduleignore: location,.,..,email,file

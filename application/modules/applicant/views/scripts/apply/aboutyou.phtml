@@ -1,0 +1,19 @@
+<?php
+/**
+ * The user tell us about himself
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->headLink()->prependStylesheet('/css/zendform2.css')	
+	->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+
+echo $this->message($this->msg);
+echo $this->form;
+?>
+<script type="text/javascript">
+    $(function() { $("#dob").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+</script>

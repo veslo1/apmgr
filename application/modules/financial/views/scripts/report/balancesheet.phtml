@@ -1,0 +1,76 @@
+<?php
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	
+echo $this->headLink()->prependStylesheet('/css/statements.css')
+	 ->headLink()->prependStylesheet('/css/zendform2.css')
+	 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css')
+	 ->headLink()->appendStylesheet('/css/squareMessage.css');// success, error, and warning messages css
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dateFrom").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dateTo").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+
+<?php echo $this->form; ?> 
+<br>
+
+<table id='toptable'>
+	<caption>
+		<i18n>balanceSheet</i18n> <?php if( $this->dateFrom && $this->dateTo ) { ?><i18n>for</i18n> <?php echo date('m-d-Y', strtotime($this->dateFrom)); ?> <i18n>to</i18n> <?php echo date('m-d-Y', strtotime($this->dateTo)); } ?>
+	</caption>	
+		      
+	<th><i18n>assets</i18n></th>
+	<?php foreach( $this->assets as $name=>$balance ) { ?> 
+	<tr>
+		<td><?php echo $name; ?></td>		
+		<td><?php echo $balance; ?></td>
+	</tr>
+	<?php } ?>
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>	
+	<tr class="italic">			
+		<td><i18n>totalAssets</i18n></td>		
+		<td><?php echo $this->sumAssets; ?></td>
+	</tr>
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>	
+        <th><i18n>liabilities</i18n></th>
+	<?php foreach( $this->liabilities as $name=>$balance ) { ?> 
+	<tr>
+		<td><?php echo $name; ?></td>
+		<td><?php echo $balance; ?></td>
+	</tr>
+	<?php } ?>
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>	
+	<tr class="italic">		
+		<td><i18n>totalLiabilities</i18n></td>
+		<td><?php echo $this->sumLiabilities; ?></td>
+	</tr>
+	<th><i18n>equity</i18n></th>
+	<?php foreach( $this->equity as $name=>$balance ) { ?> 
+	<tr>
+		<td><?php echo $name; ?></td>		
+		<td><?php echo $balance; ?></td>
+	</tr>
+	<?php } ?>
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>	
+	<tr class="italic">			
+		<td><i18n>totalEquity</i18n></td>		
+		<td><?php echo $this->sumEquity; ?></td>
+	</tr>
+	
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>	
+	<tr class="italic">			
+		<td><i18n>sumLiabilityAndEquity</i18n></td>		
+		<td><?php echo $this->sumLiabilityAndEquity; ?></td>
+	</tr>
+</table>

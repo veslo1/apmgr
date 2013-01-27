@@ -1,0 +1,83 @@
+<?php
+/**
+ * Created on January 29, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * @author Rachael Michele Nelson <wtcfg1@gmail.com>
+ * @revision Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * <p>
+ * Display all the bills that the user may pay
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/zendform2.css');
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+echo $this->headScript()->prependFile('/javascript/financial/financial.js','text/javascript');
+echo $this->bar (
+array( 'type'		=>'action',
+						   'destination'=>array(
+												 'module' 	 => 'financial',
+												 'controller'=>'create'
+												 )
+												 )
+												 );
+
+												 echo $this->message($this->msg);
+												 if( $this->bills ) { ?>
+<form id='billGrid' method='post' action=''
+	enctype='application/x-www-form-urlencoded'>
+<table>
+	<tr>
+		<th>&nbsp;</th>
+		<th><i18n>origamount</i18n></th>
+		<th><i18n>currentamountdue</i18n></th>
+		<th><i18n>duedate</i18n></th>
+		<th><i18n>amttopay</i18n></th>
+	</tr>
+	<?php foreach(  $this->bills as $id=>$bill )  { ?>
+	<tr>
+		<td><?php
+		//$checked=false;
+		//if( isset($this->selBill[$bill['billId']]) )
+		//    $checked=true;
+		echo $this->formCheckbox('bill['.$bill['billId'].']',
+		$bill['billId'],
+		array('onclick'=>'observerUser(this.id);',
+		/*'checked'=>$checked*/));
+			
+		?></td>
+		<td>
+		<p id='id-for-originalAmountDue-<?=$bill['billId']?>'><?php echo $bill['originalAmountDue']; ?></p>
+		</td>
+		<td>
+		<p id='id-for-currentAmountDue-<?=$bill['billId']?>'><?php echo $bill['currentAmountDue'];?></p>
+		</td>
+		<td>
+		<p><?php echo $this->dateFormat($bill['dueDate'],'mdy');?></p>
+		</td>
+		<td><?php
+		if( !isset( $this->selBill[$bill['billId']] ) ){
+			echo $this->formText('pmt['.$bill['billId'].']',$bill['originalAmountDue'], array(
+    																					 'id'      => 'amttopay-'.$bill['billId'] ,
+    																					 'size'    => 8,
+    																					 'disabled'=> true
+			)
+			);
+		} else {
+			echo $this->formText('pmt['.$bill->getId().']',$this->selPmt[$bill['billId']], array(
+    																					 'id'      => 'amttopay-'.$bill['billId'] ,
+    																					 'size'    => 8,
+    																					 'disabled'=> true
+			)
+			);
+		}
+		?></td>
+	</tr>
+	<?php } ?>
+</table>
+</form>
+	<?php } ?>
+
+	<?php
+	//	This is the main payment form
+	echo $this->form;
+	?>

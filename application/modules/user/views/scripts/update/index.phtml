@@ -1,0 +1,17 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * @package application.modules.user.views.update
+ * <p>View for the user update page</p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'user','controller'=>'index'),
+		 'hiddenElements'=>array( 'index' ),
+                 'target'=>array(array('action'=>'info','queryString'=>'/id/'.$this->id)) 
+));
+
+$this->internazionalization($this->msg,$this->type);
+echo $this->form;
+?>

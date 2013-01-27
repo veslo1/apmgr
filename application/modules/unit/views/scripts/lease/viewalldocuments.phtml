@@ -1,0 +1,47 @@
+<?php
+/**
+ * Created on Dec 31, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for lease documents </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                        ->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','viewallevictiondocuments','addevictiondocument','viewevictions','createleasefee','cancellease','viewleaselist','createeviction','vieweviction','viewevictiondocument','deleteevictiondocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments' ),
+		 'target'=>array(array('action'=>'adddocument','queryString'=>'/leaseId/'.$this->leaseId),
+				 array('action'=>'viewlease','queryString'=>'/leaseId/'.$this->leaseId)) 
+));
+
+if( $this->msg ) {
+	echo $this->message($this->msg);
+}
+?>
+
+<table id='currenttable'>
+	<caption><i18n>leaseDocuments</i18n></caption>
+	<?php if( $this->document ) {?>
+	<tr>		
+		<th><i18n>document</i18n></th>
+		<th><i18n>dateCreated</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->document as $id=>$row ) {  ?>
+	<tr>
+			<td><img width="60" src="<?=$row['path'];?>"
+				alt="<?=$row['description'];?>"
+				title="<?=$row['description'];?>" />
+			</td>
+			<td><?=$this->dateFormat($row['dateCreated'],'mdy');?></td>	
+			<td><?=$this->viewPicture($row['id'],$this->url(array('controller'=>'lease','module'=>'unit','action'=>'viewdocument','id'=>$row['id'], 'leaseId'=>$row['leaseId']),null,true,'view' ));?>
+			<?=$this->deletePictures($row['id'],$this->url(array('controller'=>'lease','module'=>'unit','action'=>'deletedocument','id'=>$row['id'], 'leaseId'=>$row['leaseId']),null,true),'delete');?>
+			</td>
+		</tr>
+	<?php } ?>
+
+	<?php } else echo '<tr><td>No Rows</td></tr>';?>
+</table>

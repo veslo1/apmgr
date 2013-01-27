@@ -1,0 +1,12 @@
+<?php if ($this->pageCount): ?>
+<div
+	class="paginationControl"><!-- This control holds the current page -->
+<input name='currentPage' id='currentPage' style='display: none;'
+	value='' /> <!-- This control holds the result of the operation --> <input
+	type="text" id="result" name="result" style='display: none;' value='' />
+<?php foreach ($this->pagesInRange as $page): ?>
+<p id="page-<?=$page;?>" class='vertical'
+	onclick="new Effect.Highlight($('page-<?=$page;?>'),{startcolor:'#99CCE',restorecolor:true});
+    ajaxPaginate('<?php echo $this->url(array('module'=>'role','controller'=>'create','action'=>'paginaterolepermissionajax','page' => $page));?>','pagesPermission',this.id);"><?php echo $page; ?></p>
+<?php endforeach; ?></div>
+<?php endif; ?>

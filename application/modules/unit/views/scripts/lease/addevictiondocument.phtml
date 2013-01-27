@@ -1,0 +1,15 @@
+<?php
+$this->headLink()->appendStylesheet('/css/zendform2.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','viewevictions','createleasefee','cancellease','viewleaselist','viewlease','createeviction','vieweviction','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments' ),
+		 'target'=>array(array('action'=>'viewallevictiondocuments','queryString'=>'/evictionId/'.$this->evictionId)) 
+));
+
+echo $this->internazionalization($this->msg,'error');
+echo $this->form;
+?>

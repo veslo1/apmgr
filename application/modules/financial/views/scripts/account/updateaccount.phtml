@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created on Apr 19, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts
+ * <p>
+ *
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'updateaccount', 'viewaccount','viewaccounttransactions' )		
+));
+
+echo $this->form;
+?>

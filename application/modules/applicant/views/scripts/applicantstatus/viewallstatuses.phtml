@@ -1,0 +1,45 @@
+<?php
+/**
+ * Created on Sept 13, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * Lists all applicant statuses
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<div><a
+	href="<?php echo $this->serverUrl('/applicant/applicantstatus/createstatus'); ?>">
+<img width="24" height="24" title="<i18n>createApplicantStatus</i18n>"
+	src="/images/add_48.png" /> </a></div>
+
+
+<table id='currenttable'>
+	<caption><i18n>applicantStatuses</i18n></caption>
+	<?php if( $this->paginator ) {?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $row->getName(); ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/applicant/applicantstatus/updatestatus/id/'. $row->getId()); ?>">
+		<img width="24" height="24" title="<i18n>update</i18n>"
+			src="/images/onebit_20.png" /> </a></td>
+	</tr>
+	<?php } ?>
+
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 't3.phtml');?>
+</td>
+</tfoot>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>
+
+
+

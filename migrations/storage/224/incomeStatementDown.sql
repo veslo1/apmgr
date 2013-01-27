@@ -1,0 +1,1 @@
+DELETE FROM `apmgr`.`reports` WHERE `name` = 'incomeStatement';

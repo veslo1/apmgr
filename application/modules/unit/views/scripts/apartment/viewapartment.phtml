@@ -1,0 +1,65 @@
+<?php
+/**
+ * Created on Jan 8, 2009 by rnelson
+ * @name apmgr view
+ * @package application.modules.apartment.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'apartment'),
+		 'hiddenElements'=>array('index','updateapartment','createapartment','deleteapartment','viewapartment'),		 
+));
+?>
+
+<div class="details">
+<div class="results"><?php 
+if ( $this->resultCheck($this->apartment) ){
+	?>
+
+<table>
+	<caption><i18n>apartmentDetails</i18n></caption>
+	<tr>
+		<th><i18n>apartmentName</i18n></th>
+		<td><?=$this->apartment->getName();?></td>
+	</tr>
+	<tr>
+		<th><i18n>addressOne</i18n></th>
+		<td><?=$this->apartment->getAddressOne();?></td>
+	</tr>
+	<tr>
+		<th><i18n>addressTwo</i18n></th>
+		<td><?=$this->apartment->getAddressTwo();?></td>
+	</tr>
+	<tr>
+		<th><i18n>city</i18n></th>
+		<td><?=$this->apartment->getCity();?></td>
+	</tr>
+	<tr>
+		<th><i18n>state</i18n></th>
+		<td><?=$this->apartment->getState();?></td>
+	</tr>
+	<tr>
+		<th><i18n>zip</i18n></th>
+		<td><?=$this->apartment->getZip();?></td>
+	</tr>
+	<tr>
+		<th><i18n>country</i18n></th>
+		<td><?=$this->apartment->getCountry();?></td>
+	</tr>
+	<tr>
+		<th><i18n>phone</i18n></th>
+		<td><?=$this->apartment->getPhone();?></td>
+	</tr>
+</table>
+
+	<?php
+}
+?></div>
+
+</div>
+
+

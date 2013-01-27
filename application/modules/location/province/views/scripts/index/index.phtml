@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created on Sep 21, 2009 by jvazquez
+ * @name datesite
+ * @package application.,modules.region.views.scripts.index
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+?>
+<div class="details">
+<h1><?=$this->moduleName;?></h1>
+<h3>Select an option</h3>
+<div class="crudbar"><?php echo $this->crudBar('province');?></div>
+<div class="success">
+<p>In this section, you can manage your region</p>
+<p>Choose an option from the upper level</p>
+</div>
+</div>
+

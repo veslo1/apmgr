@@ -1,0 +1,72 @@
+<?php
+/**
+ * Created on Mar 28, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+?>
+
+<?php
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'leasewizard'),
+		 'hiddenElements'=>array( 'addusertolist', 'removeuserfromlist', 'confirmation', 'enterdiscounts', 'entermoveindate', 'searchaddtenant', 'selectfeedeposit','selectrentschedule'),
+		 'target'=>array(array('action'=>'startleasewizard','queryString'=>'/unitId/'.$this->unitId)) 
+));
+
+?>
+<table id='currenttable'>
+	<caption><i18n>currentPendingLease</i18n></caption>
+	<?php if( $this->current ) {?>
+	<tr>
+		<th><i18n>leaseStartDate</i18n></th>
+		<th><i18n>leaseEndDate</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->current as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($row['leaseStartDate'], 'mdy'); ?></td>
+		<td><?php echo $this->dateFormat($row['leaseEndDate'], 'mdy'); ?></td>
+		<td><a href="<?php echo $this->serverUrl('/unit/lease/viewlease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/search_48.png" title="<i18n>viewLease</i18n>" /> </a>
+		<a href="<?php echo $this->serverUrl('/unit/lease/cancellease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/cancel_48.png" title="<i18n>cancelLease</i18n>" /></a>
+		<a href="<?php echo $this->serverUrl('/unit/leasewizard/clonelease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/star_half_48.png" title="<i18n>cloneLease</i18n>"/></a>		
+		</td>
+	</tr>
+	<?php } ?>
+
+	<?php } else echo '<tr><td>No Rows</td></tr>';?>
+</table>
+
+	<?php if( $this->history ) {?>
+<table id='historytable'>
+	<caption>Lease History</caption>
+
+	<tr>
+		<th><i18n>leaseStartDate</i18n></th>
+		<th><i18n>leaseLastDay</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->history as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($row['leaseStartDate'], 'mdy'); ?></td>
+		<td><?php echo $this->dateFormat($row['lastDay'], 'mdy'); ?></td>		
+		<td><a href="<?php echo $this->serverUrl('/unit/lease/viewlease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/search_48.png" title="<i18n>viewLease</i18n>" /> </a>
+		<a href="<?php echo $this->serverUrl('/unit/lease/cancellease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/cancel_48.png" title="<i18n>cancelLease</i18n>" /></a>
+		<a href="<?php echo $this->serverUrl('/unit/leasewizard/clonelease/leaseId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/star_half_48.png" title="<i18n>cloneLease</i18n>"/></a>			
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } ?>
+

@@ -1,0 +1,18 @@
+<?php
+/**
+ * The applicant page
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css')
+->headLink()->appendStylesheet('/css/roundError.css')
+->headLink()->appendStylesheet('/css/roundSuccess.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript();
+echo $this->headLink();
+$this->bar(	array(
+						'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array('index','completedapps','statuschange','bgcheckdetails')
+	)
+);
+?>

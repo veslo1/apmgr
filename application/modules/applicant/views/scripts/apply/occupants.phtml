@@ -1,0 +1,27 @@
+<?php
+/**
+ * Other occupants form
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+					->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+$this->headLink()->prependStylesheet('/css/roundError.css')
+				 ->headLink()->prependStylesheet('/css/zendform2.css')				 
+				 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+echo $this->headScript();
+echo $this->headLink();
+
+echo $this->message($this->msg);
+echo $this->form;
+?>
+<script type="text/javascript">
+    $(function() { $("#dob").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+    var $inputs = $('#occupants input');
+    $inputs.each(function(i, el) {
+		if( el.name.match(/\[dob\]/) != null ) {
+			$(function() { $("#"+el.id).datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+		}
+    });
+</script>

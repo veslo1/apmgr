@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created on Sep 13, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.create
+ */
+$this->headLink()->appendStylesheet('/css/zendform2.css')
+->headLink()->appendStylesheet('/css/roundError.css')
+->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink();
+echo $this->bar(array('type'=>'action','destination'=>array('module'=>'role','controller'=>'create'),'hiddenElements'=>array('index','update')));
+?>
+<h1><i18n>roleTitle</i18n></h1>
+<h3><i18n>createNewRole</i18n></h3>
+<?php
+echo $this->minimize('index');
+echo $this->form;
+echo $this->message($this->messages);
+?>

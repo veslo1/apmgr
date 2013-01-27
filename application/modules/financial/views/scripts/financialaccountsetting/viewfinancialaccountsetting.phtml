@@ -1,0 +1,43 @@
+<?php
+/**
+ * Created on August 14, 2010 by rnelson
+ * @name apmgr view
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'financialaccountsetting'),
+		 'hiddenElements'=>array( 'viewfinancialaccountsetting', 'updatefinancialaccountsetting' )		
+));
+?>
+
+<div class="details">
+<div class="results"><?php 
+if ( $this->resultCheck($this->record) ){
+	?>
+
+<table id='currenttable'>
+	<caption><i18n>financialAccountSettings</i18n></caption>
+	<tr>
+		<th><i18n>settingName</i18n></th>
+		<td><i18n><?php echo $this->record->getSettingName();?></i18n></td>
+	</tr>
+	<tr>
+		<th><i18n>description</i18n></th>
+		<td><i18n><?php echo $this->record->getDescription();?></i18n></td>
+	</tr>
+	<tr>
+		<th><i18n>account</i18n></th>
+		<td><i18n><?php echo $this->record->getAccount()->getName();?></i18n></td>
+	</tr>
+</table>
+
+	<?php
+}
+?></div>
+
+</div>
+
+

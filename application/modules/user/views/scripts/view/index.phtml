@@ -1,0 +1,78 @@
+<?php
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+echo $this->internazionalization($this->msg,$this->type);
+
+if( count($this->users)>0 )
+{
+?>
+<table>
+	<caption><i18n>viewingUsers</i18n></caption>
+	<tr>
+		<th>
+			<i18n>firstName</i18n>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'firstName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+				<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>" />
+			</a> 
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'firstName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+				<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>" />
+			</a>
+		</th>
+		<th>
+			<i18n>lastName</i18n>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+				<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>" /> </a> <a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+				<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>" />
+			</a>
+		</th>
+		<th>
+			<i18n>username</i18n>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'username',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+				<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>" /> </a> <a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'username',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+				<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>" />
+			</a>
+		</th>
+		<th>
+			<i18n>emailAddress</i18n>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'username',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+				<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>" /> </a> <a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'emailAddress',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'username',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+				<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>" />
+			</a>
+		</th>
+		<th>
+			<i18n>rolename</i18n>
+		</th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach($this->users as $id=>$user) { ?>
+	<tr>
+		<td><?php echo $user['firstName']?></td>
+		<td><?php echo $user['lastName']?></td>
+		<td><?php echo $user['username']?></td>
+		<td><?php echo $user['emailAddress']?></td>
+		<td><i18n><?php echo $user['roleName']?></i18n></td>
+		<td><a
+			href="<?php echo $this->url(array('module'=>'user','controller'=>'update','action'=>'delete','id'=>$user['id']));?>">
+		<img src="/images/24/cancel_48.gif" alt="<?php echo $this->translate('delete');?>"
+			title="<?php echo $this->translate('delete');?>" /> </a> <a
+			href="<?php echo $this->url(array('module'=>'user','controller'=>'update','action'=>'index','id'=>$user['id']));?>">
+		<img src="/images/dashboard/actionBar/user/edit.png" alt="<?php echo $this->translate('updateUser');?>"
+			title="<?php echo $this->translate('updateUser');?>" /> </a>
+		<a href="<?php echo $this->url(array('module'=>'user','controller'=>'view','action'=>'info','id'=>$user['id']));?>">
+			<img src="/images/dashboard/actionBar/user/view.png" title="<?php echo $this->translate('view');?>" alt="<?php echo $this->translate('view');?>"/>
+		</a>
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php
+	echo $this->paginationControl($this->users,'Sliding', 'paginationTemplate.phtml');
+}
+?>

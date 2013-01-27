@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created on Dec 3, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.apartment.views.scripts
+ * <p>
+ * Create form for apartments
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'apartment'),
+		 'hiddenElements'=>array('index','updateapartment','createapartment','deleteapartment','viewapartment'),		 
+));
+
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+echo $this->form;
+?>
+

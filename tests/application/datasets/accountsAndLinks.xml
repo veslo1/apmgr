@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Holds the accounts and account link data -->
+
+<dataset>
+	<account id="1" dateCreated="2010-05-01" name="account1"
+		number="123" orientation="debit" accountTypeId="4" />
+	<account id="2" dateCreated="2010-05-01" name="account2"
+		number="124" orientation="credit" accountTypeId="1" />
+	<account id="3" dateCreated="2010-05-01" name="account3"
+		number="125" orientation="debit" accountTypeId="2" />
+	<account id="4" dateCreated="2010-05-01" name="account4"
+		number="126" orientation="credit" accountTypeId="3" />
+	<account id="5" dateCreated="2010-05-01" name="account5"
+		number="127" orientation="credit" accountTypeId="4" />
+	<!-- accounts 6, 7, 8, 9 used for lease cancellation - do not use -->
+	<account id="6" dateCreated="2010-05-01" name="account6"
+		number="666" orientation="debit" accountTypeId="1" />
+	<account id="7" dateCreated="2010-05-01" name="account7"
+		number="777" orientation="credit" accountTypeId="3" />
+	<account id="8" dateCreated="2010-05-01" name="account8"
+		number="888" orientation="debit" accountTypeId="2" />
+	<account id="9" dateCreated="2010-09-01" name="account9"
+		number="999" orientation="credit" accountTypeId="4" />
+	<accountLink id="1" dateCreated="2010-05-01" name="testAccountLink1"
+		debitAccountId="1" creditAccountId="2" dateUpdated="2010-05-01" />
+	<accountLink id="2" dateCreated="2010-05-01" name="testAccountLink2"
+		debitAccountId="2" creditAccountId="1" dateUpdated="2010-05-01" />
+	<accountLink id="3" dateCreated="2010-05-01" name="paidRent"
+		debitAccountId="1" creditAccountId="2" dateUpdated="2010-05-01" />
+	<!-- Adjusting these to use accounts 6 and 7 for lease cancellation and 
+		8 and 9 for lease discount refunds - do not use -->
+	<accountLink id="4" dateCreated="2010-05-01"
+		name="leaseCancellationRentPortion" debitAccountId="6"
+		creditAccountId="7" dateUpdated="2010-05-01" />
+	<accountLink id="5" dateCreated="2010-05-01"
+		name="leaseCancellationDiscountPortion" debitAccountId="8"
+		creditAccountId="9" dateUpdated="2010-05-01" />
+	<accountLink id="6" dateCreated="2010-05-01" name="rentRevenue"
+		debitAccountId="5" creditAccountId="2" dateUpdated="2010-05-01" />
+</dataset>

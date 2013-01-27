@@ -1,0 +1,28 @@
+<?php
+/**
+ * Created on Apr 1, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Cancels Lease
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+                      ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+           ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#cancellationLastDay").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+<?
+if( $this->message ){    
+    echo $this->internazionalization($this->message['msg'],$this->message['type']);
+}
+echo $this->form;
+?>

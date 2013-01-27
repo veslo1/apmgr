@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created on Dec 5, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Create form for units
+ * </p>
+ */
+
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('createunitsingle','index','show','unitsforrent','updateunit','viewunit','viewunitgraphics'),		 
+));
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+$this->form->setAction($this->url());
+echo $this->form;
+?>

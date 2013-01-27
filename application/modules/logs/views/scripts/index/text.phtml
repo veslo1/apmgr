@@ -1,0 +1,6 @@
+<?php echo $this->back();?>
+<?php
+foreach ($this->files as $file ) {
+	print "<a href='".$this->url( array('module'=>'logs','controller'=>'index','action'=>'read','filename'=>$file) ) ."'>".$file."</a><br/>";
+}
+?>

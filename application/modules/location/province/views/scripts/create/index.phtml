@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created on Sep 21, 2009 by jvazquez
+ * @name datesite
+ * @package application.modules.region.views.scripts.create
+ * <p>
+ * Page to create a region
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+?>
+<div class="details">
+<h1>Province Section</h1>
+<h3>Create a new Province</h3>
+<div><?php echo $this->crudBar('province'); ?></div>
+<div class="form"><?php 
+$this->form->setAction($this->url());
+echo $this->form;
+?></div>
+</div>

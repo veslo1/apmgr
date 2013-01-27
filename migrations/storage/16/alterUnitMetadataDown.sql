@@ -1,0 +1,1 @@
+ALTER TABLE `apmgr`.`unitMetaData` DROP COLUMN `description`;

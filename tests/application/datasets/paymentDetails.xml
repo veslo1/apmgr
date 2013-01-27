@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<paymentDetail id="1" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" totalAmount="10" payor="me" paymentType="check" />
+</dataset>

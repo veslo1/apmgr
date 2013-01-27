@@ -1,0 +1,54 @@
+<?php
+/**
+ * Displays the waitlist page for the lease agent.
+ * The user will be able to perform basic operations in this page for searching users
+ * that are in a waitlist
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css')
+	 ->headLink()->appendStylesheet('/css/roundError.css')
+	 ->headLink()->appendStylesheet('/css/roundSuccess.css')
+	 ->headLink()->appendStylesheet('/css/roundcorner_32_grey.css')
+	 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript();
+echo $this->headLink();
+$barOptions = array(
+						'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array( 'index','waitlist','completedapps','statuschange','bgcheckdetails'));
+$this->bar($barOptions);
+?>
+<h1><i18n>waitList</i18n></h1>
+<?php echo $this->round($this->form); ?>
+<script type="text/javascript">
+    $(function() { $("#dateFrom").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+    $(function() { $("#dateTo").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+</script>
+
+<table class="hor-minimalist-a">
+	<tr>
+		<th><a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'waitlist','column'=>'firstName','sort'=>$this->sort),null,false);?>"><i18n>firstName</i18n></a></th>
+		<th><a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'waitlist','column'=>'lastName','sort'=>$this->sort),null,false);?>"><i18n>lastName</i18n></a></th>
+		<th><a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'waitlist','column'=>'unitModelName','sort'=>$this->sort),null,false);?>"><i18n>unitModel</i18n></a></th>
+		<th><a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'waitlist','column'=>'dateCreated','sort'=>$this->sort),null,false);?>"><i18n>dateCreated</i18n></a></th>
+		<th><i18n>action</i18n></th>
+	</tr>
+	<?php foreach ($this->applicants as $id=>$applicant) { ?>
+	<tr>
+		<td><?php echo $applicant['firstName'];?></td>
+		<td><?php echo $applicant['lastName'];?></td>
+		<td><?php echo $applicant['unitModelName'];?></td>
+		<td><?php echo $applicant['dateCreated'];?></td>
+		<td>
+			<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'create','action'=>'waitlistemail','user'=>$applicant['userId']),null,true);?>"><img title="<?php echo $this->translate('mailThisUser');?>" src="/images/24/mail_write_48.gif" alt="<?php echo $this->translate('mailThisUser');?>" /></a>
+		</td>
+	</tr>
+	<?php }?>
+</table>
+	<?php
+	echo $this->paginationControl($this->applicants,'Sliding', 't3.phtml');
+	echo $this->internazionalization($this->error,'error');
+
+?>

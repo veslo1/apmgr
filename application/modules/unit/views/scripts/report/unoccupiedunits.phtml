@@ -1,0 +1,89 @@
+<?php
+/**
+ * The reports page
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');	 
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+
+$this->bar(	array(
+						'type'=>'action',
+						'destination'=>array('module'=>'unit','controller'=>'report'),
+						'hiddenElements'=>array('cancelledlease','export')
+)
+);
+
+echo $this->internazionalization($this->msg,$this->type);
+?>
+
+<h1><i18n>unoccupiedUnitsReport</i18n></h1>
+<?php if( $this->recordsPopulated ) { ?>
+<table id='currenttable'>
+	<thead>
+		<tr>			
+			<th>
+				<i18n>unitnumber</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>unitModel</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'unitModel',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'unitModel',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>rentAmount</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'rentAmount',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'rentAmount',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>lastOccupiedDay</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'lastOccupiedDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'lastOccupiedDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>nextOccupiedDay</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'nextOccupiedDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'report','action'=>'unoccupiedunits',ZFInterfaces_Sortable::COLUMN=>'nextOccupiedDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>	
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->data as $id=>$info){ ?>
+		<tr>		
+		<td><?php echo $info['unitNumber']?></td>
+		<td><?php echo $info['unitModel']?></td>
+		<td><?php echo $info['rentAmount']?></td>
+		<td><?php echo $info['lastOccupiedDay'];?></td>
+		<td><?php echo $info['nextOccupiedDay'];?></td>		
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+		<?php
+		echo $this->paginationControl($this->data,'Sliding', 'paginationTemplate.phtml');
+} else {
+	?>
+<p><i18n>noRecordsToShow</i18n></p>
+	<?php
+}
+?>

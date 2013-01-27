@@ -1,0 +1,91 @@
+<?php
+/**
+ * The reports page
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css')
+	 ->headLink()->prependStylesheet('/css/zendform2.css')
+	 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');	
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+
+echo $this->form; ?>
+<br>
+
+<table id='currenttable'>
+	<caption><i18n>rentRoll</i18n></caption>
+	<? if( $this->recordsPopulated ) { ?>
+	<thead>
+		<tr>
+			<th>
+				<i18n>unitnumber</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>tenantName</i18n>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'tenantName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'tenantName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>rentamount</i18n>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'rentamount',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'rentamount',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>leaseStartDate</i18n>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'leaseStartDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'leaseStartDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>leaseEndDate</i18n>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'leaseEndDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'leaseEndDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>leaseLastDay</i18n>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'lastDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'financial','controller'=>'report','action'=>'rentroll',ZFInterfaces_Sortable::COLUMN=>'lastDay',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->data as $id=>$info){ ?>
+		<tr>
+		<td><?php echo $info['unitNumber']?></td>
+		<td><?php echo $info['tenantName']?></td>
+		<td><?php echo $info['rentAmount']?></td>
+		<td><?php echo $info['leaseStartDate'];?></td>
+		<td><?php echo $info['leaseEndDate'];?></td>
+		<td><?php echo $info['lastDay'];?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+<script type="text/javascript">
+    $(function() { $("#dateTo").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+    $(function() { $("#dateFrom").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+</script>

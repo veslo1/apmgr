@@ -1,0 +1,1 @@
+UPDATE settings SET value='http://apmgr.com/applicant/dashboard/paymentconfirmation' WHERE name='x_receipt_link_url';

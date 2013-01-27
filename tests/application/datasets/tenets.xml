@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<tenant id="5
+" dateCreated="2010-05-01
+" dateUpdated="2010-05-01
+"
+		userId="10
+" leaseId="10
+" />
+	<tenant id="6
+" dateCreated="2010-05-01
+" dateUpdated="2010-05-01
+"
+		userId="11
+" leaseId="10
+" />
+</dataset>

@@ -1,0 +1,57 @@
+<project name="Apmgr" default="build" basedir=".">
+	<target name="build"
+		depends="update,document, migrate, prepareDb, test, distribute" />
+	<property file="build.properties" />
+	<target name="update">
+		<exec dir="${basedir.utils}" executable="bash">
+			<arg line="cleanup.sh" />
+			<arg line="${basedir}/source" />
+		</exec>
+	</target>
+	<target name="document">
+		<exec dir="${basedir}/source" executable="phpdoc">
+			<arg line="-d ${basedir}/source/apmgr" />
+			<arg line="-t ${basedir}/build/api" />
+		</exec>
+	</target>
+	<target name="migrate">
+		<exec dir="${basedir.migrations}" executable="${php}">
+			<arg line="main.php" />
+			<arg line="-c" />
+		</exec>
+	</target>
+	<target name="prepareDb">
+		<exec dir="${basedir.utils}" executable="bash">
+			<arg line="prepare.sh" />
+			<arg line="${mysql}" />
+			<arg line="${user}" />
+			<arg line="${password}" />
+			<arg line="${database}" />
+			<arg line="${database.test}" />
+			<arg line="${database.storeproc}" />
+			<arg line="${mysqldump}" />
+			<arg line="${mysqldump.flags}" />
+		</exec>
+	</target>
+	<target name="php-codesniffer">
+		<exec executable="phpcs" dir="${basedir}/source"
+			output="${basedir}/build/logs/checkstyle.xml" error="/var/tmp/checkstyle.error.log">
+			<arg line="-n --report=checkstyle --standard=ZEND application" />
+		</exec>
+	</target>
+	<target name="test">
+		<exec dir="${basedir.tests}" executable="${phpunit}">
+			<arg
+				line="--log-junit ${basedir}/build/logs/phpunit.xml --log-json logs/json.xml --coverage-html ${basedir}/build/coverage --coverage-clover ${basedir}/build/logs/phpunit.coverage.xml --testdox-html  --colors --verbose --bootstrap application/bootstrap.php --configuration phpunit.xml" />
+		</exec>
+	</target>
+	<target name="distribute">
+		<exec dir="${basedir.utils}" executable="${rsync}">
+			<arg line="-avz" />
+			<arg line="--compress-level='9'" />
+			<arg line="-e='ssh -C'" />
+			<arg line="${basedir.results}" />
+			<arg line="${basedir.remote}" />
+		</exec>
+	</target>
+</project>

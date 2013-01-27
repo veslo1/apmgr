@@ -1,0 +1,11 @@
+<?php
+/**
+ * Created on Sep 19, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.view
+ */
+?>
+<h1><i18n>roleTitle</i18n></h1>
+<?=$this->bar(array('type'=>'controller','destination'=>'role','hiddenElements'=>array('search','delete','index')));?>
+<?php print $this->message($this->messageResult);?>

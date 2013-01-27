@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<transaction id="1" dateCreated="2010-05-01" userId="1"
+		comment="test" action="test" />
+	<transaction id="2" dateCreated="2010-05-01" userId="1"
+		comment="test" action="test" />
+	<transaction id="65" dateCreated="2010-05-01" userId="1"
+		comment="test" action="test" />
+	<!-- Please do not create accountTransaction records for accountId 6, 7, 
+		8 and 9- is used in leases -->
+	<accountTransaction id="1" dateCreated="2010-05-01"
+		amount="111.11" datePosted="2010-05-01" accountId="1" transactionId="1"
+		side="debit" />
+	<accountTransaction id="2" dateCreated="2010-05-01"
+		amount="111.11" datePosted="2010-05-01" accountId="2" transactionId="1"
+		side="credit" />
+	<accountTransaction id="3" dateCreated="2010-05-01"
+		amount="222.22" datePosted="2010-12-01" accountId="2" transactionId="2"
+		side="credit" />
+	<accountTransaction id="4" dateCreated="2010-05-01"
+		amount="10.10" datePosted="2010-01-01" accountId="2" transactionId="2"
+		side="debit" />
+	<accountTransaction id="5" dateCreated="2010-05-01"
+		amount="5.55" datePosted="2010-01-01" accountId="2" transactionId="2"
+		side="debit" />
+	<accountTransaction id="6" dateCreated="2010-05-01"
+		amount="50.00" datePosted="2010-01-01" accountId="2" transactionId="2"
+		side="credit" />
+</dataset>

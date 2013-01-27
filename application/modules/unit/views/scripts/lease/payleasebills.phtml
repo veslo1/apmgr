@@ -1,0 +1,21 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+          ->headLink()->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+          ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','cancellease','viewevictions','vieweviction','createeviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','viewmyleasebill','viewmypayments','createleasefee','viewleaselist','selectleasebills'),
+		 'target'=>array(array('action'=>'viewlease','queryString'=>'/leaseId/'.$this->leaseId))				   
+));
+
+echo $this->internazionalization($this->msg['msg'],$this->msg['type']);
+echo $this->form;
+?>
+<script type="text/javascript">
+    $(function() {
+        $("#datePosted").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>

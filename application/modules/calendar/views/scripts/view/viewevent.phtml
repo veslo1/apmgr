@@ -1,0 +1,139 @@
+<?php
+/**
+ * @author jvazquez <jvazquez@debserverp4.com.ar>
+ */
+?>
+<h1><i18n>viewEventTitle</i18n></h1>
+<?php
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink()->appendStylesheet('/css/roundWarning.css');
+echo $this->headLink()->prependStylesheet('/css/calendar.css');
+echo $this->headLink()->appendStylesheet('/css/paginator.css');
+echo $this->headScript()->appendFile('/javascript/calendar/calendar.js','text/javascript');
+?>
+<div id="miniNavigation"><span><a
+	href="<?php echo $this->url(array('module'=>'calendar','controller'=>'view','action'=>'dailyview'),null,true);?>"><i18n>dayView</i18n></a></span>
+<span><a
+	href="<?php echo $this->url(array('module'=>'calendar','controller'=>'view','action'=>'weekview'),null,true);?>"><i18n>weekView</i18n></a></span>
+<span><a
+	href="<?php echo $this->url(array('module'=>'calendar','controller'=>'view','action'=>'index'),null,true);?>"><i18n>monthView</i18n></a></span>
+</div>
+
+<?php echo $this->message($this->msg);?>
+
+<?php if( $this->lock == false ) { ?>
+<table class="newspaper-a">
+	<thead>
+		<tr>
+			<th colspan="3"><i18n>event</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><i18n>eventTitle</i18n></td>
+			<td><?php echo $this->event->getTitle();?></td>
+		</tr>
+		<tr>
+			<td>
+			<p><i18n>allDayEventLbl</i18n></p>
+			</td>
+			<td>
+			<p><i18n><?=($this->event->getAllDayEvent())?'yes':'no';?></i18n></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><i18n>eventTitle</i18n></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<p><?php echo $this->event->getData();?></p>
+			</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td><?php
+			echo $this->delete($this->event->getId(),$this->url(array('module'=>'calendar','controller'=>'delete','action'=>'deleteevent','eventId'=>$this->event->getId())),'deleteevent','deleteeventconfirm');
+			echo $this->edit($this->event->getId(),$this->url(array('module'=>'calendar','controller'=>'update','action'=>'updateevent','id'=>$this->event->getId())),'updateEvent');
+			?></td>
+		</tr>
+	</tfoot>
+</table>
+
+			<?php if( $this->eventTime ) { ?>
+<table class="newspaper-a">
+	<thead>
+		<tr>
+			<th colspan="6"><i18n>occurrences</i18n></th>
+		</tr>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','time'=>'startDate','timesort'=>$this->sortTime));?>'><i18n>startDate</i18n></a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','time'=>'endtDate','timesort'=>$this->sortTime));?>'><i18n>endDate</i18n></a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','time'=>'startTime','timesort'=>$this->sortTime));?>'><i18n>startTime</i18n></a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','time'=>'endTime','timesort'=>$this->sortTime));?>'><i18n>endTime</i18n></a></th>
+			<th colspan="2"><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->eventTime as $id=>$eventTimeObject) { ?>
+		<tr>
+			<td>
+			<p><?=$this->dateFormat($eventTimeObject->getStartDate(),null,$this->dateFormat);?></p>
+			</td>
+			<td>
+			<p><?=$this->dateFormat($eventTimeObject->getEndDate(),null,$this->dateFormat);?></p>
+			</td>
+			<td>
+			<p><?=$this->timeFormat($eventTimeObject->getStartTime());?></p>
+			</td>
+			<td>
+			<p><?=$this->timeFormat($eventTimeObject->getEndTime());?></p>
+			</td>
+			<td><?=$this->delete($this->event->getId(),$this->url(array('module'=>'calendar','controller'=>'delete','action'=>'deleteeventtime','id'=>$eventTimeObject->getId(),'eventId'=>$this->event->getId())),'deleteEventTime','deleteEventTimeConfirm');?></td>
+		</tr>
+		<? } ?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->eventTime,'Sliding', 't3.phtml'); ?>
+		<?php } ?>
+
+		<?php if ( $this->lockcontact==true ) { ?>
+<table class="newspaper-a">
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','contacts'=>'lastName','sortcontacs'=>$this->sortContacts));?>'><i18n>lastName</i18n></a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'viewevent','module'=>'calendar','contacts'=>'firstName','sortcontacs'=>$this->sortContacts));?>'><i18n>firstName</i18n></a></th>
+			<th><i18n>actions</i18n></th>
+			<th><?=$this->delete($this->event->getId(),$this->url(array('module'=>'calendar','controller'=>'delete','action'=>'deleteallguests','eventId'=>$this->event->getId())),'deleteAllGuests','deleteAllGuestConfirm');?></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php  foreach($this->eventNotification as $id=>$user) { ?>
+		<tr>
+			<td>
+			<p><?php echo $user->getLastName();?></p>
+			</td>
+			<td>
+			<p><?php echo $user->getFirstName();?></p>
+			</td>
+			<td colspan="2"><?=$this->delete($this->event->getId(),$this->url(array('module'=>'calendar','controller'=>'delete','action'=>'deleteguest','eventId'=>$this->event->getId(),'guestId'=>$user->getId())),'deleteUserGuest','deleteEventGuestConfirm');?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+
+		<?php echo $this->paginationControl($this->eventNotification,'Sliding', 't3.phtml');?>
+		<? } else { ?>
+<div class="warning">
+<p><i18n>noattendees</i18n></p>
+</div>
+		<?php } ?>
+		<?php } else { ?>
+<p>no cigar</p>
+		<?php }?>

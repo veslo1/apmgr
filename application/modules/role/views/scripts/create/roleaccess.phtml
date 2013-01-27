@@ -1,0 +1,37 @@
+<?php
+/**
+ * Created on 21/12/2009
+ *
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * <p>Interface for the user to create access to roles</p>
+ */
+$this->headLink()->prependStylesheet('/css/paginator.css')
+->headLink()->appendStylesheet('/css/zendform.css')
+->headLink()->appendStylesheet('/css/roundError.css')
+->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink();
+echo $this->bar(array('type'=>'action','destination'=>array('module'=>'role','controller'=>'create'),'hiddenElements'=>array('roleaccess','update')));
+echo $this->minimize('roleaccess');
+?>
+<h1><i18n>roleaccesstitle</i18n></h1>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><a
+				href="<?=$this->url(array('controller'=>'create','action'=>'roleaccess','module'=>'role','column'=>'alias','sort'=>$this->sort));?>"><i18n>pages</i18n></a></th>
+			<th><i18n>roles</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->records as $id=>$page) { ?>
+		<tr>
+			<td><?=$page['pageName'];?></td>
+			<td><? echo $this->form[$page['pageId']];?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+		<?php
+		echo $this->paginationControl($this->records,'Sliding', 't3.phtml');
+		echo $this->message($this->msg);
+		?>

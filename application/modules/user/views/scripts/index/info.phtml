@@ -1,0 +1,52 @@
+<?php
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'user','controller'=>'update'),
+		 'hiddenElements'=>array( 'delete' ),
+                 'target'=>array(array('action'=>'index','queryString'=>'/id/'.$this->user['id']))
+));
+
+if( isset($this->user) ) { ?>
+	<table>
+		<caption><i18n>viewUserInfo</i18n></caption>
+		<tr>
+			<td><i18n>firstName</i18n></td>
+			<td><?php echo $this->user['firstName'];?></td>
+		</tr>
+		<tr>
+			<td><i18n>lastName</i18n></td>
+			<td><?php echo $this->user['lastName'];?></td>
+		</tr>
+		<tr>
+			<td><i18n>username</i18n></td>
+			<td><?php echo $this->user['username'];?></td>
+		</tr>
+		<tr>
+			<td><i18n>email</i18n></td>
+			<td><?php echo $this->user['emailAddress'];?></td>
+		</tr>
+		<tr>
+			<td><i18n>phone</i18n></td>
+			<td><?php echo $this->user['phone'];?></td>
+		</tr>
+		<tr>
+			<td><i18n>cellPhone</i18n></td>
+			<td><?php echo $this->user['mobile']?></td>
+		</tr>
+		<tr>
+			<td><i18n>fax</i18n></td>
+			<td><?php echo $this->user['fax']?></td>
+		</tr>
+		<tr>
+			<td><i18n>rolename</i18n></td>
+			<td><i18n><?php echo $this->user['roleName']?></i18n></td>
+		</tr>
+		<tr>
+			<td><i18n>dateCreated</i18n></td>
+			<td><?php echo $this->dateFormat($this->user['dateCreated'],'mdy');?></td>
+		</tr>
+	</table>
+<?php }?>

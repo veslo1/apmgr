@@ -1,0 +1,47 @@
+<?php
+/**
+ * Display the status change for the given applicant
+ * @author Jorge Omar Vazquez<jvazquez@debserverp4.com.ar>
+ */
+
+$this->headLink()->prependStylesheet('/css/table.css');
+
+$this->headLink()->appendStylesheet('/css/roundcorner_32_grey.css')
+	->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript();
+echo $this->headLink();
+$barOptions = array(				'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array('index','fees','completedapps','statuschange','bgcheckdetails')
+);
+echo $this->bar($barOptions);
+$this->results($this->restore,$this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallapplicants','restore'=>$this->restore),null,true));
+echo $this->results($this->restore,$this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallapplicants')));
+?>
+<table>
+	<caption><i18n>viewHistoryOfStatuses</i18n></caption>
+	<thead>
+		<tr>
+			<th><i18n>applicantStatuses</i18n></th>
+			<th><i18n>comments</i18n></th>
+			<th><i18n>dateCreated</i18n></th>
+			<th><i18n>currentStatus</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->statusHistory as $id=>$record){?>
+		<tr>
+			<td><?php echo $this->translator($record['properName']);?></td>
+			<td><i18n><?php echo $record['comment'];?></i18n></td>
+			<td><?php echo $this->dateFormat($record['dateCreated'],'mdyt');?></td>
+			<td><i18n><?php echo $record['currentStatus'];?></i18n></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php
+		echo $this->internazionalization($this->noRecords,'warning');
+		echo $this->internazionalization($this->msg,'error');
+		?>

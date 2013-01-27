@@ -1,0 +1,1 @@
+INSERT INTO `messages`(`id`,`message`,`identifier`,`category`,`language`,`locked`,`dateCreated`) VALUES (50,'The specified file exists','fileExists','error','en_US',1,'2010-05-15 13:42:17');

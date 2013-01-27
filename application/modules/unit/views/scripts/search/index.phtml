@@ -1,0 +1,110 @@
+<?php
+/**
+ * View that allows the user to search units
+ *
+ * @author jvazquez
+ */
+$this->headLink()->prependStylesheet('/css/zendform.css')
+	 ->headLink()->prependStylesheet('/css/paginator.css')
+	 ->headLink()->prependStylesheet('/css/roundWarning.css')
+	 ->headLink()->prependStylesheet('/css/mytable.css');
+
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javASCVIEWript')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javASCVIEWript');
+echo $this->headLink();
+echo $this->headScript();
+?>
+<h1><i18n>searchUnits</i18n></h1>
+<div style="display:table-row">
+	<div style="display:table-row">
+<?php echo $this->form; ?>
+	</div>
+	<div style="display:table-cell">
+	<?php if( $this->recordsPopulated>0 ) { ?>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					<i18n>name</i18n>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'name',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+						<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+					</a>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'name',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+						<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+					</a>
+				</th>
+				<th>
+					<i18n>beds</i18n>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numBeds',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+						<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+					</a>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numBeds',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+						<img src="/images/10/down.png" title="<?php $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+					</a>
+				</th>
+				<th>
+					<i18n>baths</i18n>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numBaths',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+						<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+					</a>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numBaths',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+						<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+					</a>
+				</th>
+				<th>
+					<i18n>numFloors</i18n>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numFloors',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+						<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+					</a>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'numFloor',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+						<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+					</a>
+				</th>
+				<th>
+					<i18n>size</i18n>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'size',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+						<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+					</a>
+					<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'search','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'size',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+						<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+					</a>
+				</th>
+				<th><i18n>amenities</i18n></th>
+				<th><i18n>actions</i18n></th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach($this->units as $id=>$record) { ?>
+		<tr>
+			<td><?=$record['name'];?></td>
+			<td><?=$record['numBeds'];?></td>
+			<td><?=$record['numBaths'];?></td>
+			<td><?=$record['numFloors'];?></td>
+			<td><?=$record['size'];?></td>
+			<td>
+			<?php
+			if( count($record['amenities']) ) {
+				echo implode(",", $record['amenities']);
+			} else { ?>
+					<i18n>noAmenities</i18n>
+			<?php
+			}
+			?>
+			</td>
+			<td colspan="2"><?=$this->unitModelLinks($record['id'],array(
+			$this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent','model'=>$record['id'])),
+			$this->url(array('module'=>'applicant','controller'=>'waitlist','action'=>'index','model'=>$record['id']))
+			),'unitsAvailable');?></td>
+			</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php
+echo $this->paginationControl($this->units,'Sliding', 'paginationTemplate.phtml');
+}
+?>
+	</span>
+	<span>
+<?php echo $this->message($this->msg);?>
+	</span>
+</div>

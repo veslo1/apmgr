@@ -1,0 +1,32 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/paginator.css');
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->appendFile('/javascript/tablecss/tablecss.js');
+
+if($this->msg){
+    echo $this->message($this->msg);
+}
+?>
+
+<table id='currenttable'>
+	<caption><i18n>preleaseFees</i18n> <i18n>for</i18n> <?php echo $this->applicant['firstName'] . ' ' . $this->applicant['lastName']  ?></caption>
+	<?php if ( $this->resultCheck($this->fees) ){ ?>
+	<tr>		
+		<th><i18n>feeName</i18n></th>
+		<th><i18n>originalAmountDue</i18n></th>
+		<th><i18n>isPaid</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->fees as $id=>$item ) {  ?>
+	<tr>		
+		<td><?php echo $item['feeName']; ?></td>
+		<td><?php echo $item['originalAmountDue']; ?></td>
+		<td><?php if($item['isPaid']) echo "<i18n>yes</i18n>"; else echo "<i18n>no</i18n>"; ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/bill/viewbill/billId/'. $item['billId'] ); ?>">
+		<img width="24" height="24" src="/images/search_48.png" /> </a></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>

@@ -1,0 +1,3 @@
+This code here it's the "live integration" that points to the test sandbox.
+Test folder is used for testing authorize since at this point, we are outside the framework
+and can't be tested using zend-framework phpunit integration

@@ -1,0 +1,11 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+?>
+<h1><i18n>appFeePayment</i18n></h1>
+<?php
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+} else {
+	echo $this->form;
+}
+?>

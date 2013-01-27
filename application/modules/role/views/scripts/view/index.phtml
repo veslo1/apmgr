@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created on Sep 19, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.view
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css')
+	->headLink()->appendStylesheet('/css/roundError.css')
+	->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink();
+?>
+<h1><i18n>roleTitle</i18n></h1>
+<?php
+echo $this->bar(array('type'=>'action','hiddenElements'=>array('index','view'),'destination'=>array('module'=>'role','controller'=>'view'),'container'=>'<div>','containerCloseTag'=>'</div>'));
+echo $this->message($this->msg);
+?>
+<h5 class="alert"><i18n>warningAcl</i18n></h5>
+<br />
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'role','column'=>'name','sort'=>$this->sort));?>'>
+			<i18n>rolename</i18n> </a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'role','column'=>'dateCreated','sort'=>$this->sort));?>'>
+			<i18n>dateCreated</i18n> </a></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->role as $id=>$object) { ?>
+		<tr>
+			<td><?=ucfirst($object->getName());?></td>
+			<td><?=$object->getDateCreated();?></td>
+			<td><?php
+			echo $this->edit( $this->url(array('controller'=>'update','action'=>'update','module'=>'role','id'=>$object->getId())) ,'update');
+			echo $this->delete($object->getId(),$this->url(array('controller'=>'delete','action'=>'delete','module'=>'role','id'=>$object->getId())),'delete');
+			echo $this->view($this->url(array('controller'=>'view','action'=>'view','module'=>'role','id'=>$object->getId())),'view');
+			?></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->role,'Sliding', 't3.phtml');?>

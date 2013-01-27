@@ -1,0 +1,2 @@
+DELETE FROM actions
+WHERE name IN ( 'Viewevictions','Vieweviction','Createeviction','Viewallevictiondocuments','Addevictiondocument','Viewevictiondocument','Deleteevictiondocument','Adddocument','Viewalldocuments','Viewdocument','Mylease','Myleaselist','Myrentbill','Payleasebillconfirmation','Payleasebills','Selectleasebills','Viewmyleasebill','Viewmypayments' );

@@ -1,0 +1,32 @@
+<?php if ($this->pageCount): ?>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th colspan="<?php echo $this->pageCount+2;?>"><i18n>paginationControls</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><?php if (isset($this->previous)): ?> <a
+				href="<?php echo $this->url(array('page' => $this->previous)); ?>">
+			&lt;<i18n>previous</i18n> </a> <?php else: ?> <span class="disabled">&lt;<i18n>previous</i18n></span>
+			<?php endif; ?></td>
+
+			<?php foreach ($this->pagesInRange as $page): ?>
+			<td><?php if ($page != $this->current): ?> <a
+				href="<?php echo $this->url(array('page' => $page)); ?>"><?php echo $page; ?></a>
+				<?php else: ?> <?php echo $page; ?></td>
+				<?php endif; ?>
+				<?php endforeach; ?>
+
+
+				<?php if (isset($this->next)): ?>
+			<td><a href="<?php echo $this->url(array('page' => $this->next)); ?>">Next
+			&gt;</a></td>
+			<?php else: ?>
+			<td><span class="disabled">Next &gt;</span></td>
+			<?php endif; ?>
+		</tr>
+	</tbody>
+</table>
+			<?php endif; ?>

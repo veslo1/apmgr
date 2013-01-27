@@ -1,0 +1,36 @@
+<?php
+/**
+ * Created on July 7, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.maintenance.views.scripts
+ * <p>
+ * Page for configurations
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+?>
+<script type="text/javascript">
+    function populateDefaultAssigned() {
+        var info = new Ajax.Request("<?=$this->url( array('module'=>'maintenance', 'controller'=>'setting', 'action'=>'populatedefaultassignedto'  ) )?>", {
+				method:'post',
+				parameters: { roleId: $('roleId').value },
+				requestHeaders: {Accept: 'application/json'},
+				onSuccess: function(transport) {          
+                    var json = transport.responseText.evalJSON();                                                   
+             
+                    for( i=$('defaultAssignedTo').options.length-1; i>=0; i--) {
+		                $('defaultAssignedTo')[i]=null;
+                    } 
+                
+                    for( i=0; i<json.length; i++) {                            
+                        $('defaultAssignedTo')[i] = new Option( json[i].name, json[i].value  );              		       		                          
+                    }                    
+    			},
+    			onFailure: function() {
+    			    alert('Something went wrong...') 
+    			}
+  		} );  		   		  		  		  		
+    }
+</script>
+<div><?php echo $this->form; ?></div>

@@ -1,0 +1,16 @@
+<?php
+/**
+ * Created on October 16, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts
+ * <p>
+ * Manually pay bills
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/zendform2.css');
+
+echo $this->bar ( array( 'type' =>'action',
+			 'destination'=>array( 'module' => 'financial',
+			      	               'controller'=>'create')));
+echo $this->form;
+?>

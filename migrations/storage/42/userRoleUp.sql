@@ -1,0 +1,7 @@
+ALTER TABLE `userRole` ADD FOREIGN KEY ( `userId` ) REFERENCES `apmgr`.`user` (
+`id`
+) ON DELETE CASCADE ON UPDATE CASCADE ;
+
+ALTER TABLE `userRole` ADD FOREIGN KEY ( `roleId` ) REFERENCES `apmgr`.`role` (
+`id`
+) ON DELETE CASCADE ON UPDATE CASCADE ;

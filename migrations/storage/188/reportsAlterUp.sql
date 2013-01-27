@@ -1,0 +1,2 @@
+ALTER TABLE `reports` ADD `urlPath` VARCHAR(50) NOT NULL COMMENT 'The partial url for this report' AFTER `cacheTtl`;
+UPDATE `apmgr`.`reports` SET `urlPath` = '/report/rentroll', `dateUpdated` = '2010-11-03 19:56:20' WHERE `reports`.`id` =1;

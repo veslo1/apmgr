@@ -1,0 +1,76 @@
+<?php
+/**
+ * @author Jorge Vazquez <jvazquez@debserverp4.com.ar>
+ * Display all the units that are for rent in the given apartment
+ */
+echo $this->headLink()->appendStylesheet('/css/paginator.css')
+	  ->headLink()->prependStylesheet('/css/mytable.css');
+
+if($this->recordsPopulated>0){ ?>
+<table>
+	<caption><i18n>viewunit</i18n></caption>
+	<thead>
+		<tr>
+			<th>
+				<i18n>unitnumber</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'number',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'number',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>apartmentName</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'name',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'name',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>addressOne</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'addressOne',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'addressOne',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>dateAvailable</i18n>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'dateAvailable',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW));?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'unitsforrent',ZFInterfaces_Sortable::COLUMN=>'dateAvailable',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW));?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>actions</i18n>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->units as $id=>$unit) { ?>
+		<tr>
+			<td><p><?php echo $unit['number'];?></p></td>
+			<td><p><?php echo $unit['name'];?></p></td>
+			<td><p><?php echo $unit['address'];?></p></td>
+			<td><p><?php echo $this->dateFormat($unit['dateAvailable'],'mdy');?></p></td>
+			<td>
+				<?php if($unit['hasPictures'] ) { ?>
+				<a href="<?php echo $this->url(array('module'=>'unit','controller'=>'unit','action'=>'viewunitgraphics','unitId'=>$unit['unitId']),null,true);?>"><img src="/images/24/camera_48.gif" alt="<?php echo $this->translator("viewPictures");?>" title="<?php echo $this->translator("viewPictures");?>"/></a>
+				<?php } ?>
+			<a href="<?=$this->url(array('module'=>'applicant','controller'=>'apply','action'=>'index','unit'=>$unit['unitId'],'apartment'=>$unit['apartmentId']));?>"><img src="/images/24/app_48.gif" alt="<?php echo $this->translator("applyForm");?>" title="<?php echo $this->translator("applyForm");?>"/></a>
+			</td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php
+	$this->paginationControl($this->units,'Sliding', 'paginationTemplate.phtml');
+}
+echo $this->internazionalization($this->msg,'error');
+?>

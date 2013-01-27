@@ -1,0 +1,14 @@
+<?php
+/**
+ * Created on August 24, 2010 by rnelson
+ * application.modules.role.views.script.update
+ * <p>
+ * Update page for the permissions
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+echo $this->form;
+?>

@@ -1,0 +1,65 @@
+<?php
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript();
+if( count($this->prospect)>0 )
+{
+?>
+<table>
+	<thead>
+	  	<tr>
+	    	<th><i18n>prospectDetails</i18n></th>
+	  	</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td><i18n>firstName</i18n></td>
+  			<td><?php echo $this->prospect['prospect']['firstName'];?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>lastName</i18n></td>
+  			<td><?php echo $this->prospect['prospect']['lastName'];?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>phone</i18n></td>
+  			<td><?php echo $this->prospect['prospect']['phone'];?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>email</i18n></td>
+  			<td><?php echo $this->prospect['prospect']['email'];?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>contactMode</i18n></td>
+  			<td><?php echo $this->translate($this->prospect['prospect']['contactMode']);?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>pets</i18n></td>
+  			<td><?php echo $this->translate($this->prospect['prospect']['pets']);?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>numOtherOccupantsForm</i18n></td>
+  			<td><?php echo $this->translate($this->prospect['prospect']['occupants']);?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>notes</i18n></td>
+  			<td><?php echo $this->prospect['prospect']['notes'];?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>status</i18n></td>
+  			<td><?php echo $this->translate($this->prospect['prospect']['status']);?></td>
+  		</tr>
+  		<tr>
+  			<td><i18n>unitModel</i18n></td>
+  			<td>
+  				<ul>
+  			<?php foreach($this->prospect['models'] as $id=>$model){?>
+  				<li><?php echo $model['name'];?></li>
+  			<?php }?>
+  				</ul>
+  			</td>
+  		</tr>
+  	</tbody>
+</table>
+<?php
+}
+echo $this->internazionalization($this->msg,$this->type);

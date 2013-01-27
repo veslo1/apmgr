@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<refund id="8" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="8" feeId="8" amount="10" transactionId="1"/>
+<refund id="9" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="9" feeId="9" amount="1" transactionId="1"/>
+<refund id="10" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="10" feeId="10" amount="5" transactionId="1"/>
+<refund id="11" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="11" feeId="11" amount="1" transactionId="1"/>
+<forfeitedFee id="9" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="9" feeId="9" amount="1" transactionId="1"/>
+<!-- bill 14 and 15 used in refund helper test do not modify-->
+<refund id="14" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="14" feeId="14" amount="50" transactionId="1"/>
+<refund id="15" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="15" feeId="15" amount="50" transactionId="1"/>
+<forfeitedFee id="14" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="14" feeId="14" amount="50" transactionId="1"/>
+<forfeitedFee id="15" dateCreated="2010-05-01" dateUpdated="2010-05-01" billId="15" feeId="15" amount="50" transactionId="1"/>
+</dataset>

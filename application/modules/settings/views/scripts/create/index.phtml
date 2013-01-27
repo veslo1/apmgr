@@ -1,0 +1,10 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ *
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->bar(array('type'=>'controller','destination'=>'settings','hiddenElements'=>array('index')));
+echo $this->form;

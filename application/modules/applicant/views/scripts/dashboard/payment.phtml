@@ -1,0 +1,15 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * Payment integration for authorize
+ */
+$this->headLink()->prependStylesheet('/css/roundError.css')
+	->headLink()->prependStylesheet('/css/zendform2.css')
+	->headLink()->prependStylesheet('/css/roundSuccess.css')
+	->headLink()->prependStylesheet('/css/roundWarning.css');
+echo $this->headLink();
+?>
+<h1><i18n>payments</i18n></h1>
+<?php
+	echo $this->form;
+?>

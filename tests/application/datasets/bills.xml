@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- should be past the due date and not paid (used for test in lease cancellation) -->
+	<bill id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		originalAmountDue="100" dueDate="2010-05-01" isPaid="0" />
+	<!-- amounts for bill ids 2,3, and 4 are used in lease cancellation - please 
+		do not change the amount -->
+	<bill id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		originalAmountDue="100" dueDate="2010-05-01" isPaid="1" />
+	<bill id="3" dateCreated="2010-05-01" originalAmountDue="50"
+		dueDate="2210-06-01" isPaid="0" />
+	<bill id="4" dateCreated="2010-05-01" originalAmountDue="75"
+		dueDate="2310-07-01" isPaid="0" />
+	<!-- not used in lease creation -->
+	<bill id="5" dateCreated="2010-04-01" originalAmountDue="20"
+		dueDate="2010-04-01" isPaid="0" />
+	<!-- The following fees are used in the Financial_Model_Refund tests -->
+	<bill id="6" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="0" />
+	<bill id="7" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="0" />
+	<bill id="8" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="1" />
+	<bill id="9" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="1" />
+	<bill id="10" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="1" />
+	<bill id="11" dateCreated="2010-04-01" originalAmountDue="10"
+		dueDate="2010-04-01" isPaid="1" />
+	<!-- bill 12 and 13 used in bulk rent payment -->
+	<bill id="12" dateCreated="2010-04-01" originalAmountDue="100"
+		dueDate="2010-05-01" isPaid="0" />
+	<bill id="13" dateCreated="2010-04-01" originalAmountDue="100"
+		dueDate="2010-05-01" isPaid="0" />
+	<!-- bill 14 and 15 used in refund helper test - do not use -->
+	<bill id="14" dateCreated="2010-04-01" originalAmountDue="200"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="15" dateCreated="2010-04-01" originalAmountDue="100"
+		dueDate="2010-05-01" isPaid="1" />
+	<!-- This is used for ApplicantPayment.xml -->
+	<bill id="16" dateCreated="2010-08-22 13:00:00" originalAmountDue="50"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="17" dateCreated="2010-08-22 13:00:00" originalAmountDue="30"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="18" dateCreated="2010-08-22 13:00:00" originalAmountDue="50"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="19" dateCreated="2010-08-22 13:00:00" originalAmountDue="30"
+		dueDate="2010-05-01" isPaid="1" />
+	<!-- 20-23 This is used for payment helper tests -->
+	<bill id="20" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="0" />
+	<bill id="21" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="22" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="1" />
+	<bill id="23" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="0" />
+	<!-- bills 24 and 25 used for lease manual rent payment - do not modify -->
+	<bill id="24" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="0" />
+	<bill id="25" dateCreated="2010-08-22 13:00:00" originalAmountDue="10"
+		dueDate="2010-05-01" isPaid="0" />
+</dataset>

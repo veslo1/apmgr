@@ -1,0 +1,63 @@
+<?php
+/**
+ * Created on Jan 8, 2011 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for a tenant's unit </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+
+// for tenant users
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','createleasefee','cancellease','viewleaselist','viewlease','createeviction','vieweviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments','viewmyleasedocument','viewmyleasedocuments' )		 
+));
+
+
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+
+if ( $this->resultCheck($this->unit) ){
+	?>
+<table>
+	<caption><i18n>unitDetails</i18n></caption>
+	<tr>
+		<th><i18n>apartment</i18n></th>
+		<td><?=$this->unit->getApartment()->getName();?></td>
+	</tr>
+	<tr>
+		<th><i18n>unitNumber</i18n></th>
+		<td><?=$this->unit->getNumber();?></td>
+	</tr>	
+	<tr>
+		<th><i18n>yearBuilt</i18n></th>
+		<td><?=$this->unit->getYearBuilt();?></td>
+	</tr>
+	<tr>
+		<th><i18n>yearRenovated</i18n></th>
+		<td><?=$this->unit->getYearRenovated();?></td>
+	</tr>
+	<tr>
+		<th><i18n>unitModel</i18n></th>
+		<td><?=$this->unit->getUnitModel()->getName();?></td>
+	</tr>
+	<tr>
+		<th><i18n>size</i18n></th>
+		<td><?=$this->unit->getUnitModel()->getSize();?></td>
+	</tr>
+	<tr>
+		<th><i18n>beds</i18n></th>
+		<td><?=$this->unit->getUnitModel()->getNumBeds();?></td>
+	</tr>
+	<tr>
+		<th><i18n>baths</i18n></th>
+		<td><?=$this->unit->getUnitModel()->getNumBaths();?></td>
+	</tr>
+</table>
+<?php } ?>
+

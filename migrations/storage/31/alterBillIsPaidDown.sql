@@ -1,0 +1,1 @@
+ALTER TABLE `bill` CHANGE `isPaid` `isPaid` TINYINT( 1 ) NOT NULL;

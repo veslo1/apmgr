@@ -1,0 +1,33 @@
+<?php
+/**
+ * Created on Nov 13, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.maintenance.views.scripts.view
+ * <p>View page for maintenance </p>
+ **/
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+if ( $this->resultCheck($this->setting) ){
+	?>
+<table>
+	<caption><i18n>maintenanceSetting</i18n></caption>
+	<tr>
+		<th><i18n>role</i18n></th>
+		<th><i18n>defaultAssignedTo</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<tr>
+		<td><i18n><?php echo $this->setting['name']; ?></i18n></td>
+		<td><?php echo $this->setting['firstName'] . ' ' . $this->setting['lastName']; ?></td>		
+		<td> <a href="<?php echo $this->serverUrl('/maintenance/setting/configure/'); ?>">
+		         <img width="24" height="24" title="<i18n>configureSetting</i18n>" src="/images/onebit_20.png" />
+		     </a>
+		</td>	
+	</tr>	
+		
+</table>
+<?php } ?>
+

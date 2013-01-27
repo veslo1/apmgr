@@ -1,0 +1,13 @@
+<?php
+/**
+ * Index file for the modules module
+ * Allows the user to control the modules , controllers and actions in the system.
+ * The main functionalit is to allow the user to provide aliases.
+ * We won't be showing deletes because the user can't delete modules, he can only update
+ * the module name
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+?>
+<h1><i18n>modulesSection</i18n></h1>
+<?php echo $this->back();?>
+<?=$this->controllers('modules');?>

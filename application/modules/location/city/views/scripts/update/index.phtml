@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    function FillRegion() {
+        var info = new Ajax.Request("<?=$this->url( array('module'=>'city', 'controller'=>'create', 'action'=>'getregions'  ) )?>", {
+				method:'post',
+				parameters: { countryId: $('countryId').value },
+				requestHeaders: {Accept: 'application/json'},
+				onSuccess: function(transport) {
+          
+                    var json = transport.responseText.evalJSON();                                                    
+             
+                    for( i=$('provinceId').options.length-1; i>=0; i--) {
+		                $('provinceId')[i]=null;
+                    } 
+                
+                    for( i=0; i<json.length; i++) {                            
+                        $('provinceId')[i] = new Option( json[i].name, json[i].value  );              		       		                          
+                    }                    
+    			},
+    			onFailure: function() {
+    			    alert('Something went wrong...') 
+    			}
+  		} );  		   		  		  		  		
+    }
+</script>
+
+<?php
+/**
+ * Created on Sep 13, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.create
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+?>
+<div class="details">
+<h1>Create a City</h1>
+<div><?php echo $this->crudBar('city');?></div>
+<div class="form"><?php echo $this->form;?></div>
+
+
+</div>

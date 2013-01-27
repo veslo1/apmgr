@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- User setup -->
+	<user id="1" firstName="Jorge" lastName="Vazquez" username="jvazquez"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jvazquez@debserverp4.com.ar"
+		phone="3527-5153" mobile="15555555" fax="0" deleted="0"
+		dateCreated="2010-01-01 00:00:00" dateUpdated="2010-01-01 00:00:00" roleId="1"/>
+
+	<user id="2" firstName="japplicant" lastName="test" username="applicant"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="applicant@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-03-15 12:32:00"
+		dateUpdated="2010-03-15 12:32:00" roleId="2"/>
+	<applicant id="1" dateCreated="2010-03-15 12:32:00"
+		dateUpdated="2010-03-15 12:32:00" userId="2" />
+
+	<user id="3" firstName="john" lastName="connor" username="jconnor"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jconnor@skynet.com"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-04-01 10:00:00"
+		dateUpdated="2010-04-01 10:00:00" roleId="8"/>
+	<applicant id="2" dateCreated="2010-04-01 10:00:00"
+		dateUpdated="2010-04-01 10:00:00" userId="3" />
+
+	<user id="4" firstName="bill" lastName="johnson" username="bjohnson"
+		password="blah" emailAddress="blah@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-05-01 17:20:20"
+		dateUpdated="2010-05-01 17:20:20" roleId="8"/>
+	<applicant id="3" dateCreated="2010-05-01 17:20:20"
+		dateUpdated="2010-05-01 17:20:20" userId="4" />
+
+	<user id="5" firstName="dan" lastName="smith" username="dsmith"
+		password="blah" emailAddress="dsmith@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-08-15 14:00:00"
+		dateUpdated="2010-08-15 14:00:00" roleId="8"/>
+	<applicant id="4" dateCreated="2010-05-01 17:20:20"
+		dateUpdated="2010-08-15 14:00:40" userId="5" />
+<!-- This users will not apply to a unit -->
+	<user id="6" firstName="alfred" lastName="test" username="atest"
+		password="blah" emailAddress="dsmith@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-07-22 13:32:00"
+		dateUpdated="2010-07-22 13:32:00" roleId="8"/>
+	<applicant id="5" dateCreated="2010-05-01 17:20:20"
+		dateUpdated="2010-07-22 13:32:00" userId="6" />
+
+	<user id="7" firstName="jules" lastName="caesar" username="jcaesar"
+		password="blah" emailAddress="jcaesar@debserverp4.com.ar" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-09-05 06:32:00"
+		dateUpdated="2010-09-05 06:32:00" roleId="8"/>
+	<applicant id="6" dateCreated="2010-09-05 06:32:00"
+		dateUpdated="2010-09-05 06:32:00" userId="7" />
+<!-- End of user that do not apply -->
+	<!-- End of user setup -->
+
+	<!-- Starts unit configuration -->
+	<apartment id="1" dateCreated="2010-01-02 09:00:00" name="Test Apartment"
+		addressOne="St Saturn Road 1234" addressTwo="test" city="test" state="TX"
+		zip="7000" country="USA" phone="1234567890" />
+	<unitModel id="1" name="Condo" dateCreated="2010-01-02 10:00:00"
+		dateUpdated="2010-01-02 10:00:00" size="500" numBeds="2" numBaths="2"
+		numFloors="1" />
+	<unitModel id="2" name="ph fondo" dateCreated="2010-01-02 13:00:00"
+		dateUpdated="2010-01-02 13:00:00" size="900" numBeds="2" numBaths="1"
+		numFloors="0" />
+	<amenity id="1" dateCreated="2010-01-02 13:00:00" dateUpdated="2010-01-02 13:00:00"
+		name="Garage" />
+	<amenity id="2" dateCreated="2010-01-02 13:30:00" dateUpdated="2010-01-02 13:30:00"
+		name="Patio" />
+	<unitModelAmenity id="1" dateCreated="2010-01-02 13:05:00"
+		dateUpdated="2010-01-02 13:05:00" unitModelId="1" amenityId="1" />
+	<unitModelAmenity id="2" dateCreated="2010-01-02 13:15:00"
+		dateUpdated="2010-01-02 13:15:00" unitModelId="2" amenityId="2" />
+	<unit id="1" dateCreated="2010-01-02 10:30:00" dateUpdated="2010-01-02 10:30:00"
+		number="1ufc" apartmentId="1" unitModelId="1" isAvailable="1"
+		yearBuilt="1950" yearRenovated="1950" />
+	<unit id="2" dateCreated="2010-01-02 10:31:40" dateUpdated="2010-01-02 10:31:40"
+		number="2ufc" apartmentId="1" unitModelId="2" isAvailable="1"
+		yearBuilt="1950" yearRenovated="1950" />
+	<unit id="3" dateCreated="2010-01-02 13:14:00" number="3fpf"
+		apartmentId="1" unitModelId="2" isAvailable="1" yearBuilt="1950"
+		yearRenovated="1950" dateUpdated="2010-01-02 13:14:00" />
+	<unit id="4" dateCreated="2010-01-02 13:25:00" number="4fpf"
+		apartmentId="1" unitModelId="2" isAvailable="1" yearBuilt="2009"
+		yearRenovated="2009" dateUpdated="2010-01-02 13:25:00" />
+	<unit id="5" dateCreated="2010-01-02 14:00:00" number="5fpf"
+		apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2009"
+		yearRenovated="2009" dateUpdated="2010-01-02 14:00:00" />
+	<!-- End of unit configuration -->
+
+	<!-- Misc configuration -->
+	<applicantStatus id="1" dateCreated="2010-01-01 09:00:00"
+		dateUpdated="2010-01-01 09:00:00" name="pending" />
+	<applicantStatus id="2" dateCreated="2010-01-01 09:00:00"
+		dateUpdated="2010-01-01 09:00:00" name="rejected" />
+	<applicantStatus id="3" dateCreated="2010-01-01 09:00:00"
+		dateUpdated="2010-01-01 09:00:00" name="accepted" />
+	<!-- End of misc configuration -->
+
+	<!-- Appliance -->
+	<applicantAppliance id="1" applicantId="1" unitId="1"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00" />
+	<applicantWorkflowStatus id="1"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="1" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="0" />
+	<applicantWorkflowStatus id="2"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="1" applicantStatusId="3" userId="1" comment="auto move"
+		currentStatus="1" />
+
+	<applicantAppliance id="2" applicantId="2" unitId="2"
+		dateCreated="2010-04-01 10:01:00" dateUpdated="2010-04-01 10:01:00" />
+	<applicantWorkflowStatus id="3"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="2" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="0" />
+	<applicantWorkflowStatus id="4"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="2" applicantStatusId="3" userId="1" comment="auto move"
+		currentStatus="1" />
+
+	<applicantAppliance id="3" applicantId="3" unitId="3"
+		dateCreated="2010-05-01 17:20:20" dateUpdated="2010-05-01 17:20:20" />
+	<applicantWorkflowStatus id="5"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="3" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="0" />
+	<applicantWorkflowStatus id="6"
+		dateCreated="2010-03-15 12:33:00" dateUpdated="2010-03-15 12:33:00"
+		applicantId="3" applicantStatusId="3" userId="1" comment="auto move"
+		currentStatus="1" />
+
+	<applicantAppliance id="4" applicantId="4" unitId="4"
+		dateCreated="2010-06-01 17:20:20" dateUpdated="2010-06-01 17:20:20" />
+	<applicantWorkflowStatus id="7"
+		dateCreated="2010-06-01 17:20:20" dateUpdated="2010-06-01 17:20:20"
+		applicantId="4" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="0" />
+	<applicantWorkflowStatus id="8"
+		dateCreated="2010-06-01 17:20:20" dateUpdated="2010-06-01 17:20:20"
+		applicantId="4" applicantStatusId="3" userId="1" comment="auto move"
+		currentStatus="1" />
+<!-- Users that only apply but will not pay -->
+	<applicantAppliance id="5" applicantId="5" unitId="4"
+		dateCreated="2010-07-22 13:32:00" dateUpdated="2010-07-22 13:32:00" />
+	<applicantWorkflowStatus id="9"
+		dateCreated="2010-07-22 13:32:00" dateUpdated="2010-07-22 13:32:00"
+		applicantId="5" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="1" />
+	<applicantAppliance id="9" applicantId="6" unitId="4"
+		dateCreated="2010-09-05 06:32:00" dateUpdated="2010-09-05 06:32:00" />
+	<applicantWorkflowStatus id="10"
+		dateCreated="2010-09-05 06:32:00" dateUpdated="2010-09-05 06:32:00"
+		applicantId="6" applicantStatusId="1" userId="1" comment="auto move"
+		currentStatus="1" />
+<!-- Users that only apply but will not pay -->	
+	<!-- End of appliance -->
+
+	<!-- Background check -->
+	<applicantBackgroundCheck id="2" applicantId="1"
+		status="passed" notes="automated system test" dateCreated="2010-03-15 12:33:00"
+		dateUpdated="2010-03-15 12:33:00" currentStatus="0" />
+	<applicantBackgroundCheck id="1" applicantId="1"
+		status="notrun" notes="Passed the background check" dateCreated="2010-03-16 09:00:00"
+		dateUpdated="2010-03-16 09:00:00" currentStatus="1" />
+	<applicantBackgroundCheck id="4" applicantId="2"
+		status="passed" notes="automated system test" dateCreated="2010-04-01 10:01:00"
+		dateUpdated="2010-04-01 10:01:00" currentStatus="0" />
+	<applicantBackgroundCheck id="3" applicantId="2"
+		status="notrun" notes="automated system test" dateCreated="2010-04-02 09:10:10"
+		dateUpdated="2010-04-02 09:10:10" currentStatus="1" />
+	<applicantBackgroundCheck id="5" applicantId="3"
+		status="passed" notes="automated system test" dateCreated="2010-05-01 09:40:20"
+		dateUpdated="2010-05-01 09:40:20" currentStatus="0" />
+	<applicantBackgroundCheck id="6" applicantId="3"
+		status="notrun" notes="automated system test" dateCreated="2010-05-02 09:00:00"
+		dateUpdated="2010-05-02 09:00:00" currentStatus="1" />
+	<applicantBackgroundCheck id="7" applicantId="4"
+		status="notrun" notes="automated system test" dateCreated="2010-05-02 10:20:20"
+		dateUpdated="2010-05-02 10:20:20" currentStatus="1" />
+	<applicantBackgroundCheck id="8" applicantId="5"
+		status="notrun" notes="Autoamted System flow" dateCreated="2010-07-22 13:32:00"
+		dateUpdated="2010-07-22 13:32:00" currentStatus="1" />
+	<!-- End of background check -->
+
+	<!-- Payment -->
+	<account id="1" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="account1" number="123" orientation="debit" accountTypeId="1"/>
+	<account id="2" dateCreated="2010-01-01 09:00:00" name="account2"
+		dateUpdated="2010-01-01 09:00:00" number="124" orientation="credit" accountTypeId="2"/>
+	<account id="3" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="account3" number="321" orientation="debit" accountTypeId="3"/>
+	<account id="4" dateCreated="2010-01-01 09:00:00" name="account4"
+		dateUpdated="2010-01-01 09:00:00" number="421" orientation="credit" accountTypeId="4"/>
+	<fee id="1" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="fee1" amount="50" debitAccountId="1" creditAccountId="2"
+		enabled="1" refundable="0" />
+	<fee id="2" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="fakefee2" amount="10" debitAccountId="3" creditAccountId="4"
+		enabled="1" refundable="0" />
+	<fee id="3" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="fakefee3" amount="5" debitAccountId="3" creditAccountId="4"
+		enabled="1" refundable="0" />
+	<fee id="4" dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00"
+		name="fakefee4" amount="10.84" debitAccountId="3" creditAccountId="4"
+		enabled="1" refundable="0" />
+	<applicantFeeSetting id="1" feeId="1"
+		dateCreated="2010-01-01 09:00:00" dateUpdated="2010-01-01 09:00:00" />
+
+	<bill id="1" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00"
+		originalAmountDue="50" dueDate="2010-07-30" isPaid="1" />
+	<bill id="2" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00"
+		originalAmountDue="10" dueDate="2010-07-30" isPaid="1" />
+	<bill id="3" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00"
+		originalAmountDue="5" dueDate="2010-07-30" isPaid="1" />
+	<bill id="4" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00"
+		originalAmountDue="10.84" dueDate="2010-07-30" isPaid="1" />
+
+	<bill id="5" dateCreated="2010-04-01 10:02:00" dateUpdated="2010-04-01 10:02:00"
+		originalAmountDue="50" dueDate="2010-05-01" isPaid="1" />
+	<bill id="6" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		originalAmountDue="50" dueDate="2010-05-01" isPaid="1" />
+
+	<bill id="7" dateCreated="2010-05-01 17:25:20" dateUpdated="2010-05-01 17:25:20"
+		originalAmountDue="50" dueDate="2010-05-01" isPaid="1" />
+	<bill id="8" dateCreated="2010-05-01 17:25:20" dateUpdated="2010-05-01 17:25:20"
+		originalAmountDue="10" dueDate="2010-05-01" isPaid="1" />
+	<bill id="9" dateCreated="2010-05-01 17:25:20" dateUpdated="2010-05-01 17:25:20"
+		originalAmountDue="5" dueDate="2010-05-01" isPaid="1" />
+	<bill id="10" dateCreated="2010-05-01 17:25:20" dateUpdated="2010-05-01 17:25:20"
+		originalAmountDue="10.84" dueDate="2010-05-01" isPaid="1" />
+
+	<applicantFeeBill id="1" applicantId="1" feeId="1"
+		billId="1" amount="50" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00" />
+	<applicantFeeBill id="2" applicantId="1" feeId="2"
+		billId="2" amount="10" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00" />
+	<applicantFeeBill id="3" applicantId="1" feeId="3"
+		billId="3" amount="5" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00" />
+	<applicantFeeBill id="4" applicantId="1" feeId="3"
+		billId="4" amount="10.84" dateCreated="2010-03-15 12:32:00"
+		dateUpdated="2010-03-15 12:32:00" />
+
+	<applicantFeeBill id="5" applicantId="2" feeId="1"
+		billId="5" amount="50" dateCreated="2010-04-01 10:02:00" dateUpdated="2010-04-01 10:02:00" />
+	<applicantFeeBill id="6" applicantId="3" feeId="1"
+		billId="6" amount="50" dateCreated="2010-08-22 13:00:00" />
+
+	<applicantFeeBill id="7" applicantId="4" feeId="1"
+		billId="7" amount="50" dateCreated="2010-05-01 17:25:20" dateUpdated="2010-05-01 17:25:20" />
+	<applicantFeeBill id="8" applicantId="4" feeId="2"
+		billId="8" amount="10" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00" />
+	<applicantFeeBill id="9" applicantId="4" feeId="3"
+		billId="9" amount="5" dateCreated="2010-03-15 12:32:00" dateUpdated="2010-03-15 12:32:00" />
+	<applicantFeeBill id="10" applicantId="4" feeId="3"
+		billId="10" amount="10.84" dateCreated="2010-03-15 12:32:00"
+		dateUpdated="2010-03-15 12:32:00" />
+
+	<transaction id="1" dateCreated="2010-07-25 13:00:00"
+		dateUpdated="2010-07-25 13:00:00" userId="2" />
+	<transaction id="2" dateCreated="2010-04-01 10:02:00"
+		dateUpdated="2010-04-01 10:02:00" userId="3" />
+	<transaction id="3" dateCreated="2010-08-22 13:00:00"
+		dateUpdated="2010-08-22 13:00:00" userId="4" />
+	<transaction id="4" dateCreated="2010-08-22 13:00:00"
+		dateUpdated="2010-08-22 13:00:00" userId="5" />
+
+	<paymentDetail id="1" dateCreated="2010-03-15 12:32:00"
+		dateUpdated="2010-03-15 12:32:00" totalAmount="75.84" payor="me"
+		paymentType="creditcard" />
+	<paymentDetail id="2" dateCreated="2010-04-01 10:02:00"
+		dateUpdated="2010-04-01 10:02:00" totalAmount="50" payor="me"
+		paymentType="creditcard" />
+	<paymentDetail id="3" dateCreated="2010-08-22 13:00:00"
+		dateUpdated="2010-08-22 13:00:00" totalAmount="50" payor="me"
+		paymentType="check" />
+	<paymentDetail id="4" dateCreated="2010-05-01 17:25:20"
+		dateUpdated="2010-05-01 17:25:20" totalAmount="75.84" payor="me"
+		paymentType="creditcard" />
+
+	<payment id="1" dateCreated="2010-07-25 13:00:00" dateUpdated="2010-07-25 13:00:00"
+		billId="1" amtPaid="50" transactionId="1" paymentDetailId="1" />
+	<payment id="2" dateCreated="2010-07-25 13:00:00" dateUpdated="2010-07-25 13:00:00"
+		billId="2" amtPaid="10" transactionId="1" paymentDetailId="1" />
+	<payment id="3" dateCreated="2010-07-25 13:00:00" dateUpdated="2010-07-25 13:00:00"
+		billId="3" amtPaid="5" transactionId="1" paymentDetailId="1" />
+	<payment id="4" dateCreated="2010-07-25 13:00:00" dateUpdated="2010-07-25 13:00:00"
+		billId="4" amtPaid="10.84" transactionId="1" paymentDetailId="1" />
+
+	<payment id="5" dateCreated="2010-04-01 10:02:00" dateUpdated="2010-04-01 10:02:00"
+		billId="5" amtPaid="50" transactionId="2" paymentDetailId="2" />
+
+	<payment id="6" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		billId="6" amtPaid="50" transactionId="3" paymentDetailId="3" />
+
+	<payment id="7" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		billId="7" amtPaid="50" transactionId="4" paymentDetailId="3" />
+	<payment id="8" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		billId="8" amtPaid="10" transactionId="4" paymentDetailId="3" />
+	<payment id="9" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		billId="9" amtPaid="5" transactionId="4" paymentDetailId="3" />
+	<payment id="10" dateCreated="2010-08-22 13:00:00" dateUpdated="2010-08-22 13:00:00"
+		billId="10" amtPaid="10.84" transactionId="4" paymentDetailId="3" />
+	<!-- End of payment -->
+
+	<!-- And put the report -->
+	<reports id="4" name="applicantReport" cacheIdentifier='appreport'
+		moduleId="1" cacheTtl="60" urlPath='applicant' datecreated="2010-11-26 21:23:55" />
+</dataset>

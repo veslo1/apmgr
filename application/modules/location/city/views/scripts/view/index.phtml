@@ -1,0 +1,55 @@
+<?php
+/**
+ * Created on Sep 13, 2009
+ * index.phtml
+ * jvazquez
+ * @package modules.role.views.scripts.index
+ * <p>The view object of the index</p>
+ */
+?>
+
+<div id="content">
+<h1>City</h1>
+<div><?php echo $this->crudBar('city');?></div>
+</div>
+
+
+<div id="msg">
+<div><?php if( isset($this->view->msg) ) echo $this->view->msg;?></div>
+</div>
+
+
+<?php
+//require_once '/usr/local/www/datesite/application/helpers/TestGrid.php';
+$fields = array( 'Id' => 'ID',
+                     'name' => 'City Name',
+                     'Province.Name' => 'Province Name'                                    
+                     );
+
+                     //                var_dump( $this->paginator );
+
+                     echo $this->testGrid(  'grd',
+                     $fields,
+                     $this->paginator,
+                     true,
+                     array( 'Edit' => array(
+                                                           'column'=>'Id',                                                              
+                                                           'module'=>'city',
+                                                           'controller'=>'update',
+                                                           'action'=>'index', 
+                                                           'image'=>'onebit_20.png'),
+                      
+                                       'Delete' => array( 
+                                           'column'=>'Id', 
+                                           'module'=>'city',
+                                           'controller'=>'delete',
+                                           'action'=>'delete', 
+                                           'image'=>'onebit_33.png',
+                                           'js'=>  array( // javascript crap 
+                     // js action => the callback function => ( callback params  )
+                                                            'onClick'=>array(  'deleteElement' => array('id') ) ))                                      
+                     ));
+
+
+                     ?>
+

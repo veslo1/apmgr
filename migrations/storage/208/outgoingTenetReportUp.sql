@@ -1,0 +1,2 @@
+INSERT INTO `apmgr`.`reports` ( `id` , `name` , `cacheIdentifier` , `moduleId` , `cacheTtl` , `urlPath` , `dateCreated` , `dateUpdated` )
+VALUES ( NULL , 'outgoingTenets', 'outgoingTenets', '12', '60', 'outgoingtenets', '2010-11-24 20:04:21', NULL );

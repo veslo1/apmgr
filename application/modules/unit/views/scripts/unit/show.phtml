@@ -1,0 +1,19 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * @package unit.views.scripts.unit
+ */
+$this->internazionalization($this->msg,$this->type);
+if($this->img!==null)
+{
+?>
+	<img src="<?php echo $this->img['path'].DIRECTORY_SEPARATOR.$this->img['fileName'];?>"
+		alt="<?php echo $this->img['description'];?>"
+		title="<?php echo $this->img['description'];?>"
+	/>
+	<br/>
+	<i18n>description</i18n>::<strong><?php echo $this->img['description'];?></strong><br/>
+<!--	<i18n>sizeBytes</i18n>::<strong><?php echo $this->img['size'];?></strong>-->
+<?php
+}
+?>

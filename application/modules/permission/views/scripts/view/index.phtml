@@ -1,0 +1,50 @@
+<?php
+/**
+ * Created on Sep 20, 2009 by jvazquez
+ * @name datesite
+ * @package application.modules.permissions.views.scripts.view
+ * <p>
+ * Page for the permissions
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/paginator.css');
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+?>
+<h1><i18n>permissionTitle</i18n></h1>
+<?php
+echo $this->back();
+echo $this->bar(array('type'=>'controller','destination'=>'permission'));
+echo $this->message($this->msg);
+?>
+<table>
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'permission','column'=>'alias','sort'=>$this->sort));?>'>
+			<i18n>aliasHeader</i18n> </a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'permission','column'=>'dateCreated','sort'=>$this->sort));?>'>
+			<i18n>dateCreated</i18n> </a></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->records as $id=>$object) { $css = ($id%2==0)?'tablecellsEven':'tablecellsOdd'; ?>
+		<tr>
+			<td class='<?=$css?>'><?=$object->getAlias();?></td>
+			<td class='<?=$css?>'><?=$object->getDateCreated();?></td>
+			<td class='<?=$css?>'><a
+				href="<?=$this->Url(array('controller'=>'update','action'=>'index','module'=>'permission','id'=>$object->getId())); ?>"><img
+				src='/images/24/onebit_20.gif'
+				alt='<?=$this->translator('update')?>'
+				title='<?=$this->translator('update')?>' /></a> <a
+				href="<?=$this->url(array('controller'=>'view','action'=>'view','module'=>'permission','id'=>$object->getId())); ?>"><img
+				src='/images/24/onebit_02.gif'
+				alt='<?=$this->translator('update')?>'
+				title='<?=$this->translator('view')?>' /></a></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->records,'Sliding', 't3.phtml');?>

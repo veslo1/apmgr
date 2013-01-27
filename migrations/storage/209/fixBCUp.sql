@@ -1,0 +1,1 @@
+ALTER TABLE `applicantBackgroundCheck` ADD `currentStatus` BOOLEAN NOT NULL AFTER `notes`; 

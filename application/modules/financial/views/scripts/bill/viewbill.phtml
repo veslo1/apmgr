@@ -1,0 +1,115 @@
+<?php
+/**
+ * Created on April 27, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.financial.views.scripts.view
+ * <p>View bill details </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<?php
+if( $this->msg ) {
+	echo $this->message($this->msg);
+}
+
+echo $this->anchor($this->returnLink);
+if ( $this->resultCheck($this->bill) ){
+	?>
+<!-- bill -->
+<table id='currenttable'>
+	<caption><i18n>billDetails</i18n></caption>
+	<tr>	<th><i18n>originalAmount</i18n></th>
+		<td><?php echo $this->bill->getOriginalAmountDue();?></td>	
+	</tr>
+	<tr>
+		<th><i18n>dueDate</i18n></th>
+		<td><?php echo $this->dateFormat($this->bill->getDueDate(), 'mdy');?></td>	
+	</tr>
+	<tr>
+		<th><i18n>dateCreated</i18n></th>
+		<td><?php echo $this->dateFormat($this->bill->getDateCreated(), 'mdy');?></td>	
+	</tr>
+	<tr>
+		<th><i18n>currentAmountDue</i18n></th>
+		<td><?php echo $this->billCurrentDue; ?></td>	
+	</tr>
+</table>
+<?php } ?>
+
+<!-- payments -->
+<?php if ( $this->resultCheck($this->payments) ){ ?>
+<table id='currenttable'>
+	<caption><i18n>payments</i18n></caption>	
+	<tr>
+		<th><i18n>dateOfPayment</i18n></th>
+		<th><i18n>paymentAmount</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->payments as $id=>$item ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($item->getDateCreated(),'mdy'); ?></td>
+		<td><?php echo $item->getAmtPaid(); ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/payment/viewpaymentdetail/paymentDetailId/'. $item->getPaymentDetailId() ); ?>">
+		<img width="24" height="24" src="/images/search_48.png" /> </a></td>
+	</tr>
+	<?php } ?>
+</table>
+<?php } ?>
+
+
+<!-- refunds -->
+<?php if ( $this->resultCheck($this->refunds) ){ ?>
+<table id='currenttable'>
+	<caption><i18n>refunds</i18n></caption>
+	
+	<tr>
+		<th><i18n>dateOfRefund</i18n></th>
+		<th><i18n>refundAmount</i18n></th>		
+	</tr>
+	<?php foreach( $this->refunds as $id=>$item ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($item->getDateCreated(),'mdy'); ?></td>
+		<td><?php echo $item->getAmount(); ?></td>		
+	</tr>
+	<?php } ?>
+</table>
+<?php } ?>
+
+<!-- forfeits -->
+<?php if ( $this->resultCheck($this->forfeits) ){ ?>
+<table id='currenttable'>
+	<caption><i18n>forfeits</i18n></caption>	
+	<tr>
+		<th><i18n>dateOfForfeit</i18n></th>
+		<th><i18n>forfeitAmount</i18n></th>		
+	</tr>
+	<?php foreach( $this->forfeits as $id=>$item ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($item->getDateCreated(),'mdy'); ?></td>
+		<td><?php echo $item->getAmount(); ?></td>		
+	</tr>
+	<?php } ?>
+</table>
+<?php } ?>
+
+<!-- transfers -->
+<?php if ( $this->resultCheck($this->transfersOut) ){ ?>
+<table id='currenttable'>
+	<caption><i18n>transfersOut</i18n></caption>	
+	<tr>
+		<th><i18n>dateOfTransfer</i18n></th>
+		<th><i18n>amount</i18n></th>		
+	</tr>
+	<?php foreach( $this->transfersOut as $id=>$item ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($item->getDateCreated(),'mdy'); ?></td>
+		<td><?php echo $item->getAmount(); ?></td>		
+	</tr>
+	<?php } ?>
+</table>
+<?php } ?>
+

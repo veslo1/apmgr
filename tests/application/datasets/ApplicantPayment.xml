@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<applicantFeeBill id="1" applicantId="1" feeId="1"
+		billId="16" amount="50" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="2" applicantId="1" feeId="2"
+		billId="17" amount="30" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="3" applicantId="3" feeId="1"
+		billId="18" amount="50" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="4" applicantId="3" feeId="2"
+		billId="19" amount="30" dateCreated="2010-08-22 13:00:00" />
+	<!-- 9 Used in prelease - do not modify -->
+	<applicantFeeBill id="9" applicantId="9" feeId="16" billId="16" amount="10" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="10" applicantId="9" feeId="16" billId="16" amount="100" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="11" applicantId="9" feeId="16" billId="10" amount="10" dateCreated="2010-08-22 13:00:00" />
+	<!-- 12, 13, 14 Used in pmt helper - do not modify -->
+	<applicantFeeBill id="12" applicantId="10" feeId="18" billId="20" amount="10" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="13" applicantId="10" feeId="18" billId="21" amount="10" dateCreated="2010-08-22 13:00:00" />
+	<applicantFeeBill id="14" applicantId="12" feeId="18" billId="22" amount="10" dateCreated="2010-08-22 13:00:00" />	
+</dataset>

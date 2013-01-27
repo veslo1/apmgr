@@ -1,0 +1,30 @@
+<?php
+/**
+ * The reports page
+ */
+echo $this->headLink()->prependStylesheet('/css/mytable.css');
+?>
+<table>
+	<caption>
+		<i18n>maintenenceReports</i18n>
+	</caption>
+	<thead>
+		<tr>
+			<th><i18n>reportName</i18n></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach($this->reports as $report){ ?>
+		<tr>
+			<td><p><i18n><?php echo $this->translate($report['name']);?></i18n></p></td>
+			<td>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>$report['urlPath']));?>">
+					<img src="/images/onebit_02.png" alt="<?php echo $this->translate('view');?>" title="<?php echo $this->translate('view');?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>$report['urlPath'],'export'=>1));?>"><img src="/images/excel_Icon.png" alt="excel" title="excel"/></a>
+			</td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>

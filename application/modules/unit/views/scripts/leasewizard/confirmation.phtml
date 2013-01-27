@@ -1,0 +1,169 @@
+<?php
+/**
+ * Created on Mar 12, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * Confirmation page of the wizard  (last page of wizard)
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headLink()->appendStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+if( $this->messages )
+echo $this->Message($this->messages);
+echo $this->form; ?>
+<br>
+<table>
+	<caption><i18n>leaseGeneralDetail</i18n></caption>
+	<tr>
+		<th><i18n>unitNumber</i18n></th>
+		<td><?php echo $this->item->getUnit()->getNumber(); ?></td>
+	</tr>
+
+	<tr>
+		<th><i18n>effectiveDate</i18n></th>
+		<td><?php echo $this->DateFormat( $this->item->getEffectiveDate(), 'mdy' ); ?>
+		</td>
+	</tr>        
+	<tr>
+		<th><i18n>leaseStartDate</i18n></th>
+		<td><?php echo $this->DateFormat( $this->item->getMoveInDate(), 'mdy' ); ?>
+		</td>
+	</tr>
+	<tr>
+		<th><i18n>leaseEndDate</i18n></th>
+		<td><?php echo $this->DateFormat( $this->item->getEndDate(), 'mdy' ); ?>
+		</td>
+	</tr>
+</table>
+
+<table>
+	<caption><i18n>leaseDetails</i18n></caption>
+	<tr>
+		<th><i18n>numMonths</i18n>
+		</td>
+		<th><i18n>rentAmount</i18n>
+		</td>
+		<th><i18n>prorationMonth</i18n>
+		</td>
+		<th><i18n>prorationAmount</i18n>
+		</td>
+	
+	</tr>
+
+	<tr>
+		<td><?php echo $this->scheduleItem->getNumMonths(); ?></td>
+		<td><?php echo $this->scheduleItem->getRentAmount(); ?></td>
+		<?php  if( isset( $this->prorationEnabled ) && $this->prorationCheck) { ?>
+		    <td><?php echo $this->proration['month']; ?></td>
+		    <td><?php echo $this->proration['amount']; ?></td>
+		<?php } else { ?>
+		     <td>&nbsp;</td>
+		     <td>&nbsp;</td>
+		<?php }?>
+	</tr>
+</table>
+
+<table>
+	<caption><i18n>tenants</i18n></caption>
+
+	<?php foreach( $this->item->getTenant() as $id=>$name) { ?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<td><?php echo $name; ?></td>
+	</tr>
+	<?php } ?>
+</table>
+
+<table>
+	<caption><i18n>discounts</i18n></caption>
+	<?php if( $this->item->getDiscount()) { ?>
+	<tr>
+		<th><i18n>month</i18n>
+		</td>
+		<th><i18n>discountAmount</i18n>
+		</td>
+	
+	</tr>
+
+	<?php foreach( $this->item->getDiscount() as $month=>$amount) { ?>
+	<tr>
+		<td><?php echo $month; ?></td>
+		<td><?php echo $amount; ?></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } else echo '<tr><td><i18n>noDiscountsEntered</i18n></td></tr>';?>
+
+<table>
+	<caption><i18n>leaseFees</i18n></caption>
+	<?php if( $this->item->getLeaseFee()) { ?>
+	<tr>
+		<th><i18n>fee</i18n></th>
+		<th><i18n>amount</i18n></th>		
+	</tr>
+
+	<?php foreach( $this->item->getLeaseFee() as $id=>$fee) { ?>
+	<tr>
+		<td><?php echo $fee['feeName']; ?></td>
+		<td><?php echo $fee['amount']; ?></td>
+	</tr>
+	<?php } ?>
+	<?php } else echo '<tr><td><i18n>noLeaseFeesSelected</i18n></td></tr>';?>
+</table>
+
+<table>
+	<caption><i18n>preleaseFees</i18n></caption>
+	<?php if( $this->item->getPreleaseFee()) { ?>
+	<tr>
+		<th><i18n>fee</i18n></th>
+		<th><i18n>amount</i18n></th>
+		<th><i18n>name</i18n></th>
+	</tr>
+
+	<?php foreach( $this->item->getPreleaseFee() as $id=>$fee) {  ?>
+	<tr>
+		<td><?php echo $fee['feeName']; ?></td>
+		<td><?php echo $fee['amount']; ?></td>
+		<td><?php echo $fee['firstName'] . ' ' . $fee['lastName']; ?></td>
+	</tr>
+	<?php } ?>
+	<?php } else echo '<tr><td><i18n>noPreleaseFeesSelected</i18n></td></tr>';?>
+</table>
+
+<table>
+	<caption><i18n>newFees</i18n></caption>
+	<?php if( $this->item->getFee()) { ?>
+	<tr>
+		<th><i18n>fee</i18n></th>
+		<th><i18n>amount</i18n></th>
+	</tr>
+
+	<?php foreach( $this->item->getFee() as $id=>$fee) {  ?>
+	<tr>
+		<td><?php echo $fee['name']; ?></td>
+		<td><?php echo $fee['amount']; ?></td>
+	</tr>
+	<?php } ?>
+	<?php } else echo '<tr><td><i18n>noNewFeesSelected</i18n></td></tr>';?>
+</table>
+
+<table>
+	<caption><i18n>recurringFees</i18n></caption>
+	<?php if( $this->item->getRecurringFee()) { ?>
+	<tr>
+		<th><i18n>fee</i18n></th>
+		<th><i18n>amount</i18n></th>
+	</tr>
+
+	<?php foreach( $this->item->getRecurringFee() as $id=>$fee) {  ?>
+	<tr>
+		<td><?php echo $fee['name']; ?></td>
+		<td><?php echo $fee['amount']; ?></td>
+	</tr>
+	<?php } ?>
+	<?php } else echo '<tr><td><i18n>noRecurringFeesSelected</i18n></td></tr>';?>
+</table>

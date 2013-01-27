@@ -1,0 +1,51 @@
+<?php
+/**
+ * Created on Sep 26, 2009 by jvazquez
+ * @name datesite
+ * @package application.modules.region.views.scripts.view
+ * <p>View page for a single region</p>
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+echo $this->headLink()->appendStylesheet('/css/records.css');
+?>
+<div class="details">
+<h1>Region Section</h1>
+<h3>View Region</h3>
+<div class="crudbar"><?php echo $this->crudBar('region');?></div>
+<div class="results"><?php 
+if ( $this->resultCheck($this->record) ){
+	?>
+<table>
+	<tr class="tableHeader">
+		<td>Id</td>
+		<td>Name</td>
+		<td>Parent Region</td>
+		<td>Country</td>
+		<td>Date Created</td>
+		<td>Date Updated</td>
+		<td>Actions</td>
+	</tr>
+	<tr class="tableRecords">
+		<td><?=$this->record['id'];?></td>
+		<td><?=$this->record['name'];?></td>
+		<td><?=$this->record['parentreigionid'];?></td>
+		<td><?=$this->record['countryid'];?></td>
+		<td><?=$this->record['datecreated'];?></td>
+		<td><?=$this->record['dateupdated'];?></td>
+		<td><a
+			href="<?=$this->serverUrl('/region/view/'. $this->record['id']);?>"
+			class="cleanlink"><img src="/images/view.gif" alt="View region"
+			title="View region" /></a> <a
+			href="<?=$this->serverUrl('/region/update/'. $this->record['id']);?>"
+			class="cleanlink"><img src="/images/edit.gif" title="Update region"
+			alt="Update region" /></a> <a
+			href="<?=$this->serverUrl('/region/delete/'. $this->record['id']);?>"
+			class="cleanlink"><img src="/images/delete.gif" alt="Delete region"
+			title="Delete region" /></a></td>
+	</tr>
+</table>
+	<?php
+}
+?></div>
+</div>
+

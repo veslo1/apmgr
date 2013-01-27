@@ -1,0 +1,1 @@
+DELETE FROM rolePermission WHERE permissionId = '192';

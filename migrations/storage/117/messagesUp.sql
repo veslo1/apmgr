@@ -1,0 +1,2 @@
+INSERT INTO `apmgr`.`messages` (`message` ,`identifier` ,`category` ,`language` ,`locked` ,`dateCreated` ,`dateUpdated`) VALUES 
+('Record Created Successfully!', 'recordCreatedSuccessfully', 'success', 'en_US', '1', '2010-08-22', NULL );

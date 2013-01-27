@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<apartment id="1" dateCreated="2010-05-01" name="test" addressOne="test" addressTwo="test" city="test" state="tx" zip="12345" country="test" phone="1234567890"/>
+<unitModel id="1" name="testModel" dateCreated="2010-05-01" size="1000" numBeds="1" numBaths="1" numFloors="1" />
+<unitModel id="2" name="modelTest" dateCreated="2009-01-01" size="500" numBeds="2" numBaths="2" numFloors="2" />
+<unitModel id="3" name="aTest" dateCreated="2009-03-01" size="900" numBeds="4" numBaths="1" numFloors="1" />
+<unitModel id="4" name="A1B22" dateCreated="2009-04-01" size="1000" numBeds="2" numBaths="1.5" numFloors="2" />
+<unitModel id="5" name="ZB122" dateCreated="2010-01-01" size="8000" numBeds="5" numBaths="4" numFloors="5" />
+<unitModel id="6" name="1AzB2" dateCreated="2010-02-01" size="6000" numBeds="4" numBaths="4" numFloors="4" />
+<unit id="1" dateCreated="2010-05-01" number="A" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004"/>
+<unit id="2" dateCreated="2010-05-01" number="1A" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004"/>
+<unit id="3" dateCreated="2010-05-01" number="2B" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004"/>
+<unit id="4" dateCreated="2010-05-01" number="3C" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004"/>
+<unit id="5" dateCreated="2010-05-01" number="ABC" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004"/>
+<!-- units 5 and 6 used for bulk rent payment -->
+<unit id="6" dateCreated="2010-05-01" number="7X" apartmentId="1" unitModelId="1" isAvailable="0" yearBuilt="2000" yearRenovated="2004"/>
+<unit id="7" dateCreated="2010-05-01" number="8X" apartmentId="1" unitModelId="1" isAvailable="0" yearBuilt="2000" yearRenovated="2004"/>
+<modelRentSchedule id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" unitModelId="1" effectiveDate="2010-05-01"/>
+<modelRentScheduleItem id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" modelRentScheduleId="1" rentAmount="500" numMonths="3"/>    
+</dataset>

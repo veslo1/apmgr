@@ -1,0 +1,68 @@
+<?php
+/**
+ * Created on Jan 9, 2009 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+
+/*  Layout:
+
+
+------------------------
+Unit Details
+------------------------
+Basic Info (apartment, number)
+Extra Info ( furnished, size, utilities, map, etc  )
+Click link to view tenant info
+
+Need icons for removal/edit etc
+
+*/
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<?php
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('index','show','unitsforrent','updateunit','viewunit','viewunitgraphics'),		 
+));
+
+
+if ( $this->resultCheck($this->unit) ){
+	?>
+<table>
+	<caption><i18n>unitDetails</i18n></caption>
+	<tr>
+		<th><i18n>apartment</i18n></th>
+		<td><?=$this->unit->getApartment()->getName();?></td>
+	</tr>
+	<tr>
+		<th><i18n>unitNumber</i18n></th>
+		<td><?=$this->unit->getNumber();?></td>
+	</tr>
+	<tr>
+		<th><i18n>unitModel</i18n></th>
+		<td><?=$this->unit->getUnitModel()->getName();?></td>
+	</tr>
+	<tr>
+		<th><i18n>yearBuilt</i18n></th>
+		<td><?=$this->unit->getYearBuilt();?></td>
+	</tr>
+	<tr>
+		<th><i18n>yearRenovated</i18n></th>
+		<td><?=$this->unit->getYearRenovated();?></td>
+	</tr>
+	<tr>
+		<th><i18n>isAvailableForRenting</i18n></th>
+		<td><?=$this->unit->getIsAvailableString();?></td>
+	</tr>
+	<tr>
+		<th><i18n>dateAvailable</i18n></th>
+		<td><?= $this->dateFormat($this->unit->getDateAvailable(),'mdy');?></td>
+	</tr>
+</table>
+<?php } ?>
+

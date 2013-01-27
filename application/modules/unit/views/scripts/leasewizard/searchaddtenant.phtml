@@ -1,0 +1,113 @@
+<?php
+/**
+ * Created on Dec 11, 2009
+ * index.phtml
+ * @author rnelson
+ * @package application.modules.user.views.scripts.tenant
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headLink()->appendStylesheet('/css/table.css'); // used on tenant list
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+?>
+
+<script type="text/javascript">
+    function addUserToList( $id ) {
+        var info = new Ajax.Request("<?=$this->url( array('module'=>'unit',
+                                                          'controller'=>'leasewizard',
+                                                          'action'=>'addusertolist'  ) )?>", {
+				method:'post',
+				parameters: { userId: $id },
+				requestHeaders: {Accept: 'application/json'},
+				onSuccess: function(transport) {
+                                    var json = transport.responseText.evalJSON(true);                                                                        
+                                    
+				    var tableContents='<caption><i18n>currentTenantList</i18n></caption><th><i18n>name</i18n></th><th><i18n>actions</i18n></th>';				    
+                                   
+                                    for(var i = 0; i < json.length; i++){
+                                        if( json[i].name )
+                                            tableContents += '<tr><td>' + json[i].name + '</td><td><input type="image" src="/images/24/cancel.gif" title="<i18n>removeUser</i18n>" onClick="removeUser(' + json[i].id +')"/></td></tr>';
+                                    }                                                  
+                                                                             
+                                    $('currentTenants').update( tableContents );                                                                                                      
+    			},
+    			onFailure: function() {
+    			    alert('Something went wrong...') 
+    			}
+  		} );  		   		  		  		  		
+    }
+    
+    function removeUser( $id ) {
+             var info = new Ajax.Request("<?=$this->url( array('module'=>'unit',
+                                                          'controller'=>'leasewizard',
+                                                          'action'=>'removeuserfromlist'  ) )?>", {
+				method:'post',
+				parameters: { userId: $id },
+				requestHeaders: {Accept: 'application/json'},
+				onSuccess: function(transport) {
+                                    var json = transport.responseText.evalJSON(true);                                                                                                                                               
+                                  
+                                    var tableContents='<caption><i18n>currentTenantList</i18n></caption><th><i18n>name</i18n></th><th><i18n>actions</i18n></th>';		
+                                   
+                                   for(var i = 0; i < json.length; i++){
+                                        if( json[i].name )
+                                            tableContents += '<tr><td>' + json[i].name + '</td><td> <input type="image" src="/images/24/cancel.gif" title="<i18n>removeUser</i18n>"  onClick="removeUser(' + json[i].id +')"/></td></tr>';
+                                    }                               
+                                    
+                                   if( tableContents=='' )
+                                       tableContents = '<tr><td><i18>noTenantsSelected</i18n></td></tr>';                                       
+                                   $('currentTenants').update( tableContents );                                                        
+                                    
+    			},
+    			onFailure: function() {
+    			    alert('Something went wrong...') 
+    			}
+  		} );  		   		   
+    }
+    
+</script>
+
+<?php echo $this->internazionalization($this->message['msg'],$this->message['type']); ?>
+
+<?php echo $this->form;?>
+<br>
+
+<table id='currenttable'>
+	<caption><i18n>userSearchResults</i18n></caption>
+	<?php if ( isset( $this->records ) ){  ?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<th><i18n>userName</i18n></th>
+		<th><i18n>email</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->records as $id => $user ){  ?>
+	<tr>
+		<td><?php echo $user->getFirstName() . ' ' . $user->getLastName(); ?></td>
+		<td><?php echo $user->getUsername(); ?></td>
+		<td><?php echo $user->getEmailAddress(); ?></td>
+		<td><input type="image" height="24" src="/images/onebit_17.png"
+			title="<i18n>addUser</i18n>" name="add"
+			onClick="addUserToList( <?php echo $user->getId(); ?> )" /></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } else echo '<tr><td><i18n>noUsersFound</i18n></td></tr>';?>
+
+
+<!--<div class="pagtable">-->
+<table id="currentTenants">
+	<caption><i18n>currentTenantList</i18n></caption>
+	<?php if( $this->tenants ){?>
+	<th><i18n>name</i18n></th><th><i18n>actions</i18n></th>
+	<?php foreach( $this->tenants as $id=>$tenant ) {  ?>
+	<tr>
+		<td><?php echo $tenant; ?></td>
+		<td><input type="image" src="/images/24/cancel.gif"
+			title="<i18n>removeUser</i18n>"
+			onClick="removeUser(<?php echo $id; ?>)" /></td>
+	</tr>
+	<?php }} else echo '<tr><td><i18n>noTenantsSelected</i18n></td></tr>';?>	
+</table>
+<!--</div>-->
+
+	<?php echo $this->nextForm;?>

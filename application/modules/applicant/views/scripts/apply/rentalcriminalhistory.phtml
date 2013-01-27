@@ -1,0 +1,10 @@
+<?php
+
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+} else {
+	echo $this->form;
+}
+?>

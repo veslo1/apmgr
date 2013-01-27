@@ -1,0 +1,53 @@
+<?php
+/**
+ * Created on Apr 28, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts.view
+ * <p>
+ * View transactions for the specified account
+ * </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                         ->appendFile('/javascript/tablecss/tablecss.js');
+			
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'viewaccount','createaccount','updateaccount','viewallaccounts' ),
+		 'target'=>array(array('action'=>'viewaccounttransactions','queryString'=>'/accountId/'.$this->accountId))
+));			
+
+if( $this->msg ) {
+    echo $this->internazionalization($this->msg['msg'],$this->msg['type']);
+}
+
+if( $this->paginator ) {?>
+<table id='currenttable'>
+	<caption><i18n>transaction</i18n> <?php echo $this->transactionId; ?></caption>	
+	<tr>
+		<th><i18n>datePosted</i18n></th>
+		<th><i18n>account</i18n></th>
+		<th><i18n>debit</i18n></th>
+		<th><i18n>credit</i18n></th>
+		<th><i18n>comment</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $this->dateFormat($row['datePosted'], 'mdy'); ?></td>
+		<td><?php echo $row['accountName']; ?></td>
+		<?php if( $row['side']=='debit' ) { ?>
+		<td><?php echo $row['amount']; ?></td>
+		<td>&nbsp;</td>
+		<?php }  else { ?>
+		<td>&nbsp;</td>
+		<td><?php echo $row['amount']; ?></td>
+		<?php }  ?>
+		<td><?php echo $row['comment']; ?></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+<?php } ?>	

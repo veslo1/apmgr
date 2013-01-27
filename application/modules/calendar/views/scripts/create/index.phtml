@@ -1,0 +1,23 @@
+<h1><i18n>createEvent</i18n></h1>
+<?php
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+echo $this->headLink()->appendStylesheet('/css/general.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink()->appendStylesheet('/css/roundWarning.css');
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+echo $this->headLink()->appendStylesheet('/css/timepicker/jquery.timeentry.css');
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript()->appendFile('/javascript/timepicker/jquery.timeentry.js','text/javascript');
+print $this->form;
+echo $this->message($this->msg);
+?>
+<script type="text/javascript">
+    $(function() {
+        $("#startDate").datepicker({dateFormat: 'yy-mm-dd'} );
+        $("#endDate").datepicker({dateFormat: 'yy-mm-dd'});
+        $('#startTime').timeEntry({spinnerImage: '/images/timepicker/spinnerDefault.png',showSeconds:true,show24Hours:true});
+        $('#endTime').timeEntry({spinnerImage: '/images/timepicker/spinnerDefault.png',showSeconds:true,show24Hours:true});
+    });
+</script>

@@ -1,0 +1,1 @@
+ALTER TABLE `applicantOccupants` ADD `idIdentification` ENUM( 'driversLicense', 'govLicense' ) NOT NULL AFTER `identification`;

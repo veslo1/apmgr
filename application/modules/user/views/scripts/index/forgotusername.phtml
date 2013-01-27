@@ -1,0 +1,9 @@
+<h1><i18n>forgotUsername</i18n></h1>
+<?php
+$this->headLink()->headLink()->prependStylesheet('/css/zendform2.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headScript();
+echo $this->headLink();
+echo $this->form;
+echo $this->internazionalization($this->msg,$this->type);
+?>

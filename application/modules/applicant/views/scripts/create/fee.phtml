@@ -1,0 +1,20 @@
+<?php
+/**
+ * Create fees
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->appendStylesheet('/css/roundError.css')
+->headLink()->appendStylesheet('/css/roundSuccess.css')
+->headLink()->appendStylesheet('/css/roundWarning.css')
+->headLink()->appendStylesheet('/css/zendform2.css');
+
+echo $this->headLink();
+
+echo $this->bar(array('type'=>'action',
+					'destination'=>array('module'=>'applicant','controller'=>'create'),
+					'hiddenElements' => array('fee','applicantemail','waitlistemail','index')
+				)
+		);
+echo $this->form;
+echo $this->message($this->msg);
+?>

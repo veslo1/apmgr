@@ -1,0 +1,16 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ *
+ */
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->message($this->msg);
+
+if( null!=$this->setting ) {
+	?>
+<div style="border: thin solid black;">
+<p><i18n>settingName</i18n>:<span><?php echo $this->setting->getName();?></span></p>
+<p><i18n>valueName</i18n>:<?php echo $this->setting->getValue();?></p>
+</div>
+	<?php }?>

@@ -1,0 +1,39 @@
+<?php
+/**
+ * Created on Dec 5, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The model for unit
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/paginator.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+echo $this->back();
+echo $this->bar(array('type'=>'action','destination'=>array('module'=>'unit','controller'=>'index')));
+?>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><a
+				href="<?php echo $this->url(array('module'=>'unit','controller'=>'index','action'=>'amenityindex','by'=>'name','sort'=>$this->sort));?>"><i18n>amenityName</i18n></a></th>
+			<th><a
+				href="<?php echo $this->url(array('module'=>'unit','controller'=>'index','action'=>'amenityindex','by'=>'dateCreated','sort'=>$this->sort));?>"><i18n>dateCreated</i18n></a></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($this->amenities as $id=>$model) { ?>
+		<tr>
+			<td><?php echo $model['name'];?></td>
+			<td><?php echo $model['dateCreated'];?></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php
+		echo $this->paginationControl($this->amenities,'Sliding', 'paginationTemplate.phtml');
+		echo $this->message($this->msg);
+?>

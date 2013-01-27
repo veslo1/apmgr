@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created on Apr 19, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts.create
+ * <p>
+ * Lists all accounts
+ * </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                        ->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'updateaccount', 'viewallaccounts', 'viewaccount','viewaccounttransactions' )		
+));
+
+print $this->message($this->messageResult);
+?>
+<br />
+
+<table id='currenttable'>
+	<caption><i18n>accounts</i18n></caption>
+	<?php if( $this->paginator ) {?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $row['name']; ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/account/viewaccount/accountId/'. $row['id']); ?>">
+		<img width="24" height="24" title="<i18n>viewAccount</i18n>"
+			src="/images/search_48.png" /> </a> <a
+			href="<?php echo $this->serverUrl('/financial/account/updateaccount/accountId/'. $row['id']); ?>">
+		<img width="24" height="24" title="<i18n>update</i18n>"
+			src="/images/onebit_20.png" /> </a> <a
+			href="<?php echo $this->serverUrl('/financial/account/viewaccounttransactions/accountId/'. $row['id']); ?>">
+		<img width="24" height="24"
+			title="<i18n>viewAccountTransactions</i18n>"
+			src="/images/book_48.png" /> </a>
+		<?  if( !array_key_exists($row['id'], $this->attached )) {  ?>
+		    <a href="<?php echo $this->serverUrl('/financial/account/remove/accountId/'. $row['id']); ?>">
+		    <img width="24" height="24" title="<i18n>remove</i18n>"
+			src="/images/24/cancel.gif" /> </a>
+		<? } ?>			
+		</td>
+	</tr>
+	<?php } ?>
+
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>

@@ -1,0 +1,15 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ *
+ */
+$this->headLink()->prependStylesheet('/css/zendform2.css');
+echo $this->headLink();
+
+
+
+if( $this->msg ) {
+	echo $this->message($this->msg);
+} else {
+	echo $this->form;
+}

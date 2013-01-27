@@ -1,0 +1,16 @@
+<?php
+/**
+ * Authorization page
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+} else { ?>
+<div class="instructions"><i18n>congratulations</i18n>
+<br>	
+<a
+	href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'index'));?>"><i18n>takeAlook</i18n>
+<i18n>applicantDashboard</i18n></a>
+<?php } ?>

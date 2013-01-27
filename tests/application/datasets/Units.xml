@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<apartment id="1" dateCreated="2010-05-01" name="test"
+		addressOne="test address" addressTwo="test" city="test" state="tx"
+		zip="12345" country="test" phone="1234567890" />
+	<unitModel id="1" name="ph corto" dateCreated="2010-05-29"
+		dateUpdated="2010-05-29" size="500" numBeds="2" numBaths="2"
+		numFloors="1" />
+	<unitModel id="2" name="ph fondo" dateCreated="2010-05-29 13:00:00"
+		dateUpdated="2010-05-29" size="900" numBeds="2" numBaths="1"
+		numFloors="0" />
+	<amenity id="1" dateCreated="2010-05-29" dateUpdated="2010-05-29"
+		name="Garage" />
+	<amenity id="2" dateCreated="2010-08-27 12:30:00" name="Patio" />
+	<unitModelAmenity id="1" dateCreated="2010-05-29"
+		dateUpdated="2010-05-29" unitModelId="1" amenityId="1" />
+	<unitModelAmenity id="2" dateCreated="2010-08-27 12:30:00"
+		unitModelId="2" amenityId="2" />
+	<unit id="1" dateCreated="2010-05-29" dateUpdated="2010-05-29"
+		number="1" apartmentId="1" unitModelId="1" isAvailable="1" yearBuilt="1950"
+		yearRenovated="1950" />
+	<unit id="2" dateCreated="2010-05-29" dateUpdated="2010-05-29"
+		number="1" apartmentId="1" unitModelId="1" isAvailable="0" yearBuilt="1950"
+		yearRenovated="1950" />
+	<unit id="3" dateCreated="2010-08-20 13:15:00" number="3"
+		apartmentId="1" unitModelId="2" isAvailable="0" yearBuilt="1950"
+		yearRenovated="1950" />
+	<file id="1"
+		path="/usr/local/www/apmgr/public/images/uploads/1/3/3387-turf-houses.jpg"
+		size="79.4609375" description="Not likely the ideal tunna shop"
+		deleted="0" dateCreated="2010-05-29" dateUpdated="2010-05-29" mimeType="image/jpg"/>
+	<unitFile id="1" unitId="1" fileId="1" dateCreated="2010-05-29"
+		dateUpdated="2010-05-29" />
+	<file id="2"
+		path="/usr/local/www/apmgr/public/images/uploads/1/3/3387-turf-houses.jpg"
+		size="79.4609375" description="Not likely the ideal tunna shop"
+		deleted="0" dateCreated="2010-05-29" dateUpdated="2010-05-29" mimeType="image/jpg"/>
+	<unitFile id="2" unitId="1" fileId="2" dateCreated="2010-05-29"
+		dateUpdated="2010-05-29" />
+</dataset>

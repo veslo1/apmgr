@@ -1,0 +1,11 @@
+<?php
+$this->headLink()->appendStylesheet('/css/zendform2.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+?>
+<h1><i18n>fileAdd</i18n></h1>
+<?php
+echo $this->form;
+echo $this->internazionalization($this->msg,$this->type);
+?>

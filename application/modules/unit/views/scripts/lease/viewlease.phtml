@@ -1,0 +1,114 @@
+<?php
+/**
+ * Created on Mar 28, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<?php
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','cancellease','viewlease','vieweviction','createeviction', 'viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','viewmyleasebill','viewmypayments'),
+		 'target'=>array(array('action'=>'createleasefee','queryString'=>'/leaseId/'.$this->lease->getId()),
+				 array('action'=>'viewleaselist','queryString'=>'/unitId/'.$this->lease->getUnitId()),
+				 array('action'=>'viewevictions','queryString'=>'/leaseId/'.$this->lease->getId()),
+				 array('action'=>'viewalldocuments','queryString'=>'/leaseId/'.$this->lease->getId()),
+		                 array('action'=>'selectleasebills','queryString'=>'/leaseId/'.$this->lease->getId())),  
+));
+?>
+
+<table>
+	<caption><i18n>leaseDetails</i18n></caption>
+	<tr>
+		<th><i18n>baseRentAmount</i18n></th>
+		<th><i18n>numberOfMonths</i18n></th>
+		<th><i18n>leaseStartDate</i18n></th>
+		<th><i18n>leaseLastDay</i18n></th>
+	</tr>
+	<tr>
+		<td><?php echo $this->modelRentScheduleItem->getRentAmount(); ?></td>
+		<td><?php echo $this->modelRentScheduleItem->getNumMonths(); ?></td>
+		<td><?php echo $this->dateFormat($this->lease->getLeaseStartDate(), 'mdy'); ?></td>
+		<td><?php echo $this->dateFormat($this->lease->getLastDay(), 'mdy'); ?></td>
+	</tr>
+</table>
+
+<?php if( $this->lease->getIsCancelled() ) {?>
+<table>
+	<caption><i18n>cancellationDetails</i18n></caption>
+	<tr>
+		<th><i18n>cancellationDate</i18n></th>
+		<th><i18n>cancellationLastDay</i18n></th>
+		<th><i18n>cancelComment</i18n></th>
+	</tr>
+	<tr>
+		<td><?php echo $this->dateFormat($this->lease->getCancellationDate(), 'mdy'); ?></td>
+		<td><?php echo $this->dateFormat($this->lease->getLastDay(), 'mdy'); ?></td>
+		<td><?php echo $this->lease->getCancelComment(); ?></td>
+	</tr>
+</table>
+<?php } ?>
+
+	<?php if( $this->leaseSchedule ) {?>
+<table>
+	<caption><i18n>rentSchedule</i18n></caption>
+	<tr>
+		<th><i18n>month</i18n></th>
+		<th><i18n>discountAmount</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+
+	<?php foreach( $this->leaseSchedule as $id=>$item ){ ?>
+	<tr>
+		<td><?php echo $this->dateFormat($item->getMonth(), 'mdy'); ?></td>
+		<td><?php echo $item->getDiscount(); ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/bill/viewbill/billId/'. $item->getBillId() ); ?>"><img
+			width="24" height="24" src="/images/search_48.png" /></a></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } ?>
+
+<?php if( $this->fees ) {?>
+<table>
+	<caption><i18n>fees</i18n></caption>
+	<tr>
+		<th><i18n>fee</i18n></th>
+		<th><i18n>amount</i18n></th>
+		<th><i18n>dueDate</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->fees as $id=>$item ){ ?>
+	<tr>
+		<td><?php echo $item['name']; ?></td>
+		<td><?php echo $item['amount']; ?></td>
+		<td><?php echo $this->dateFormat($item['dueDate'],'mdy'); ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/bill/viewbill/billId/'. $item['billId'] ); ?>"><img
+			width="24" height="24" src="/images/search_48.png" /></a></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } ?>
+
+
+	<?php if( $this->tenants ) {?>
+<table>
+	<caption><i18n>tenants</i18n></caption>
+	<?php foreach( $this->tenants as $id=>$item ){ ?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<td><?php echo $item['firstName'] . ' ' . $item['lastName']; ?></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } ?>
+
+

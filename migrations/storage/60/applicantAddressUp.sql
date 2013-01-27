@@ -1,0 +1,20 @@
+CREATE TABLE `applicantAddress` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) NOT NULL, 
+  `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` enum('AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY') DEFAULT NULL,  
+  `zip` int(11) NOT NULL, 
+  `rent` decimal(10,2) NOT NULL,
+  `apartmentName` varchar(255) NULL,
+  `ownerName` varchar(255) NULL,
+  `apartmentPhone` varchar(10) NOT NULL,
+  `moveInDate` date NOT NULL,
+  `moveOutDate` date NULL,
+  `reasonForLeaving` varchar(500) NULL,
+  `isCurrentResidence` tinyint(1) DEFAULT 0,
+  `dateCreated` datetime NOT NULL,
+  `dateUpdated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userId` (`userId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='applicant address info';

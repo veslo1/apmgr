@@ -1,0 +1,1 @@
+RENAME TABLE evictionFile TO evictionDocument;

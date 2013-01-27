@@ -1,0 +1,94 @@
+<?php
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	 
+echo $this->headLink()->prependStylesheet('/css/table.css')
+	 ->headLink()->prependStylesheet('/css/zendform2.css')
+	 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css')
+	 ->headLink()->appendStylesheet('/css/squareMessage.css');// success, error, and warning messages css
+/**
+ * The reports page
+ */
+echo $this->form;
+?>
+<br>
+<table id='currenttable'>
+	<caption><i18n>applicantReport</i18n></caption>
+	<?php if( $this->recordsPopulated ) { ?>
+	<thead>
+		<tr>
+			<th>
+				<i18n>applicantName</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'applicantName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'applicantName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>unitModelName</i18n>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'unitName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'unitName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>unitnumber</i18n>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>dateApplied</i18n>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'dateApplied',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'dateApplied',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>isPaid</i18n>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'paid',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'paid',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>backgroundCheck</i18n>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'backgroundCheckStatus',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'report','action'=>'applicant',ZFInterfaces_Sortable::COLUMN=>'backgroundCheckStatus',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->data as $id=>$info){ ?>
+		<tr>
+		<td><?php echo $info['applicantName']?></td>
+		<td><?php echo $info['unitName']?></td>
+		<td><?php echo $info['unitNumber']?></td>
+		<td><?php echo $info['dateApplied'];?></td>
+		<td><?php echo $this->translator($info['paid']);?></td>
+		<td><?php echo $this->translator($info['backgroundCheckStatus']);?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+<script type="text/javascript">
+    $(function() { $("#dateTo").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+    $(function() { $("#dateFrom").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+</script>

@@ -1,0 +1,53 @@
+<?php
+/**
+ * The reports page
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');	 
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+?>
+<table id='currenttable'>
+	<caption><i18n>serviceRequestsReport</i18n></caption>
+	<?php if( $this->recordsPopulated) { ?>
+	<thead>
+		<tr>
+			<th>
+				<i18n>unitnumber</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'unitNumber',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>unitmodel</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'unitModel',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'unitModel',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			<th>
+				<i18n>numberOfRequests</i18n></a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'numberOfRequests',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+					<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+				</a>
+				<a href="<?php echo $this->url(array('module'=>'maintenance','controller'=>'report','action'=>'servicerequests',ZFInterfaces_Sortable::COLUMN=>'numberOfRequests',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+					<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+				</a>
+			</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->data as $id=>$info){ ?>
+		<tr>
+		<td><?php echo $info['unitNumber']?></td>
+		<td><?php echo $info['unitModel']?></td>
+		<td><?php echo $info['numberOfRequests']?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>

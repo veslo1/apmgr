@@ -1,0 +1,39 @@
+<h1><i18n>settingsTitle</i18n></h1>
+<?php
+/**
+ * @author jvazquez
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css')
+->headLink()->appendStylesheet('/css/roundError.css')
+->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink();
+echo $this->back();
+echo $this->bar(array('type'=>'controller','destination'=>'settings','hiddenElements'=>array('index')));
+echo $this->message($this->msg);
+?>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'settings','column'=>'name','sort'=>$this->sort));?>'>
+			<i18n>settingName</i18n> </a></th>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'index','module'=>'settings','column'=>'dateCreated','sort'=>$this->sort));?>'>
+			<i18n>dateCreated</i18n> </a></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->settings as $id=>$object) { ?>
+		<tr>
+			<td><?=ucfirst($object['name']);?></td>
+			<td><?=$object['dateCreated'];?></td>
+			<td><?php
+			echo $this->edit( $this->url(array('controller'=>'update','action'=>'index','module'=>'settings','id'=>$object['id'])) ,'update');
+			echo $this->view($this->url(array('controller'=>'view','action'=>'view','module'=>'settings','id'=>$object['id'])),'view');
+			?></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->settings,'Sliding', 't3.phtml');?>

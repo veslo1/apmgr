@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <unitModel id="1 " name="testModel " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " size="1000 " numBeds="1 " numBaths="1 " numFloors="1 "/>
+  <modelRentSchedule id="1 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " unitModelId="1 " effectiveDate="2010-05-01 "/>
+  <modelRentScheduleItem id="1 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="1 " rentAmount="500 " numMonths="3 "/>
+  <modelRentScheduleItem id="2 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="1 " rentAmount="300 " numMonths="6 "/>
+  <modelRentSchedule id="2 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " unitModelId="1 " effectiveDate="2009-08-01 "/>
+  <modelRentScheduleItem id="3 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="2 " rentAmount="500 " numMonths="3 "/>
+  <modelRentScheduleItem id="4 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="1 " rentAmount="300 " numMonths="6 "/>
+  <modelRentSchedule id="3 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " unitModelId="1 " effectiveDate="2005-01-01 "/>
+  <modelRentScheduleItem id="5 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="3 " rentAmount="500 " numMonths="3 "/>
+  <modelRentScheduleItem id="6 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="3 " rentAmount="300 " numMonths="6 "/>
+  <modelRentScheduleItem id="7 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="3 " rentAmount="300 " numMonths="12 "/>
+  <modelRentScheduleItem id="8 " dateCreated="2010-05-01 " dateUpdated="2010-05-01 " modelRentScheduleId="3 " rentAmount="300 " numMonths="12 "/>
+</dataset>

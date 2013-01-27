@@ -1,0 +1,61 @@
+<?php
+/**
+ * Created on Feb 14, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The model for unit
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unitmodel'),
+		 'hiddenElements'=>array('createunitmodel','index', 'updateunitmodel', 'viewunitmodel','viewunitmodel')		 
+)); 
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'modelrentschedule'),
+		 'hiddenElements'=>array('index', 'viewallmodelrentschedule', 'viewmodelrentschedule' ),
+		 'target'=>array(array('action'=>'createmodelrentschedule','queryString'=>'/modelId/'.$this->modelId ))
+));
+?>
+
+<?php
+if( $this->msg ) {
+	echo $this->message($this->msg);
+}
+?>
+
+<table>
+	<caption><i18n>rentSchedulesForUnitModel</i18n>&nbsp;<?php echo $this->unitmodel->getName(); ?></caption>
+	<?php if( $this->paginator ) { ?>
+	<th><i18n>effectiveDate</i18n></th>
+	<th><i18n>actions</i18n></th>
+	<?php  foreach(  $this->paginator as $id=>$record )  { ?>
+	<tr>
+		<td><?php echo $this->dateFormat($record->getEffectiveDate(),'mdy');?></td>
+		<td><a href="<?=$this->serverUrl('/unit/modelrentschedule/viewmodelrentschedule/modelId/' . $this->unitmodel->getId() .'/scheduleId/'. $record->getId());?>">
+		<img width='24' height='24' title="<i18n>viewModelRentSchedule</i18n>"
+			src='/images/search_48.png' /> </a>
+ 			<?  if( !array_key_exists($record->getId(), $this->attached )) {  ?>
+ 		             <a href="<?php echo $this->serverUrl('/unit/modelrentschedule/remove/modelId/' . $this->unitmodel->getId() . '/scheduleId/'. $record->getId() ); ?>">
+ 		             <img width="24" height="24" title="<i18n>remove</i18n>"
+ 			     src="/images/24/cancel.gif" /> </a>
+ 		        <? } ?>
+ 		</td>
+	</tr>
+	<?php } ?>
+
+</table>
+<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>
+</div>
+
+
+
+

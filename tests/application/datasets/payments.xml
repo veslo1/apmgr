@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<payment id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="1" amtPaid="10" transactionId="1" paymentDetailId="1" />
+	<payment id="7 " dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="7" amtPaid="10" transactionId="1" paymentDetailId="1" />
+	<payment id="8" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="8" amtPaid="10" transactionId="1" paymentDetailId="1" />
+	<payment id="9" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="9" amtPaid="5" transactionId="1" paymentDetailId="1" />
+	<payment id="11" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="11" amtPaid="5" transactionId="1" paymentDetailId="1" />
+	<!-- used for bill 14 and 15 in testing refund helper - don't modify -->
+	<payment id="14" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="14" amtPaid="200" transactionId="1" paymentDetailId="1" />
+	<payment id="15" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		billId="15" amtPaid="100" transactionId="1" paymentDetailId="1" />
+</dataset>

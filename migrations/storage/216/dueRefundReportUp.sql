@@ -1,0 +1,2 @@
+INSERT INTO `apmgr`.`reports` ( `id` , `name` , `cacheIdentifier` , `moduleId` , `cacheTtl` , `urlPath` , `dateCreated` , `dateUpdated` )
+VALUES ( NULL , 'dueRefunds', 'dueRefunds', '4', '60', 'duerefunds', '2010-11-24 20:04:21', NULL );

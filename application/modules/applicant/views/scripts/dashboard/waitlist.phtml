@@ -1,0 +1,47 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * Display the wait lists that this user has applied
+ */
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	
+echo $this->headLink()->prependStylesheet('/css/paginator.css')
+	->headLink()->prependStylesheet('/css/zendform2.css');
+
+$this->bar( array(
+					'type'=>'action',
+				  	'destination'=>array('module'=>'applicant','controller'=>'dashboard'),
+				  	'hiddenElements'=>array('index','waitlist','paymentconfirmation','payment','viewfeesdue','viewfeespaid'),
+					'displayHiddenIcons'=>false 
+)
+);
+?>
+<?php echo $this->message($this->msg);?>
+<table class="hor-minimalist-a">
+	<caption><i18n>applicantDashboard</i18n> - <i18n>yourwaitlist</i18n></caption>
+	<?php if ( count($this->applications) ) { ?>
+	<tr>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'waitlist','id'=>$this->id,'sort'=>$this->sort,'column'=>'name'));?>"><i18n>unitModel</i18n></a></th>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'waitlist','id'=>$this->id,'sort'=>$this->sort,'column'=>'dateCreated'));?>"><i18n>dateCreated</i18n></a></th>
+		<th><i18n>unitModel</i18n></th>
+	</tr>
+	<?php foreach( $this->waitlist as $id=>$record ) { ?>
+	<tr>
+		<td>
+		<p><?php echo ucfirst($record['name']);?></p>
+		</td>
+		<td>
+		<p><?php echo $record['dateCreated'];?></p>
+		</td>
+		<td><a
+			href="<?php echo $this->url(array('module'=>'unit','controller'=>'unitmodel','action'=>'viewunitmodel','unitModelId'=>$record['id']),null,true);?>"><img
+			src="/images/24/onebit_02.gif"
+			title="<?php echo $this->translate('viewUnitModelDetails');?>"
+			alt="<?php echo $this->translate('viewUnitModelDetails');?>" /></a></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>

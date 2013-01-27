@@ -1,0 +1,43 @@
+<?php
+/*
+ * Created on Apr 19, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts.create
+ * <p>
+ * Lists all account links
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+->appendFile('/javascript/tablecss/tablecss.js');
+
+
+print $this->message($this->messageResult);
+?>
+<br />
+
+<table>
+	<caption><i18n>accountLinks</i18n></caption>
+	<?php if( $this->paginator ) {?>
+	<tr>
+		<th><i18n>accountLink</i18n></th>
+		<th><i18n>debitAccount</i18n></th>
+		<th><i18n>creditAccount</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+
+	<?php foreach( $this->paginator as $id=>$row ){ ?>
+	<tr>
+		<td><i18n><?php echo $row['name']; ?></i18n></td>
+		<td><?php echo $row['debitName']; ?></td>
+		<td><?php echo $row['creditName']; ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/financial/accountlink/updateaccountlink/accountLinkId/'. $row['id']); ?>">
+		<img width="24" height="24" src="/images/onebit_20.png" /> </a></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>

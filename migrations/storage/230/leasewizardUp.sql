@@ -1,0 +1,2 @@
+ALTER TABLE leaseWizard
+ADD COLUMN leaseFee varchar(1000) DEFAULT NULL;

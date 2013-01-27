@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created on Apr 20, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts.view
+ * <p>
+ * View transactions for the specified account
+ * </p>
+ */
+
+echo $this->headLink()->prependStylesheet('/css/table.css')
+                      ->prependStylesheet('/css/zendform2.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                        ->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'viewaccount','createaccount','updateaccount','viewaccounttransactions' )		
+));			
+?>
+
+<table id='currenttable'>
+	<caption><i18n>accountingTransactions</i18n><br>
+	<?php echo $this->account->getName(); ?><br>
+	<i18n>balance</i18n>:&nbsp;<?php echo $this->balance; ?></caption>
+	<?php if( $this->paginator ) {?>
+	<tr>
+		<th><i18n>transaction</i18n></th>
+		<th><i18n>datePosted</i18n></th>
+		<th><i18n>debit</i18n></th>
+		<th><i18n>credit</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->paginator as $id=>$row ) {  ?>
+	<tr>
+		<td><?php echo $row['transactionId']; ?></td>		
+		<td><?php echo $this->dateFormat($row['datePosted'], 'mdy'); ?></td>
+
+		<?php if( $row['side']=='debit' ) { ?>
+		<td><?php echo $row['amount']; ?></td>
+		<td>&nbsp;</td>
+		<?php }  else { ?>
+		<td>&nbsp;</td>
+		<td><?php echo $row['amount']; ?></td>
+		<?php }  ?>
+		<td>
+		    <a href="<?php echo $this->serverUrl('/financial/account/viewtransaction/accountId/'. $this->accountId . '/transactionId/'. $row['transactionId'] ); ?>">
+		        <img width="24" height="24" title="<i18n>viewDetails</i18n>"
+			src="/images/search_48.png" /> </a>
+		</td>	     
+	</tr>
+	<?php } ?>
+
+</table>
+	<?php echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+</td>
+</tfoot>
+	<?php } else echo '<tr><td><i18n>noRows</i18n></td></tr></table>';?>

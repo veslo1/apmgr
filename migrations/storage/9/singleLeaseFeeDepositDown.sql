@@ -1,0 +1,11 @@
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET FOREIGN_KEY_CHECKS=0;
+
+ALTER TABLE `lease`
+DROP COLUMN `apartmentId`;
+
+ALTER TABLE `leaseFee`
+DROP COLUMN `billId`;  
+
+ALTER TABLE `leaseDeposit`
+DROP COLUMN `billId`;  

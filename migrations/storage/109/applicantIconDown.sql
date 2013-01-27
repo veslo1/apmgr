@@ -1,0 +1,1 @@
+UPDATE modules SET icon=NULL, display=0 where name='applicant';

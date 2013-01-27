@@ -1,0 +1,2 @@
+INSERT INTO `apmgr`.`messages` (`message` ,`identifier` ,`category` ,`language` ,`locked` ,`dateCreated` ,`dateUpdated`) VALUES 
+('Duplicate Months.  Please verify that months are unique', 'duplicateMonth', 'error', 'en_US', '1', '2010-11-11', NULL );

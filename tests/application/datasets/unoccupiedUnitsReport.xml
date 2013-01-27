@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<!-- Set up the users in this report -->
+	<user id="1" firstName="Admin" lastName="Apmgr" username="admin"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="admin@apmgr.debserverp4.com.ar"
+		phone="3527-5153" mobile="15555555" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="1"/>
+	<user id="2" firstName="John" lastName="Connor" username="jconnor"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jconnor@debserverp4.com.ar"
+		phone="3527-5153" mobile="15555555" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="8" />
+	<user id="3" firstName="Sarah" lastName="Connor" username="sconnor"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="sconnor@debserverp4.com.ar"
+		phone="3527-5153" mobile="15555555" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="8"/>
+	<!-- Financial accounts -->
+	<account id="1" dateCreated="2010-05-01" name="account1"
+		number="123" orientation="debit" accountTypeId="1"/>
+	<account id="2" dateCreated="2010-05-01" name="account2"
+		number="124" orientation="credit" accountTypeId="2"/>
+	<!-- The units that are needed -->
+	<apartment id="1" dateCreated="2010-05-01" name="test"
+		addressOne="test" addressTwo="test" city="test" state="tx" zip="12345"
+		country="test" phone="1234567890" />
+	<unitModel id="1" name="testModel" dateCreated="2010-05-01"
+		size="1000" numBeds="1" numBaths="1" numFloors="1" />
+	<unit id="1" dateCreated="2010-05-01" number="A" apartmentId="1"
+		unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004" />
+	<unit id="2" dateCreated="2010-05-01" number="1A" apartmentId="1"
+		unitModelId="1" isAvailable="1" yearBuilt="2000" yearRenovated="2004" />
+	<!-- Set up the lease for each user -->
+	<modelRentSchedule id="1 " dateCreated="2010-05-01 "
+		dateUpdated="2010-05-01 " unitModelId="1 " effectiveDate="2010-05-01 " />
+	<modelRentScheduleItem id="1 " dateCreated="2010-05-01 "
+		dateUpdated="2010-05-01 " modelRentScheduleId="1 " rentAmount="500 "
+		numMonths="3 " />
+	<lease id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		leaseStartDate="2010-05-01" leaseEndDate="2010-08-01" apartmentId="1" unitId="1" userId="1"
+		modelRentScheduleId="1" modelRentScheduleItemId="1" lastDay="2010-08-01"
+		isCancelled="0" />
+	<modelRentSchedule id="2 " dateCreated="2010-05-01"
+		dateUpdated="2010-05-01 " unitModelId="1 " effectiveDate="2010-05-01" />
+	<modelRentScheduleItem id="2 " dateCreated="2010-05-01"
+		dateUpdated="2010-05-01 " modelRentScheduleId="2 " rentAmount="500 "
+		numMonths="3 " />
+	<lease id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		leaseStartDate="2010-05-01" leaseEndDate="2010-08-01" apartmentId="1" unitId="1" userId="2"
+		modelRentScheduleId="2" modelRentScheduleItemId="2" lastDay="2010-08-01"
+		isCancelled="0" />
+	<fee id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee1"
+		amount="30" debitAccountId="1" creditAccountId="2" enabled="1"
+		refundable="0" />
+	<fee id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01" name="fee2"
+		amount="50" debitAccountId="2" creditAccountId="1" enabled="1"
+		refundable="0" />
+	<bill id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		originalAmountDue="30" dueDate="2010-05-01" isPaid="1" />
+	<bill id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		originalAmountDue="50" dueDate="2010-05-01" isPaid="1" />
+	<leaseFee id="1" dateCreated="2010-04-01" leaseId="1" feeId="1"
+		amount="30" billId="1" />
+	<leaseFee id="2" dateCreated="2010-04-01" leaseId="1" feeId="1"
+		amount="50" billId="2" />
+	<leaseSchedule id="1" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" billId="1" month="2011-05-01" discount="0"
+		leaseId="1" />
+	<leaseSchedule id="2" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" billId="2" month="2011-05-01" discount="0"
+		leaseId="2" />
+	<tenant id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		userId="2" leaseId="1" />
+	<tenant id="2" dateCreated="2010-05-01" dateUpdated="2010-05-01"
+		userId="1" leaseId="1" />
+	<reports id="8" name="unoccupiedUnits" cacheIdentifier='unoccupiedUnits' moduleId="12" cacheTtl="20" urlPath='unoccupiedunits'
+		dateCreated="2010-05-01 10:00:00" />
+</dataset>

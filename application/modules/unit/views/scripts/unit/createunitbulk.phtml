@@ -1,0 +1,31 @@
+<?php
+/**
+ * Created on Dec 5, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Create form for units
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+                      ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+					 
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+           ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');	
+					 
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('createunitbulk','index','show','unitsforrent','updateunit','viewunit','viewunitgraphics'),		 
+));
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dateAvailable").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+<?
+echo $this->internazionalization($this->msg,$this->type);
+echo $this->form;
+?>

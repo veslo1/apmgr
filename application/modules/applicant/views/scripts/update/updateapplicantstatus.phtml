@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created on September 13, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.applicant.views.scripts
+ * <p>
+ * Create form for updating applicant statuses
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+$barOptions = array(
+						'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array('index','fees','completedapps','statuschange','bgcheckdetails'),                                             
+);
+$this->bar($barOptions);
+
+echo $this->results($this->restore,$this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallapplicants')));
+echo $this->form;
+echo $this->internazionalization($this->msg[0],$this->msg[1]);

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on Sep 19, 2009 by jvazquez
+ * datesite
+ * application.modules.role.views.script.update
+ * <p>
+ * Update page for the Role object
+ * </p>
+ */
+$this->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headLink();
+?>
+<div class="details">
+<h1><i18n>roleTitle</i18n></h1>
+<h3><i18n>updateRole</i18n></h3>
+<?php echo $this->message($this->error);?>
+<?php
+echo $this->form;
+?>

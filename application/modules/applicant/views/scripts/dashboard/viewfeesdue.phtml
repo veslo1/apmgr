@@ -1,0 +1,44 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	
+echo $this->headLink()->prependStylesheet('/css/paginator.css')
+	->headLink()->prependStylesheet('/css/zendform2.css');
+$this->bar( array(
+					'type'=>'action',
+				  	'destination'=>array('module'=>'applicant','controller'=>'dashboard'),
+				  	'hiddenElements'=>array('index','paymentconfirmation','payment','viewfeesdue','viewfeespaid'),
+					'displayHiddenIcons'=>false
+));					
+
+echo $this->message($this->msg);
+if( isset($this->fees) ) { 
+    if($this->paidEnabled==true and $this->haveFees) { ?>
+        <a href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'payment'));?>">
+        <img src="/images/24/credit_cards.gif" title="<i18n>onlinePayment</i18n>" alt="<i18n>onlinePayment</i18n>" /></a>
+        <?php } ?>
+<?php } ?>	
+<table class="hor-minimalist-a">
+    <caption><i18n>yourfeesdue</i18n></caption>
+        <?php if ( count($this->fees) ) { ?>
+	<tr>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'viewfeesdue','id'=>$this->id,'sort'=>$this->sort,'column'=>'name'));?>"><i18n>feeName</i18n></a></th>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'viewfeesdue','id'=>$this->id,'sort'=>$this->sort,'column'=>'amount'));?>"><i18n>value</i18n></a></th>
+	</tr>
+	<?php foreach( $this->fees as $id=>$fee ) { ?>
+	<tr>
+		<td>
+		<p><?php echo $fee['name'];?></p>
+		</td>
+		<td>
+		<p><?php echo $fee['amount'];?></p>
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>

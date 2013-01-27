@@ -1,0 +1,67 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * mofified by Rachael Nelson to add the error table
+ * Add page for bulk upload of csv files
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headLink()->prependStylesheet('/css/zendform2.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink()->appendStylesheet('/css/roundWarning.css');
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<?php
+echo $this->form;
+echo $this->message($this->msg);
+?>
+
+
+<? if( $this->errors ){ ?>
+<table id='currenttable'>
+	<caption><i18n>errors</i18n></caption>
+
+	<tr>
+		<th><i18n>row</i18n></th>
+		<th><i18n>column</i18n></th>
+		<th><i18n>value</i18n></th>
+		<th><i18n>messages</i18n></th>
+	</tr>
+
+	<? foreach( $this->errors as $id=>$row ) {?>
+	<tr>
+		<td><? echo $row['row']; ?></td>
+		<td><? echo $row['column']; ?></td>
+		<td><? echo $row['value']; ?></td>
+		<td><? echo $row['messages']; ?></td>
+	</tr>
+	<? } ?>
+</table>
+	<? } ?>
+
+
+	<? if( $this->unprocessed ){ ?>
+<table id='currenttable'>
+	<caption><i18n>unprocessedRows</i18n></caption>
+
+	<tr>
+		<th><i18n>unitNumber</i18n></th>
+		<th><i18n>amountPaid</i18n></th>
+		<th><i18n>rentDueDate</i18n></th>
+		<th><i18n>payorname</i18n></th>
+		<th><i18n>paymentType</i18n></th>
+	</tr>
+
+	<? foreach( $this->unprocessed as $id=>$row ) {?>
+	<tr>
+		<td><? echo $row['UnitNumber']; ?></td>
+		<td><? echo $row['AmountPaid']; ?></td>
+		<td><? echo $row['RentDueDate']; ?></td>
+		<td><? echo $row['Payor']; ?></td>
+		<td><? echo $row['PaymentType']; ?></td>
+	</tr>
+	<? } ?>
+</table>
+	<? } ?>

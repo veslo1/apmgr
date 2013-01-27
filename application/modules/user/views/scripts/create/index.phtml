@@ -1,0 +1,11 @@
+<?php
+/**
+ * Displays a form that allows the user to create a page
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * @package application.modules.user.views.scripts.create
+ */
+$this->headLink()->prependStylesheet('/css/zendform2.css');
+echo $this->headLink();
+echo $this->internazionalization($this->msg,'error');
+echo $this->form;
+?>

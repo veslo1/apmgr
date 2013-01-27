@@ -1,0 +1,2 @@
+ALTER TABLE file
+DROP COLUMN fileName;

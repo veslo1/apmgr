@@ -1,0 +1,4 @@
+ALTER TABLE refund
+ADD COLUMN feeId int(10) unsigned NOT NULL,
+ADD INDEX (feeId), 
+ADD CONSTRAINT `refund_ibfk_2` FOREIGN KEY (`feeId`) REFERENCES `fee` (`id`) ON DELETE CASCADE ON UPDATE CASCADE; 

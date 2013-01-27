@@ -1,0 +1,7 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->bar(array('type'=>'controller','destination'=>'settings','hiddenElements'=>array('index')));
+echo $this->message($this->msg);
+echo $this->form;

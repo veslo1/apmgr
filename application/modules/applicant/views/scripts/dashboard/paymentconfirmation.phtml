@@ -1,0 +1,11 @@
+<?php
+/**
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ * Page that receives a POST from authorize.net and validates a payment
+ */
+$this->headLink()->prependStylesheet('/css/roundError.css')
+->headLink()->prependStylesheet('/css/roundSuccess.css')
+->headLink()->prependStylesheet('/css/roundWarning.css');
+?>
+<h1><i18n>onlinePaymentProcessing</i18n></h1>
+<?php echo $this->message($this->msg);?>

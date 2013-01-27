@@ -1,0 +1,19 @@
+<?php
+/**
+ * Index page for the dashboard
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headLink()->prependStylesheet('/css/roundError.css')
+	->headLink()->prependStylesheet('/css/roundSuccess.css')
+	->headLink()->prependStylesheet('/css/roundWarning.css');
+$this->bar( array(
+					'type'=>'action',
+				  	'destination'=>array('module'=>'applicant','controller'=>'dashboard'),
+				  	'hiddenElements'=>array('index','paymentconfirmation','payment','viewfeesdue','viewfeespaid'),
+					'displayHiddenIcons'=>false
+)
+);
+echo $this->message($this->msg);
+?>

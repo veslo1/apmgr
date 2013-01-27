@@ -1,0 +1,31 @@
+<?php
+/**
+ * Created on Sep 19, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.view
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css');
+echo $this->headLink();
+?>
+<h1><i18n>roleTitle</i18n></h1>
+<h2><i18n>viewAllRoles</i18n></h2>
+<table class="hor-minimalist-a">
+	<tr>
+		<th><a href="<?php echo $this->url(array('module'=>'role','controller'=>'update','action'=>'index','by'=>'name','order'=>$this->sort),null,false);?>"><i18n>rolename</i18n></a></th>
+		<th><i18n>action</i18n></th>
+	</tr>
+	<?php foreach ($this->roles as $id=>$role) { ?>
+	<tr>
+		<td><?php echo $role['name'];?></td>
+		<td>
+			<a href="<?php echo $this->url(array('module'=>'role','controller'=>'update','action'=>'update','id'=>$role['id']),null,false);?>">
+				<img title="<?php echo $this->translate('update');?>" src="/images/24/onebit_20.gif" alt="<?php echo $this->translate('update');?>"/>
+			</a>
+		</td>
+	<?php }?>
+</table>
+	<?php
+	echo $this->paginationControl($this->roles,'Sliding', 't3.phtml');
+	echo $this->internazionalization($this->error,'error');
+?>

@@ -1,0 +1,52 @@
+<?php
+/**
+ * Created on November 6, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.financial.views.scripts.view
+ * <p>View page for a fee </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<div class="details">
+<div class="results"><?php 
+if ( $this->resultCheck($this->fee) ){
+	?>
+
+<table id='currenttable'>
+	<caption><i18n>feeDetails</i18n></caption>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<td><?php echo $this->fee['name'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>amount</i18n></th>
+		<td><?php echo $this->fee['amount'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>debitAccount</i18n></th>
+		<td><?php echo $this->fee['debitName'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>creditAccount</i18n></th>
+		<td><?php echo $this->fee['creditName'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>refundable</i18n></th>
+		<?php if ($this->fee['refundable']){ ?>
+			<td><i18n>yes</i18n></td>
+		<? }else { ?>
+			<td><i18n>no</i18n></td>
+		<? }  ?>
+		</td>	  
+	</tr>
+</table>
+	<?php
+}
+?></div>
+
+</div>
+
+

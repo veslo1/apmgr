@@ -1,0 +1,78 @@
+<?php
+/**
+ * Created on October 20, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.applicant.models
+ * <p>
+ * Confirmation page of the wizard  (last page of wizard)
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+          ->headLink()->appendStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+          ->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+if( $this->msg )
+    echo $this->Message($this->msg);
+?>
+
+<?  if( $this->bills ) { ?>
+<table>
+    <caption><i18n>applicantBills</i18n></caption>
+    <tr>
+	<th><i18n>feeName</i18n></th>
+	<th><i18n>currentamountdue</i18n></th>
+    </tr>
+    <? foreach( $this->bills as $bill ){ ?>        
+        <tr>
+		<td> <?php echo $bill['feeName']; ?></td>
+	        <td> <?php echo $bill['currentAmountDue']; ?> </td>
+	</tr>	
+    <? } ?>
+</table>    
+<? } ?>
+
+<?  if( $this->preleaseBills ) { ?>
+<table>
+    <caption><i18n>preleaseBills</i18n></caption>
+    <tr>
+	<th><i18n>feeName</i18n></th>
+	<th><i18n>currentamountdue</i18n></th>
+    </tr>
+    <? foreach( $this->preleaseBills as $bill ){ ?>        
+        <tr>
+		<td> <?php echo $bill['feeName']; ?></td>
+	        <td> <?php echo $bill['currentAmountDue']; ?> </td>
+	</tr>	
+    <? } ?>
+</table>    
+<? } ?>
+
+<?  if( $this->paymentInfo ) { ?>
+<table>
+    <caption><i18n>paymentInformation</i18n></caption>
+    <tr>
+	<th><i18n>totalAmount</i18n></th>
+	<td> <?php echo $this->paymentInfo['totalAmount']; ?></td>
+    </tr>
+    <tr>
+	<th><i18n>payor</i18n></th>
+	<td> <?php echo $this->paymentInfo['payor']; ?></td>
+    </tr>
+    <tr>
+	<th><i18n>datePosted</i18n></th>
+	<td> <?php echo $this->dateFormat($this->paymentInfo['datePosted'], 'mdy');?></td>
+    </tr>
+    <tr>
+	<th><i18n>paymentType</i18n></th>
+	<td><i18n><?php echo $this->paymentInfo['paymentType']; ?></i18n></td>
+    </tr>
+    <tr>
+	<th><i18n>comment</i18n></th>
+	<td> <?php echo $this->paymentInfo['comment']; ?></td>
+    </tr> 
+</table>
+<? } ?>
+
+
+<? echo $this->form; ?>

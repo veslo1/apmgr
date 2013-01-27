@@ -1,0 +1,24 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/paginator.css');
+echo $this->message($this->msg);
+?>
+<table class="hor-minimalist-a">
+	<caption><i18n>viewModules</i18n></caption>
+	<thead>
+		<tr>
+			<th><i18n>moduleName</i18n></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->records as $id=>$object) { ?>
+		<tr>
+			<td><?=ucfirst($object->getName());?></td>
+			<td><a
+				href="<?php echo $this->serverUrl('/role/view/viewcontrollers/moduleId/'. $object->getId() ); ?>">
+			<img width="24" height="24" title="<i18n>viewDetails</i18n>"
+				src="/images/search_48.png" /> </a></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>

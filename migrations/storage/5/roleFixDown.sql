@@ -1,0 +1,1 @@
+--  No dump because this is a stable migration that can't have a down

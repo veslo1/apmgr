@@ -1,0 +1,29 @@
+<?php
+/**
+ * Created on Sep 15, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.view
+ */
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+?>
+<h1><i18n>roleTitle</i18n></h1>
+<h3><i18n>viewRoleById</i18n></h3>
+
+
+<?php if ( $this->resultCheck($this->record) ) { ?>
+<table>
+	<tr>
+		<td><i18n>name</i18n></td>
+		<td><i18n>dateCreated</i18n></td>
+		<td><i18n>dateUpdated</i18n></td>
+	</tr>
+	<tr>
+		<td><?=$this->record->getName();?></td>
+		<td><?=$this->record->getDatecreated();?></td>
+		<td><?=$this->record->getDateupdated();?></td>
+	</tr>
+</table>
+<?php
+}
+?>

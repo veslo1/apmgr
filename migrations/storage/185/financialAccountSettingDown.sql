@@ -1,0 +1,1 @@
+DELETE FROM financialAccountSetting WHERE `settingName` IN ('leaseRentCashAccount', 'leaseFeeCashAccount');

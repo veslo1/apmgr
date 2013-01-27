@@ -1,0 +1,13 @@
+<?php
+// for non tenant users
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unit'),
+		 'hiddenElements'=>array('index','show','unitsforrent','updateunit','viewunit','viewunitgraphics','myunit')		 
+));
+
+// for tenant users
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','createleasefee','cancellease','viewleaselist','viewlease','createeviction','vieweviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments','viewmyleasedocument','viewmyleasedocuments','viewevictions' )		 
+));
+?>

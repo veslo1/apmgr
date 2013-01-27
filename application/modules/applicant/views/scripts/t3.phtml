@@ -1,0 +1,43 @@
+<?php
+
+echo $this->headLink()->prependStylesheet('/css/test.css');
+//echo $this->headScript()->appendFile('/javascript/jquery/jquery.js');
+//echo $this->headScript()->appendFile('/javascript/tablecss/tablecss.js');
+
+?>
+<?php if ($this->pageCount): ?>
+<!--<div class="paginationControl">-->
+
+<?php /*if (isset($this->totalItemCount)) echo '# Records: '. $this->totalItemCount; */?>
+<br>
+<ul
+	id="pagination">
+	<!-- Previous page link -->
+	<?php if (isset($this->previous)): ?>
+	<!-- <li><a href="<?php /* echo $this->url(array('page' => $this->previous)); */?>"> </a> </li>-->
+	<?php else: ?>
+	<!--<li class="previous-off"> << Previous</li>-->
+	<?php endif; ?>
+
+	<!-- Numbered page links -->
+	<?php foreach ($this->pagesInRange as $page): ?>
+	<?php if ($page != $this->current): ?>
+	<li><a href="<?php echo $this->url(array('page' => $page)); ?>"> <?php echo $page; ?>
+	</a></li>
+	<?php else: ?>
+	<li class="active"><?php echo $page; ?></li>
+	<?php endif; ?>
+	<?php endforeach; ?>
+
+	<!-- Next page link -->
+	<?php if (isset($this->next)): ?>
+	<li class="next"><a
+		href="<?php echo $this->url(array('page' => $this->next)); ?>"> </a></li>
+		<?php else: ?>
+	<!--<li class="previous-off"> Next >></li> -->
+		<?php endif; ?>
+</ul>
+<!--</div>-->
+<br>
+
+		<?php endif; ?>

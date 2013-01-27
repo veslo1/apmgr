@@ -1,0 +1,40 @@
+<?php
+/**
+ * Display all the pictures and videos of the current unit
+ * @author Jorge Vazquez
+ */
+$this->headLink()->appendStylesheet('/css/paginator.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+?>
+<h1><i18n>viewPictures</i18n></h1>
+<?php
+if( !empty($this->files) )
+{
+?>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><i18n>details</i18n></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach( $this->files as $id=>$metadata) { ?>
+		<tr>
+			<td><img width="60" src="<?=$metadata['path'].DIRECTORY_SEPARATOR.$metadata['fileName'];?>"
+				alt="<?=$metadata['description'];?>"
+				title="<?=$metadata['description'];?>"/></td>
+			<td><?=$this->viewPicture($metadata['id'],$this->url(array('controller'=>'unit','module'=>'unit','action'=>'show','id'=>$metadata['id']),null,true,'view' ));?>
+			<?=$this->deletePictures($metadata['id'],$this->url(array('controller'=>'delete','module'=>'unit','action'=>'deleteunitmetadata','id'=>$metadata['id'],'unitId'=>$metadata['id']),null,true),'delete');?>
+			</td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<?php
+} 
+//echo $this->paginationControl($this->unitPictures,'Sliding', 'paginationTemplate.phtml');
+echo $this->internazionalization($this->msg,$this->type);
+?>

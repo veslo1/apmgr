@@ -1,0 +1,42 @@
+<?php
+/**
+ * Created on Feb 14, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Create form for units
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+          ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+          ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unitmodel'),
+		 'hiddenElements'=>array('index', 'createunitmodel','updateunitmodel', 'viewunitmodel','viewunitmodel')		 
+));
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'modelrentschedule'),
+		 'hiddenElements'=>array('index', 'createmodelrentschedule', 'viewmodelrentschedule'),
+		 'target'=>array(array('action'=>'viewallmodelrentschedule','queryString'=>'/modelId/'.$this->modelId))	 				 
+));
+
+if( $this->msg ) {
+	echo $this->message($this->msg);
+}
+
+echo $this->form;
+?>
+<script type="text/javascript">
+    $(function() { $("#effectiveDate").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '2000:2090'} );});
+    var $inputs = $('#schedule input');
+    $inputs.each(function(i, el) {
+		if( el.name.match(/\[effectiveDate\]/) != null ) {
+			$(function() { $("#"+el.id).datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '2000:2090'} );});
+		}
+    });
+</script>
+

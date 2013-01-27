@@ -1,0 +1,11 @@
+<?php
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headScript();
+?>
+<h1><i18n>forgotInfo</i18n></h1>
+<a href="mailto:admins@vazney.com?subject=Account recover"><img src="/images/info.png" alt="<?php echo $this->translate('contactUs');?>" title="<?php echo $this->translate('contactUs');?>"/></a>
+<br/>
+<a href="<?php echo $this->url(array('module'=>'user','controller'=>'index','action'=>'forgotusername'));?>"><i18n>forgotUsername</i18n></a>
+<a href="<?php echo $this->url(array('module'=>'user','controller'=>'index','action'=>'forgotpassword'));?>"><i18n>forgotPassword</i18n></a>
+<p><i18n>recoverInfoInfo</i18n></p>
+<?php echo $this->internazionalization($this->msg,$this->type);?>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title><?php echo $this->appTitle;?></title>
+<?php
+// keep style sheets from being included multiple times
+// http://zendweaves.blogspot.com/2009/07/how-to-use-zend-headlink-and-headscript.html
+echo $this->headLink()->appendStylesheet('/css/general.css')
+	->headLink()->appendStylesheet('/css/squareMessage.css') // success, error, and warning messages css	
+	->headLink()->appendStylesheet('/css/records.css');
+?>
+</head>
+<body>
+<div class="searchBar"><span><?php echo $this->appTitle;?></span>
+<div class="loginaction" style='display: inline;'><?php print $this->loggedIn();?></div>
+</div>
+<div class="dashboard" id="dashboard"><?php $this->bar(array('type'=>'module',
+                                                             'containerStyle'=>'dashboard',
+                                                             'hiddenElements'=>array('default'))); ?></div>
+<div class="cbar" id="cbar"><?php $this->controllerBar();?>
+<div class="page" id="page"><?php echo $this->layout()->content;?></div>
+<div class="dock" id="dock"><?php $this->docklet();?></div>
+</body>
+</html>

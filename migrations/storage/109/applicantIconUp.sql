@@ -1,0 +1,1 @@
+UPDATE modules SET icon='/images/dashboard/cb.gif', display=1 where name='applicant';

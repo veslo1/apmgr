@@ -1,0 +1,12 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/sort.css');
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+echo $this->headScript()->appendFile('/javascript/Sort/fastinit.js');
+echo $this->headScript()->appendFile('/javascript/Sort/tablesort.js');
+?>
+<h1>View Database Logs</h1>
+<?php echo $this->back();?>
+<?php
+$fields = array( 'Id' => 'ID','message' => 'Message','dateCreated'=>'Date Created');
+echo $this->testGrid('grd',$fields,$this->paginator,true);
+?>

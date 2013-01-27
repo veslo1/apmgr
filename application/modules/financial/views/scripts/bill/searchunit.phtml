@@ -1,0 +1,20 @@
+<?php
+/**
+ * //TODO Homie, please, the pages that you created, <strong>please put your name on them</strong>
+ * Select bill screen.
+ * @author Rachael Michelle Nelson <wtcfg1@gmail.com>
+ * @revision Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headLink()->prependStylesheet('/css/roundError.css');
+echo $this->bar (
+array( 'type'		=>'action',
+						   'destination'=>array(
+												 'module' 	 => 'financial',
+												 'controller'=>'create'
+												 )
+												 )
+												 );
+
+												 print $this->form;
+												 print $this->message($this->msg);
+												 ?>

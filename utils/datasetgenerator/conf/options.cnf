@@ -1,0 +1,5 @@
+user=dev
+pwd=dev
+host=localhost
+database=apmgr
+dest=/usr/local/www/apmgr/utils/datasetgenerator/xml/

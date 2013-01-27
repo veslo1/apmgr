@@ -1,0 +1,49 @@
+<?php
+/**
+ * Created on Dec 3, 2009 by rnelson
+ * @name apmgr
+ * @package application.modules.apartment.models
+ * <p>
+ * The model for apartment
+ * </p>
+ */
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+->appendFile('/javascript/tablecss/tablecss.js');
+
+echo $this->headLink()->prependStylesheet('/css/table.css');
+?>
+
+<?php if( !$this->records ) {?>
+<div><a
+	href="<?php echo $this->serverUrl('/unit/apartment/createapartment'); ?>">
+<img width="24" height="24" title="<i18n>createNewApartment</i18n>"
+	src="/images/add_48.png"> </a></div>
+<?php } ?>
+
+<?php
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+?>
+<div id="pagtable">
+<table id='currenttable'>
+	<caption><i18n>apartment</i18n></caption>
+	<?php if( $this->records ) {?>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->records as $id=>$row ) { ?>
+	<tr>
+		<td><?php echo $row->getName(); ?></td>
+		<td><a
+			href="<?php echo $this->serverUrl('/unit/apartment/viewapartment/aptId/'. $row->getId() ); ?>"><img
+			width="24" height="24" title="<i18n>viewDetails</i18n>"
+			src="/images/search_48.png" /></a> <a
+			href="<?php echo $this->serverUrl('/unit/apartment/updateapartment/aptId/'. $row->getId() ); ?>"><img
+			width="24" height="24" title="<i18n>update</i18n>"
+			src="/images/onebit_20.png" /></a> </td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?></div>

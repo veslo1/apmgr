@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on Feb 2, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.financial.views.scripts
+ * <p>
+ * Create form for accounts
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'createaccount','updateaccount', 'viewaccount' )		
+));
+
+echo $this->form;
+?>
+

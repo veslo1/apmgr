@@ -1,0 +1,25 @@
+<?php
+
+echo $this->headLink()->prependStylesheet('/css/test.css');
+
+?>
+<?php if ($this->pageCount>1): ?>
+
+<?php /*if (isset($this->totalItemCount)) echo '# Records: '. $this->totalItemCount; */?>
+
+<br>
+<ul
+	id="pagination">	
+
+	<!-- Numbered page links -->
+	<?php foreach ($this->pagesInRange as $page): ?>
+	    <?php if ($page != $this->current): ?>
+	        <li><a href="<?php echo $this->url(array('page' => $page)); ?>"> <?php echo $page; ?></a></li>
+	    <?php else: ?>
+	        <li class="active"><?php echo $page; ?></li>
+	    <?php endif; ?>
+	<?php endforeach; ?>
+
+</ul>
+<br>
+<?php endif; ?>

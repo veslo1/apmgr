@@ -1,0 +1,8 @@
+<h1>Forensic section of <?php echo $this->appTitle;?></h1>
+<?php echo $this->back();?>
+<h2>All the logs of the application, are available in this section.</h2>
+<?php
+foreach ($this->actions as $action ) {
+	print "<a href='".$this->url(array('module'=>'logs','controller'=>'index','action'=>$action))."'>".ucfirst($action)."</a><br/>";
+}
+?>

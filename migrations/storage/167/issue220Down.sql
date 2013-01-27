@@ -1,0 +1,1 @@
+UPDATE `apmgr`.`role` SET `name` = 'administrative assistant',`dateUpdated` = '2010-09-30 22:47:00' WHERE `role`.`id` =5;

@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created on Sep 22, 2009 by jvazquez
+ * @global  datesite
+ * @package application.modules.permission.views.script.update
+ * <p>
+ * Update page for the permissions module
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+?>
+<div class="details">
+<h1>Province Section</h1>
+<h3>Update province</h3>
+<div><?php echo $this->crudBar('province');  ?></div>
+<div class="form"><?php
+if( isset($this->form) ) {
+	$this->form->setAction($this->url());
+	echo $this->form;
+} else {//TODO provide a message?> <?php	}?></div>
+</div>

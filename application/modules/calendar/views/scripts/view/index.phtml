@@ -1,0 +1,13 @@
+<h1><i18n>calendarTitle</i18n></h1>
+<?php
+echo $this->headLink()->prependStylesheet('/css/calendar.css');
+echo $this->bar(array('type'=>'controller','destination'=>'calendar'));
+?>
+<div id="miniNavigation"><span><a
+	href="<?=$this->url(array('module'=>'calendar','controller'=>'view','action'=>'dailyview'),null,true);?>"><i18n>dayView</i18n></a></span>
+<span><a
+	href="<?php echo $this->url(array('module'=>'calendar','controller'=>'view','action'=>'weekview'),null,true);?>"><i18n>weekView</i18n></a></span>
+<span class="current"><a
+	href="<?php echo $this->url(array('module'=>'calendar','controller'=>'view','action'=>'index'),null,true);?>"><i18n>monthView</i18n></a></span>
+</div>
+<?=$this->calendar;?>

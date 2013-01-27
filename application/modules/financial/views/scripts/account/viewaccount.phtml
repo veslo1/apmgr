@@ -1,0 +1,42 @@
+<?php
+/**
+ * Created on Feb 2, 2010 by rnelson
+ * @name apmgr view
+ * @package application.modules.apartment.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                        ->appendFile('/javascript/tablecss/tablecss.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'account'),
+		 'hiddenElements'=>array( 'updateaccount', 'viewaccount','viewaccounttransactions' )		
+));
+ 
+if ( $this->resultCheck($this->account) ){
+	?>
+
+<table id='currenttable'>
+	<caption><i18n>accountDetails</i18n></caption>
+	<tr>
+		<th><i18n>name</i18n></th>
+		<td><?php echo $this->account['name'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>number</i18n></th>
+		<td><?php echo $this->account['number'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>orientation</i18n></th>
+		<td><i18n><?php echo $this->account['orientation'];?></i18n></td>
+	</tr>
+	<tr>
+		<th><i18n>accountType</i18n></th>
+		<td><i18n><?php echo $this->account['accountTypeName'];?></i18n></td>
+	</tr>
+</table>
+
+	<?php
+}
+?>

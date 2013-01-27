@@ -1,0 +1,2 @@
+INSERT INTO `apmgr`.`messages` (`message` ,`identifier` ,`category` ,`language` ,`locked` ,`dateCreated` ,`dateUpdated`) VALUES 
+('No apartment found.  Please create an apartment.', 'noApartment', 'error', 'en_US', '1', '2010-11-11', NULL );

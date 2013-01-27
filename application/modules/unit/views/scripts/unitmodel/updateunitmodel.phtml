@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on Apr 17, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Cancels Lease
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unitmodel'),
+		 'hiddenElements'=>array('index', 'updateunitmodel', 'viewunitmodel','viewunitmodel')		 
+)); 
+
+echo $this->form;
+?>

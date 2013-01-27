@@ -1,0 +1,1 @@
+ALTER TABLE `applicantOccupants` DROP `idIdentification`;

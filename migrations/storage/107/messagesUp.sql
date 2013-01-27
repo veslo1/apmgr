@@ -1,0 +1,3 @@
+INSERT INTO `apmgr`.`messages` (`message` ,`identifier` ,`category` ,`language` ,`locked` ,`dateCreated` ,`dateUpdated`) VALUES 
+('Error Saving.  Please configure the default assigned group in the maintenance settings ', 'missingMaintenanceSetting', 'error', 'en_US', '1', '2010-08-13', NULL ),
+('Error Saving.  You are not assigned to a current lease so you cannot open any maintenance requests.', 'maintReqNoUnit', 'error', 'en_US', '1', '2010-08-13', NULL );

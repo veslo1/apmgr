@@ -1,0 +1,1 @@
+ALTER TABLE `applicantBackgroundCheck` DROP `currentStatus`;

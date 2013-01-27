@@ -1,0 +1,17 @@
+<?php
+/**
+ * Created on Mar 5, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The view in the lease wizard for selecting a rent schedule (pagee 1 of wizard)
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+if( $this->message ){    
+    echo $this->internazionalization($this->message['msg'],$this->message['type']);
+}
+else{
+    echo $this->form;
+}
+?>

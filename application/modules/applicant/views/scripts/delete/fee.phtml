@@ -1,0 +1,17 @@
+<?php
+/**
+ * The user tell us about himself
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/roundSuccess.css');
+echo $this->headLink()->appendStylesheet('/css/roundWarning.css');
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+?>
+<h1><i18n>applicantFeeSettingsTitle</i18n></h1>
+<?php
+echo $this->back();
+echo $this->bar(array('type'=>'controller','destination'=>'applicant','container'=>'<div class="%s">','containerStyle'=>'menuModule controller','containerCloseTag'=>'</div>'));
+echo $this->form;
+echo $this->message($this->msg);
+?>

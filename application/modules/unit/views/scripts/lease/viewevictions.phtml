@@ -1,0 +1,60 @@
+<?php
+/**
+ * Created on Jan 13, 2011 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * Eviction view
+ * </p>
+ */
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+						->appendFile('/javascript/tablecss/tablecss.js'); 
+
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','createleasefee','cancellease','viewleaselist','viewevictions','vieweviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','selectleasebills','viewmyleasebill','viewmypayments' ),
+		 'target'=>array(array('action'=>'createeviction','queryString'=>'/leaseId/'.$this->leaseId),
+				 array('action'=>'viewlease','queryString'=>'/leaseId/'.$this->leaseId)) 
+));
+
+?>
+
+<?php
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+?>
+
+
+<table id='currenttable'>
+	<caption><i18n>evictions</i18n></caption>
+	<?php if( $this->evictions ) {?>
+	<tr>
+		<th><i18n>tenantName</i18n></th>
+		<th><i18n>isEvicted</i18n></th>
+		<th><i18n>dateCreated</i18n></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->evictions as $id=>$row ) { ?>
+	<tr>
+		<td><?php echo $row['tenantName']; ?></td>
+		<td><i18n><?php echo $row['isEvictedText'];?></i18n></td>
+		<td><?php echo $this->dateFormat($row['dateCreated'],'mdy'); ?></td>
+		<td>
+			<a
+		              href="<?php echo $this->serverUrl('/unit/lease/vieweviction/evictionId/'. $row['id'] ); ?>">
+		              <img width="24" height="24" title="<i18n>viewDetails</i18n>"
+			           src="/images/search_48.png" /> </a>
+		        <a
+			      href="<?php echo $this->serverUrl('/unit/lease/viewallevictiondocuments/evictionId/'. $row['id'] ); ?>">
+		              <img width="24" height="24" title="<i18n>viewDocuments</i18n>"
+			          src="/images/onebit_39.png" /> </a>						
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?>
+</td>
+</tfoot>

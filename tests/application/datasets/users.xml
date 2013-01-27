@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<user id="1" firstName="Jorge" lastName="Vazquez" username="jvazquez"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jvazquez@debserverp4.com.ar"
+		phone="3527-5153" mobile="15555555" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="1"/>
+	<user id="2" firstName="jmember" lastName="test" username="member"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="member@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="2"/>
+	<user id="3" firstName="jviewer" lastName="test" username="viewer"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="viewer@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="3"/>
+	<user id="4" firstName="jguest" lastName="guest" username="guest"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="guest@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="4"/>
+	<user id="5" firstName="jleaseagent" lastName="lagent" username="jleaseagent "
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jleaseagent@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="5"/>
+	<user id="6" firstName="jpropman" lastName="pmanager" username="pmanager"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="pmanager@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="7"/>
+	<user id="7" firstName="japplicant" lastName="test" username="applicant"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="applicant@debserverp4.com.ar"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="8"/>
+	<user id="8" firstName="john" lastName="connor" username="jconnor"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jconnor@skynet.com"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="8"/>
+	<!-- 9 Used in prelease - do not modify -->
+	<user id="9" firstName="test" lastName="prelease" username="prelease"
+		password="dddd5d7b474d2c78ebbb833789c4bfd721edf4bf" emailAddress="jconnor@skynet.com"
+		phone="0" mobile="0" fax="0" deleted="0" dateCreated="2010-06-05"
+		dateUpdated="2010-06-05" roleId="8"/>
+	<user id="10" firstName="bill" lastName="johnson" username="bjohnson"
+		password="blah" emailAddress="blah@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" roleId="8"/>
+	<user id="11" firstName="dan" lastName="smith" username="dsmith"
+		password="blah" emailAddress="dsmith@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" roleId="8"/>
+	<user id="12" firstName="kyle" lastName="williams" username="kwilliams"
+		password="blah" emailAddress="kwilliams@blah.com" phone="555-555-5555"
+		mobile="555-555-5555" fax="555-555-5555" deleted="0" dateCreated="2010-05-01"
+		dateUpdated="2010-05-01" roleId="8"/>
+	<applicant id="1" dateCreated="2010-08-27" dateUpdated="2010-07-12"
+		userId="7" />
+	<applicant id="2" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="7" />
+	<applicant id="3" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="7" />
+	<!-- 9 Used in prelease - do not modify -->
+	<applicant id="9" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="9" />
+	<!-- 10 and 11 Used in helper test - do not modify -->
+	<applicant id="10" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="9" />
+	<!-- 11 and 12 Used in helper test - do not modify - don't assign bills to applicantId=11 -->
+	<applicant id="11" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="11" />
+	<applicant id="12" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="11" />
+	<!-- 13 - 14 used in prelease test -->
+	<applicant id="13" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="11" />
+	<applicant id="14" dateCreated="2010-08-28" dateUpdated="2010-07-12"
+		userId="12" />
+</dataset>

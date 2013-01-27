@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on February 24, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.maintenance.views.scripts
+ * <p>
+ * Create form for maintenance requests
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+if($this->msg){
+echo $this->message($this->msg);
+}
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'maintenance','controller'=>'maintenance'),
+		 'hiddenElements'=>array('index','viewmaintenancerequest','viewmaintenancerequestadmin','createmaintenancerequestadmin'),		 
+));
+echo $this->form;

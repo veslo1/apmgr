@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on Sep 20, 2009 by jvazquez
+ * @global  datesite
+ * @package application.modules.permission.views.script.update
+ * <p>
+ * Update page for the permissions module
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/roundError.css');
+echo $this->headLink()->appendStylesheet('/css/round.css');
+echo $this->headLink()->appendStylesheet('/css/zendform.css');
+?>
+<h1><i18n>permissionTitle</i18n></h1>
+<h3><i18n>permissionUpdateDescription</i18n></h3>
+<?php
+echo $this->back();
+echo $this->form;
+?>

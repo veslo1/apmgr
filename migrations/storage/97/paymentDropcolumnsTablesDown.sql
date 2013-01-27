@@ -1,0 +1,1 @@
+-- Look in migration 1 for the original fields.  The fields shouldn't be added back unless we plan on storing cc data

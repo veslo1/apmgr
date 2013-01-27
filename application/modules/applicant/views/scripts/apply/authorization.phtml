@@ -1,0 +1,53 @@
+<?php
+/**
+ * Authorization page
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headLink()->prependStylesheet('/css/roundError.css')
+->headLink()->prependStylesheet('/css/roundSuccess.css')
+->headLink()->prependStylesheet('/css/roundWarning.css')
+->headLink()->prependStylesheet('/css/zendform2.css');
+echo $this->headLink();
+
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+} else {
+	echo $this->form;
+	?>
+<!-- 
+<table
+	style="border: thin solid black; font-size: 10px; font-family: monospace;">
+	<caption><strong><i18n>applicationAgreement</i18n></strong></caption>
+	<tbody>
+		<tr>
+			<td>1-<i18n>applicationLeaseContractInformation</i18n></td>
+			<td>8-<i18n>completedApplication</i18n></td>
+		</tr>
+		<tr>
+			<td>2-<i18n>applicationFeeLegal</i18n></td>
+			<td>9-<i18n>nonApprovalInSevenDays</i18n></td>
+		</tr>
+		<tr>
+			<td>3-<i18n>applicationDeposit</i18n></td>
+			<td>10-<i18n>refundAfterNonApproval</i18n></td>
+		</tr>
+		<tr>
+			<td>4-<i18n>approvalLeaseSign</i18n></td>
+			<td>11-<i18n>extensionOfDeadline</i18n></td>
+		</tr>
+		<tr>
+			<td>5-<i18n>approvalLeaseNotSign</i18n></td>
+			<td>12-<i18n>coApplicantNotice</i18n></td>
+		</tr>
+		<tr>
+			<td>6-<i18n>approvalLeaseFail</i18n></td>
+			<td>13-<i18n>keysOrAccess</i18n></td>
+		</tr>
+		<tr>
+			<td>7-<i18n>withdrawBeforeApproval</i18n></td>
+		</tr>
+	</tbody>
+</table>
+ -->
+<?php }
+?>

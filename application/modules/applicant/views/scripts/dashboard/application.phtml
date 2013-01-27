@@ -1,0 +1,57 @@
+<?php
+/**
+ * Index page for the dashboard
+ * @author Jorge Omar Vazquez <jvazquez@debserverp4.com.ar>
+ */
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+	
+$this->headLink()->prependStylesheet('/css/paginator.css')
+	->headLink()->prependStylesheet('/css/zendform2.css');		
+						
+echo $this->headScript();
+echo $this->headLink();
+
+$this->bar( array(
+					'type'=>'action',
+				  	'destination'=>array('module'=>'applicant','controller'=>'dashboard'),
+				  	'hiddenElements'=>array('application','index','paymentconfirmation','payment','viewfeesdue','viewfeespaid'),
+					'displayHiddenIcons'=>false 
+)
+);
+?>
+<?php echo $this->message($this->msg);?>
+
+<table class="hor-minimalist-a">
+	<caption><i18n>applicantDashboard</i18n> - <i18n>yourCompletedApplications</i18n></caption>
+	<?php if ( count($this->applications) ) { ?>
+	<tr>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'application','sort'=>$this->sort,'column'=>'name'));?>"><i18n>apartmentName</i18n></a></th>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'application','sort'=>$this->sort,'column'=>'dateCreated'));?>"><i18n>dateCreated</i18n></a></th>
+		<th><i18n>actions</i18n></th>
+	</tr>
+	<?php foreach( $this->applications as $id=>$application ) { ?>
+	<tr>
+		<td>
+		<p><?php echo $application['name'];?></p>
+		</td>
+		<td>
+		<p><?php echo $this->dateFormat($application['dateCreated'],'mdyt');?></p>
+		</td>
+		<td><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'viewfeesdue','id'=>$application['applicantId']),null,true);?>">
+			    <img width="24" height="24" title="<i18n>viewfeesdue</i18n>"
+			    src="/images/onebit_49.png" /></a>
+		<a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'dashboard','action'=>'viewfeespaid','id'=>$application['applicantId']),null,true);?>">
+			<img width="24" height="24" title="<i18n>viewfeespaid</i18n>"
+			    src="/images/onebit_48.png" /></a>
+		</a>
+		</td>
+	</tr>
+	<?php } ?>
+</table>
+<?php } else echo "<tr><td><i18n>noRows</i18n></td></tr></table>";?> <?php if( $this->paginator ) echo $this->paginationControl($this->paginator,'Sliding', 'paginationTemplate.phtml');?>
+	

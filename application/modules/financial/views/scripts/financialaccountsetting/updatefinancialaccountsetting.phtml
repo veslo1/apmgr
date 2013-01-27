@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created on August 14, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Update Fee
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/roundError.css')
+->appendStylesheet('/css/round.css')
+->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'financial','controller'=>'financialaccountsetting'),
+		 'hiddenElements'=>array( 'viewfinancialaccountsetting', 'updatefinancialaccountsetting' )		
+));
+
+if( $this->msg ) {
+	echo $this->message($this->msg);
+}
+echo $this->form;
+?>

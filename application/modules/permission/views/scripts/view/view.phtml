@@ -1,0 +1,46 @@
+<?php
+/**
+ * Created on Sep 20, 2009 by jvazquez
+ * @name datesite
+ * @package application.modules.permission.views.scripts.view
+ * <p>
+ * Displays the info about a single permission
+ * </p>
+ */
+?>
+<div class="details">
+<h1>Permission Section</h1>
+<?php echo $this->back();?>
+<h3>View Detailed Permission Details</h3>
+<div class="crudbar"><?php  echo $this->crudBar('permission');?></div>
+<div class="results">
+<table>
+	<tr>
+		<td>Id</td>
+		<td>Name</td>
+		<td>Access</td>
+		<td>Actions</td>
+	</tr>
+	<tr>
+		<td>
+		<p><?=$this->record->getId();?></p>
+		</td>
+		<td>
+		<p><?=$this->record->getName();?></p>
+		</td>
+		<td><span> <?=$this->record->getRead();?> <?=$this->record->getWrite();?>
+		<?=$this->record->getExecute();?> </span></td>
+		<td><a
+			href="<?=$this->serverUrl('/permission/view/'. $this->record->getId());?>"
+			class="cleanlink"><img src="/images/view.gif" alt="View Permission"
+			title="View Permission" /></a> <a
+			href="<?=$this->serverUrl('/permission/update/index/id/'. $this->record->getId());?>"
+			class="cleanlink"><img src="/images/edit.gif"
+			title="Update Permission" alt="Update Permission" /></a> <a
+			href="<?=$this->serverUrl('/permission/delete/'. $this->record->getId());?>"
+			class="cleanlink"><img src="/images/delete.gif"
+			alt="Delete Permission" title="Delete Permission" /></a></td>
+	</tr>
+</table>
+</div>
+</div>

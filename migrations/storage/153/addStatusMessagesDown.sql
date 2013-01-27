@@ -1,0 +1,1 @@
+DELETE FROM `messages` WHERE identifier IN ( 'missingUserId', 'sameApplicantId', 'missingApplicantId');

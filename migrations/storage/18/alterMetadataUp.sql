@@ -1,0 +1,1 @@
+ALTER TABLE `unitMetaData` CHANGE `size` `size` DOUBLE NOT NULL ;

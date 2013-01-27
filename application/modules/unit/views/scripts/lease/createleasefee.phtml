@@ -1,0 +1,38 @@
+<?php
+/**
+ * Created on April 25, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts.leasewizard
+ * <p>
+ * Create individual fees
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+                      ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+                        ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'lease'),
+		 'hiddenElements'=>array( 'index','cancellease','viewleaselist','viewevictions','vieweviction','createeviction','viewallevictiondocuments','addevictiondocument','viewevictiondocument','deleteevictiondocument','createleasefee','adddocument','viewalldocuments','viewdocument','mylease','myleaselist','myrentbill','payleasebillconfirmation','payleasebills','viewmyleasebill','viewmypayments','selectleasebills'),
+		 'target'=>array(array('action'=>'createleasefee','queryString'=>'/leaseId/'.$this->leaseId),
+				 array('action'=>'viewlease','queryString'=>'/leaseId/'.$this->leaseId))
+));
+
+echo $this->internazionalization($this->msg['msg'],$this->msg['type']);
+echo $this->form;
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dueDate").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+SET FOREIGN_KEY_CHECKS = 0;
+ALTER TABLE `userRole` DROP FOREIGN KEY `userRole_ibfk_1` ;
+ALTER TABLE `userRole` DROP FOREIGN KEY `userRole_ibfk_2` ;
+DROP TABLE `userRole`;
+ALTER TABLE  `user` ADD  `roleId` INT NULL DEFAULT  '2' AFTER  `fax`,ADD INDEX ( `roleId`);
+UPDATE user SET roleId=1 WHERE id=1;
+UPDATE user SET roleId=8 WHERE id<>1;
+ALTER TABLE  `user` CHANGE  `roleId`  `roleId` INT( 11 ) NOT NULL;
+ALTER TABLE `user` ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+SET FOREIGN_KEY_CHECKS = 1;

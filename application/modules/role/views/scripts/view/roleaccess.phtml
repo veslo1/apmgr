@@ -1,0 +1,25 @@
+<?php echo $this->headLink()->appendStylesheet('/css/paginator.css'); ?>
+<h1><i18n>viewRoleAccess</i18n></h1>
+<?php print $this->message($this->messageResult);?>
+<table class="hor-minimalist-a">
+	<thead>
+		<tr>
+			<th><a
+				href='<?=$this->url(array('controller'=>'view','action'=>'roleaccess','module'=>'role','column'=>'roleName','sort'=>$this->sort));?>'><i18n>rolename</i18n></a></th>
+			<th><a href=""><i18n>pages</i18n></a></th>
+			<th><i18n>actions</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->roleAccess as $id=>$object) {?>
+		<tr>
+			<td><?=ucfirst($object['roleName']);?></td>
+			<td><?php echo $object['alias'];?></td>
+			<td><?php
+			echo $this->permissionDelete($object['permissionId'],$this->url(array('controller'=>'delete','action'=>'delete','module'=>'permission','id'=>$object['permissionId'])),'delete');
+			?></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->roleAccess,'Sliding', 't3.phtml');?>

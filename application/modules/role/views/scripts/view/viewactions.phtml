@@ -1,0 +1,21 @@
+<?php echo $this->headLink()->appendStylesheet('/css/paginator.css');
+print $this->message($this->messageResult); ?>
+<table class="hor-minimalist-a">
+	<caption><?php echo ucfirst($this->module->getName()); ?>: <?php echo ucfirst($this->controller->getName());?></caption>
+	<thead>
+		<tr>
+			<th><i18n>actionName</i18n></th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($this->records as $id=>$row) { ?>
+		<tr>
+			<td><?=ucfirst($row['actionName']);?></td>
+			<td><a
+				href="<?php echo $this->serverUrl('/role/update/updatepermission/permissionId/'. $row['id'] ); ?>">
+			<img width="24" height="24" title="<i18n>update</i18n>"
+				src="/images/onebit_20.png" /> </a></td>
+		</tr>
+		<?php }?>
+	</tbody>
+</table>

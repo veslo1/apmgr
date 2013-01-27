@@ -1,0 +1,39 @@
+<?php
+/**
+ * Created on Dec 11, 2009
+ * index.phtml
+ * @author rnelson
+ * @package application.modules.user.views.scripts.tenant
+ */
+echo $this->crudBar('user');
+?>
+<div class="details">
+<h1>Search/CreateTenant</h1>
+<div class="form"><?php echo $this->form;?></div>
+</div>
+
+<?php
+$fields = array( 'firstName'=> 'Name','lastName'=>'Last Name','username'=>'User Name','emailAddress'=>'Email');
+echo $this->testGrid(  'grd', $fields,$this->paginator,true,
+array( 'Add' => array(
+                                                        'column'=>'Id',
+                                                        'alias'=>'userId',
+                                                        'module'=>'unit',
+                                                        'controller'=>'tenant',
+                                                        'action'=>'addtounit',
+                                                        'image'=>'onebit_17.png'          
+                                                     
+                                                        ),
+
+                                      'View' => array(                                      
+                                                        'column'=>'Id',                                                        
+                                                        'module'=>'unit',
+                                                        'controller'=>'view',
+                                                        'action'=>'view',
+                                                        'image'=>'onebit_02.png'                                                        
+                                                        /*'js'=>  array( 'onClick'=>array(  'deleteElement' => array('id') ) ) */
+                                                        )
+                                                        )
+
+                                                        );
+                                                        ?>

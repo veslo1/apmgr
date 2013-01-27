@@ -1,0 +1,73 @@
+<?php
+/**
+ * Created on Jan 9, 2009 by rnelson
+ * @name apmgr view
+ * @package application.modules.unit.views.scripts.view
+ * <p>View page for an apartment </p>
+ */
+
+/*  Layout:
+
+
+------------------------
+Unit Details
+------------------------
+Basic Info (apartment, number)
+Extra Info ( furnished, size, utilities, map, etc  )
+Click link to view tenant info
+
+Need icons for removal/edit etc
+
+*/
+echo $this->headLink()->prependStylesheet('/css/table.css');
+echo $this->headScript()->appendFile('/javascript/jquery/jquery.js')
+                        ->appendFile('/javascript/tablecss/tablecss.js');
+?>
+
+<?
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'unitmodel'),
+		 'hiddenElements'=>array('index', 'updateunitmodel', 'viewunitmodel','viewunitmodel')		 
+)); 
+?>
+
+<?php
+
+if ( $this->resultCheck($this->unitModel) ){
+	?>
+<table>
+	<caption><i18n>unitModelDetails</i18n></caption>
+
+	<tr>
+		<th><i18n>unitModel</i18n></th>
+		<td><?=$this->unitModel['name'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>size</i18n></th>
+		<td><?=$this->unitModel['size'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>beds</i18n></th>
+		<td><?=$this->unitModel['numBeds'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>baths</i18n></th>
+		<td><?=$this->unitModel['numBaths'];?></td>
+	</tr>
+	<tr>
+		<th><i18n>numFloors</i18n></th>
+		<td><?=$this->unitModel['numFloors'];?></td>
+	</tr>
+</table>
+
+	<?php if( $this->resultCheck($this->amenities) ){  ?>
+<table>
+	<caption><i18n>amenities</i18n></caption>
+	<?php foreach( $this->amenities as $id=>$name ){ ?>
+	<tr>
+		<td><?php echo $name ?></td>
+	</tr>
+	<?php } ?>
+</table>
+	<?php }} ?>
+

@@ -1,0 +1,20 @@
+<?php
+/**
+ * Created on Jan 25, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Create form for amenities
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'amenity'),
+		 'hiddenElements'=>array('index','updateamenity','createamenity'),		 
+));
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+$this->form->setAction($this->url());
+echo $this->form;

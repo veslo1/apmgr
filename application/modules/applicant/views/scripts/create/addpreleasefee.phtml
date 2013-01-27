@@ -1,0 +1,34 @@
+<?php
+/**
+ * Created on Oct 7, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.applicant.views.scripts.create
+ * <p>
+ * Create individual fees
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+          ->headLink()->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+          ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+if($this->messages){
+    echo $this->message($this->messages);
+}
+
+echo $this->form;
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#dueDate").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+
+
+
+
+
+

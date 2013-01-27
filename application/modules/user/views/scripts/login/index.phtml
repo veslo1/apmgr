@@ -1,0 +1,12 @@
+<?php
+/**
+ * Created on Sep 26, 2009 by jvazquez
+ */
+$this->headLink()->headLink()->prependStylesheet('/css/zendform2.css');
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript');
+echo $this->headLink();
+echo $this->headScript();
+?>
+<?=$this->form;?>
+<?php echo $this->internazionalization($this->msg['msg'],$this->msg['type']);?>
+<a href="<?php echo $this->url(array('module'=>'user','controller'=>'index','action'=>'forgotinfo'));?>"><i18n>forgotInfo</i18n></a>

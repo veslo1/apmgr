@@ -1,0 +1,57 @@
+<?php
+echo $this->headLink()->appendStylesheet('/css/paginator.css')	
+	 ->headLink()->appendStylesheet('/css/roundcorner_32_grey.css')
+	 ->headLink()->prependStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	 ->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+
+$barOptions = array(
+						'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array('fees','viewallapplicants','completedapps','statuschange')
+);
+?>
+<?php
+$this->bar($barOptions);
+echo $this->round($this->form);
+?>
+<script type="text/javascript">
+    $(function() { $("#dateFrom").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+    $(function() { $("#dateTo").datepicker({dateFormat: 'yy-mm-dd',changeMonth: true,changeYear:true,yearRange: '1900:2090'} );});
+</script>
+
+<table class="hor-minimalist-a">
+    <caption><i18n>viewAllPrelease</i18n></caption>
+	<tr>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallprelease','by'=>'firstName','order'=>$this->sort),null,true);?>"><i18n>firstName</i18n></a></th>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallprelease','by'=>'lastName','order'=>$this->sort),null,true);?>"><i18n>lastName</i18n></a></th>
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallprelease','by'=>'unitModel','order'=>$this->sort),null,true);?>"><i18n>unitModel</i18n></a></th>
+		
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallprelease','by'=>'unitNumber','order'=>$this->sort),null,true);?>"><i18n>unitNumber</i18n></a></th>
+		
+		<th><a
+			href="<?php echo $this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallprelease','by'=>'dateCreated','order'=>$this->sort),null,true);?>"><i18n>dateCreated</i18n></a></th>
+		<th colspan="5"><i18n>action</i18n></th>
+	</tr>
+	<?php foreach ($this->applicants as $id=>$applicant) { ?>
+	<tr>
+		<td><?php echo $applicant['firstName'];?></td>
+		<td><?php echo $applicant['lastName'];?></td>
+		<td><?php echo $applicant['unitModelName'];?></td>
+		<td><?php echo $applicant['unitNumber'];?></td>
+		<td><?php echo $applicant['dateCreated'];?></td>		
+		<td><a href="<?php echo $this->serverUrl('/applicant/view/viewpreleaseapplicantfees/applicantId/'. $applicant['applicantId'] ); ?>"><img
+			width="24" height="24" title="<i18n>viewDetails</i18n>"
+			src="/images/search_48.png" /></a>
+		</td>		
+	</tr>
+	<?php }?>
+</table>
+	<?php
+	echo $this->paginationControl($this->applicants,'Sliding', 'paginationTemplate.phtml');
+	echo $this->internazionalization($this->error,'error');
+?>

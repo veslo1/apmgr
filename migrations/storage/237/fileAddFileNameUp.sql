@@ -1,0 +1,2 @@
+ALTER TABLE file
+ADD COLUMN fileName varchar(100) NOT NULL;

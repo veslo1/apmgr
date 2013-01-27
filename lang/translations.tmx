@@ -1,0 +1,7380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+		adminlang="en_US" srclang="es_AR" o-tmf="abc" creationtool="XYZTool" />
+	<body>
+		<tu tuid='roleTitle'>
+			<tuv xml:lang="en_US">
+				<seg>Role Section</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Secci&#243;n Rol</seg>
+			</tuv>
+		</tu>
+		<tu tuid='cityTitle'>
+			<tuv xml:lang="en_US">
+				<seg>City Section</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Secci&#243;n Ciudad</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllRoles'>
+			<tuv xml:lang="en_US">
+				<seg>View all roles</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver todos los roles</seg>
+			</tuv>
+		</tu>
+		<tu tuid='name'>
+			<tuv xml:lang="en_US">
+				<seg>Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre</seg>
+			</tuv>
+		</tu>
+		<tu tuid='action'>
+			<tuv xml:lang="en_US">
+				<seg>Action</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Acci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid='warningAcl'>
+			<tuv xml:lang="en_US">
+				<seg>If you change this names, you will affect the ACL and will
+					cause havoc.So if you intend to make changes,please, verify the acl
+					names first!</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Si camb&#237;a estos nombres, va a afectar la ACL y esta se
+					podr&#237;a romper . Si pretende hacer cambios , por favor , !
+					Verifique el nombre de la ACL primero!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewRoleById'>
+			<tuv xml:lang="en_US">
+				<seg>View Role By Id</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Rol Por Id</seg>
+			</tuv>
+		</tu>
+		<tu tuid='dateCreated'>
+			<tuv xml:lang="en_US">
+				<seg>Date Created</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha de Creaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid='dateUpdated'>
+			<tuv xml:lang="en_US">
+				<seg>Date Updated</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha de Actualizaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewRoleAccess'>
+			<tuv xml:lang="en_US">
+				<seg>View Roles access</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Accesso de Roles</seg>
+			</tuv>
+		</tu>
+		<tu tuid='createNewRole'>
+			<tuv xml:lang="en_US">
+				<seg>Create a new role</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear un Rol Nuevo</seg>
+			</tuv>
+		</tu>
+		<tu tuid='searchRoles'>
+			<tuv xml:lang="en_US">
+				<seg>Search Roles</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Buscar Roles</seg>
+			</tuv>
+		</tu>
+		<tu tuid='updateRole'>
+			<tuv xml:lang="en_US">
+				<seg>Update Role</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar Rol</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messagesTitle'>
+			<tuv xml:lang="en_US">
+				<seg>System Messages</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Mensajes Del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='searchResults'>
+			<tuv xml:lang="en_US">
+				<seg>Search Results</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Resultados de la b&#250;squeda</seg>
+			</tuv>
+		</tu>
+		<tu tuid='noResultsFound'>
+			<tuv xml:lang="en_US">
+                          <seg>No Results</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+			  <seg>No hay resultados</seg>
+			</tuv>
+		</tu>
+		<tu tuid='systemMessages'>
+			<tuv xml:lang="en_US">
+			  <seg>View System Messages</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+			  <seg>Ver Mensajes del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='systemMessagesCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create a new System Message</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear un nuevo Mensajes de S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='roles'>
+		  <tuv xml:lang="en_US">
+		    <seg>Roles</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Roles</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='pages'>
+		  <tuv xml:lang="en_US">
+		    <seg>Pages</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Paginas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='roleCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create System Roles</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear Roles del S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='cities'>
+		  <tuv xml:lang="en_US">
+		    <seg>View System Cities</seg>
+		   </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Ciudades del S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='citiesCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create A New City</seg>
+		   </tuv>
+		   <tuv xml:lang="es_AR">
+		    <seg>Crear una Ciudad nueva</seg>
+		   </tuv>
+		</tu>
+		<tu tuid='countries'>
+		  <tuv xml:lang="en_US">
+		    <seg>View System Countries</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Pa&#237;ses del S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='countryCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create a New System Country</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear un nuevo Pa&#237;s en el S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='permissions'>
+		  <tuv xml:lang="en_US">
+		    <seg>Pages</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>P&#193;ginas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='permissionsCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create a Permission in the system</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear un nuevo Permiso en el S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='provinces'>
+		  <tuv xml:lang="en_US">
+		    <seg>View System Provinces</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Provincias del S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='provincesCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create a Province in the system</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear una nueva Provincia en el S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='users'>
+		  <tuv xml:lang="en_US">
+		    <seg>View System Users</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Usuarios del S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='usersCreate'>
+		  <tuv xml:lang="en_US">
+		    <seg>Create a new User</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear un Usuario nuevo en el S&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='currentLanguage'>
+			<tuv xml:lang="en_US">
+				<seg>Current Language</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Lenguage Actual</seg>
+			</tuv>
+		</tu>
+		<tu tuid='identifier'>
+			<tuv xml:lang="en_US">
+				<seg>identifier</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Identificador</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messageCategory'>
+			<tuv xml:lang="en_US">
+				<seg>Message Category</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Categoria del mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='message'>
+			<tuv xml:lang="en_US">
+				<seg>Message</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messageSave'>
+			<tuv xml:lang="en_US">
+				<seg>Save Message</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Guardar Mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messageCreate'>
+			<tuv xml:lang="en_US">
+				<seg>Create Message</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear Mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messageCreateHelp'>
+			<tuv xml:lang="en_US">
+				<seg>Create a personalized system message.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cree un nuevo mensaje personalizado para el s&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='messagesTitleSubHeader'>
+			<tuv xml:lang="en_US">
+				<seg>This are the current System Messages</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Estos son los Mensajes del S&#237;stema actuales</seg>
+			</tuv>
+		</tu>
+		<tu tuid='createaUser'>
+			<tuv xml:lang="en_US">
+				<seg>Create a user</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear un usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid='createUserLabel'>
+			<tuv xml:lang="en_US">
+				<seg>Create user</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid='login'>
+			<tuv xml:lang="en_US">
+				<seg>Sign In</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ingresar</seg>
+			</tuv>
+		</tu>
+		<tu tuid='roleSection'>
+			<tuv xml:lang="en_US">
+				<seg>View Access by role</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Acceso por tipo de rol</seg>
+			</tuv>
+		</tu>
+		<tu tuid='forensic'>
+			<tuv xml:lang="en_US">
+				<seg>View Forensic Section</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver historial de acciones</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewingUsers'>
+			<tuv xml:lang="en_US">
+				<seg>Viewing all the Users in the system</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Viendo todos los usuarios en el sistema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='firstName'>
+			<tuv xml:lang="en_US">
+				<seg>First Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Primer Nombre</seg>
+			</tuv>
+		</tu>
+		<tu tuid='lastName'>
+			<tuv xml:lang="en_US">
+				<seg>Surname</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Apellido</seg>
+			</tuv>
+		</tu>
+		<tu tuid='username'>
+			<tuv xml:lang="en_US">
+				<seg>User Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre de usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid='emailAddress'>
+			<tuv xml:lang="en_US">
+				<seg>Email Address</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Direcci&#243;n de correo electronico</seg>
+			</tuv>
+		</tu>
+		<tu tuid='dateOfBirth'>
+			<tuv xml:lang="en_US">
+				<seg>Date Of Birth</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha De Nacimiento</seg>
+			</tuv>
+		</tu>
+		<tu tuid='updateUser'>
+			<tuv xml:lang="en_US">
+				<seg>Update User</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar Usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid='password'>
+			<tuv xml:lang="en_US">
+				<seg>Password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid='furtherActions'>
+			<tuv xml:lang="en_US">
+				<seg>Further Actions</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>M&#225;s Acciones</seg>
+			</tuv>
+		</tu>
+		<tu tuid='changePassword'>
+			<tuv xml:lang="en_US">
+				<seg>Change Password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiar Contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid='changeRole'>
+			<tuv xml:lang="en_US">
+				<seg>Change Roles</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiar Rol</seg>
+			</tuv>
+		</tu>
+		<tu tuid='changePermission'>
+			<tuv xml:lang="en_US">
+				<seg>Change Permission</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiar Permisos</seg>
+			</tuv>
+		</tu>
+		<tu tuid='dob'>
+		  <tuv xml:lang="en_US">
+		    <seg>Date Of Birth</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha De Nacimiento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='phone'>
+		  <tuv xml:lang="en_US">
+		    <seg>Phone</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Telefono</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='fax'>
+		  <tuv xml:lang="en_US">
+		    <seg>Fax</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fax</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='mobile'>
+			<tuv xml:lang="en_US">
+				<seg>Mobile Phone</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Celular</seg>
+			</tuv>
+		</tu>
+		<tu tuid='pwdcheck'>
+			<tuv xml:lang="en_US">
+				<seg>Verify Password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Verificar Contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid='changepwd'>
+			<tuv xml:lang="en_US">
+				<seg>Update Password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar Contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid='checkpassword'>
+			<tuv xml:lang="en_US">
+				<seg>Verify Password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Verificar Contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid='notmatch'>
+			<tuv xml:lang="en_US">
+				<seg>Passwords do not match</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Las Contrase&#241;as no concuerdan</seg>
+			</tuv>
+		</tu>
+		<tu tuid='userrole'>
+			<tuv xml:lang="en_US">
+				<seg>User Roles</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Roles del Usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid='changeData'>
+			<tuv xml:lang="en_US">
+				<seg>Changing data for</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiando la informaci&#243;n de</seg>
+			</tuv>
+		</tu>
+		<tu tuid='logout'>
+			<tuv xml:lang="en_US">
+				<seg>Log out</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Salir</seg>
+			</tuv>
+		</tu>
+		<tu tuid='email'>
+			<tuv xml:lang="en_US">
+				<seg>E-Mail</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Correo Electronico</seg>
+			</tuv>
+		</tu>
+		<tu tuid='msgidentifier'>
+			<tuv xml:lang="en_US">
+				<seg>Message Identifier</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Identificador Del Mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='msgCategory'>
+			<tuv xml:lang="en_US">
+				<seg>Message Category</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Categoria Del Mensaje</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewapartment'>
+			<tuv xml:lang="en_US">
+				<seg>View Apartments</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Departamentos</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewrole'>
+		  <tuv xml:lang="en_US">
+		    <seg>View Roles</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Roles</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='viewunit'>
+		  <tuv xml:lang="en_US">
+		    <seg>View Units</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Unidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='deletelocked'>
+		  <tuv xml:lang="en_US">
+		    <seg>Can't Be Deleted</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No puede ser Borrado</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='updateMessage'>
+		  <tuv xml:lang="en_US">
+		    <seg>Update Message</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Actualizar Mensaje</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='roleaccesstitle'>
+			<tuv xml:lang="en_US">
+				<seg>Create Role Access Section Relations</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear Relaci&#243;n entre Rol Acci&#243;n y Secci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid='errortitle'>
+			<tuv xml:lang="en_US">
+				<seg>An error occurred</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ocurrio un error</seg>
+			</tuv>
+		</tu>
+		<tu tuid='exceptioninformation'>
+			<tuv xml:lang="en_US">
+				<seg>Exception information</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Informaci&#243;n sobre la excepci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewmodules'>
+			<tuv xml:lang="en_US">
+				<seg>System Modules</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Modulos del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewcontrollers'>
+			<tuv xml:lang="en_US">
+				<seg>System Controllers</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Controladores del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewactions'>
+			<tuv xml:lang="en_US">
+				<seg>System Actions</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Acciones del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='save'>
+			<tuv xml:lang="en_US">
+				<seg>Save</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Guardar</seg>
+			</tuv>
+		</tu>
+		<tu tuid='createrolerelation'>
+			<tuv xml:lang="es_AR">
+				<seg>Crear ACL</seg>
+			</tuv>
+			<tuv xml:lang="en_US">
+				<seg>Create ACL</seg>
+			</tuv>
+		</tu>
+		<tu tuid='minimize'>
+			<tuv xml:lang="en_US">
+				<seg>Minimize</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Minimizar</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllModules'>
+			<tuv xml:lang="en_US">
+				<seg>View All Modules</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Todos Los Modulos</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllControllers'>
+			<tuv xml:lang="en_US">
+				<seg>View All Pages</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Todos Las P&#193;ginas</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllActions'>
+			<tuv xml:lang="en_US">
+				<seg>View All Actions Of The System</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Todos Las Acciones Del S&#237;stema</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllModuleControllers'>
+			<tuv xml:lang="en_US">
+				<seg>View All The Pages With The Corresponding Modules</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Todas Las P&#193;ginas Del S&#237;stema Con Los Modulos Que
+					Le Pertenecen</seg>
+			</tuv>
+		</tu>
+		<tu tuid='viewAllControllerActions'>
+			<tuv xml:lang="en_US">
+				<seg>View All The Actions With The Corresponding Pages</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Todas Las Acciones Del S&#237;stema Con Los P&#193;ginas
+					Que Le Pertenecen</seg>
+			</tuv>
+		</tu>
+		<tu tuid='accessRestricted'>
+			<tuv xml:lang="en_US">
+				<seg>Access Forbidden</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Accesso Restringido</seg>
+			</tuv>
+		</tu>
+		<tu tuid='noselection'>
+			<tuv xml:lang="en_US">
+				<seg>Select an element</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Seleccione un elemento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createaclintruction">
+			<tuv xml:lang="en_US">
+				<seg>Drag and drop the roles to the corresponding page</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Seleccione y arrastre el rol a la p&#193;gina correspondiente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unitnumber">
+			<tuv xml:lang="en_US">
+				<seg>Unit Number</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>N&#250;mero de la unidad</seg>
+			</tuv>
+		</tu>
+		<tu tuid="search">
+			<tuv xml:lang="en_US">
+				<seg>Search</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Buscar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="payorname">
+			<tuv xml:lang="en_US">
+				<seg>Payor Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre Cliente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="referencename">
+			<tuv xml:lang="en_US">
+				<seg>Reference Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre Referencia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="comment">
+			<tuv xml:lang="en_US">
+				<seg>Comment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Comentario</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateposted">
+			<tuv xml:lang="en_US">
+				<seg>Date Posted</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha Publicado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentmethod">
+			<tuv xml:lang="en_US">
+				<seg>Payment Method</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>M&#233;todo De Pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentmethodnumber">
+			<tuv xml:lang="en_US">
+				<seg>Payment Method Number</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>N&#250;mero de m&#233;todo de pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ccname">
+			<tuv xml:lang="en_US">
+				<seg>CC Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre Titular Tarjeta de Cr&#233;dito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ccexpdate">
+			<tuv xml:lang="en_US">
+				<seg>CC Expiration Date</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha Vencimiento Tarjeta De Cr&#233;dito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="postpayment">
+			<tuv xml:lang="en_US">
+				<seg>Post Payment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Realizar Pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="cash">
+			<tuv xml:lang="en_US">
+				<seg>Cash</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Efectivo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="check">
+			<tuv xml:lang="en_US">
+				<seg>Check</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cheque</seg>
+			</tuv>
+		</tu>
+		<tu tuid="creditcard">
+			<tuv xml:lang="en_US">
+				<seg>Credit Card</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Tarjeta De Cr&#233;dito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="moneyorder">
+			<tuv xml:lang="en_US">
+				<seg>Money Order</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Orden de pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="origamount">
+			<tuv xml:lang="en_US">
+				<seg>Original Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto Original</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentamountdue">
+			<tuv xml:lang="en_US">
+				<seg>Current Amount Due</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Total Deuda Actual</seg>
+			</tuv>
+		</tu>
+		<tu tuid="duedate">
+		  <tuv xml:lang="en_US">
+		    <seg>Due Date</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha Vencimiento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="amttopay">
+		  <tuv xml:lang="en_US">
+		    <seg>Amount To Pay</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Total a pagar</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="descriptionUsername">
+		  <tuv xml:lang="en_US">
+		    <seg>This is your username</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Este es su nombre de usuario</seg>
+		   </tuv>
+		</tu>
+		<tu tuid="descriptionPassword">
+		  <tuv xml:lang="en_US">
+		    <seg>This is your password</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Esta es su contrase&#241;a</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="id">
+		  <tuv xml:lang="en_US">
+		    <seg>Id</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Id</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="actions">
+		  <tuv xml:lang="en_US">
+		    <seg>Actions</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Acciones</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="update">
+		  <tuv xml:lang="en_US">
+		    <seg>Update</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		  <seg>Actualizar</seg>
+                </tuv>
+		</tu>
+		<tu tuid="delete">
+                  <tuv xml:lang="en_US">
+		    <seg>Delete</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Borrar</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="view">
+		  <tuv xml:lang="en_US">
+		    <seg>View</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="previous">
+		  <tuv xml:lang="en_US">
+		    <seg>Previous</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Previo</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="identifier">
+		  <tuv xml:lang="en_US">
+		    <seg>Message Identifier Key</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Identificador del Mensaje</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="back">
+		  <tuv xml:lang="en_US">
+		    <seg>Back</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Atras</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createMessage">
+		  <tuv xml:lang="en_US">
+		    <seg>Create Message</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear Mensaje</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="identifierDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>This identifies a message in the system</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Esto identifica a un mensaje en el s&#237;stema</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="categoryDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>This denotes the kind of message you are creating</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Esto selecciona el tipo de mensaje que crea</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="messageDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>This is the message that the user will see. Do not use html tags</seg>
+                  </tuv>
+                  <tuv xml:lang="es_AR">
+		    <seg>Este es el mensaje que el usuario ve. No use etiquetas html</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="lockedDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>This message won't be deleted</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Este mensaje no se puede eliminar</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createnmrs">
+		  <tuv xml:lang="en_US">
+		    <seg>Create a new Model Rent Schedule</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear un nuevo modelo de plan de renta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="effectiveDate">
+		  <tuv xml:lang="en_US">
+		    <seg>Effective Date</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha Efectiva</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createrentschedule">
+		  <tuv xml:lang="en_US">
+		    <seg>Create Rent Schedule</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear Plan De Renta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="addRow">
+		  <tuv xml:lang="en_US">
+		    <seg>Add Row</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Agregar Fila</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="month">
+		  <tuv xml:lang="en_US">
+		    <seg>Month</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Mes</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="rentamount">
+		  <tuv xml:lang="en_US">
+		    <seg>Rent amount</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Total renta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="calendarTitle">
+		  <tuv xml:lang="en_US">
+		    <seg>Calendar</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Calendario</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="permissionTitle">
+		  <tuv xml:lang="en_US">
+		    <seg>Pages</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>P&#193;ginas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="aliasHeader">
+		  <tuv xml:lang="en_US">
+		    <seg>Alias</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Alias</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="permissionTitle">
+		  <tuv xml:lang="en_US">
+		    <seg>Permission Section</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Secci&#243;n permisos</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="permissionUpdateDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>Update Alias</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Actualizar Alias</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="notvaliddate">
+		  <tuv xml:lang="en_US">
+		    <seg>Is not a valid date</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No es una fecha valida</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="notvaliddaterange">
+		  <tuv xml:lang="en_US">
+		    <seg>The from is greater than date to</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>La fecha desde es anterior a la fecha hasta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="eventData">
+		  <tuv xml:lang="en_US">
+		    <seg>Event Data</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Informacion del evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="isRecursive">
+		  <tuv xml:lang="en_US">
+		    <seg>Is A Recursive Event?</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Es Un Evento Recursivo?</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="recursivePeriod">
+		  <tuv xml:lang="en_US">
+		    <seg>Recursive period of this event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Recursividad de este evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="days">
+		  <tuv xml:lang="en_US">
+		    <seg>Days</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Dias</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="weeks">
+		  <tuv xml:lang="en_US">
+                    <seg>Weeks</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Semanas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="months">
+		  <tuv xml:lang="en_US">
+		    <seg>Months</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Meses</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="years">
+		  <tuv xml:lang="en_US">
+		    <seg>Years</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>A&#241;os</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="startDate">
+		  <tuv xml:lang="en_US">
+		    <seg>Event date from</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha desde del evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="endDate">
+		  <tuv xml:lang="en_US">
+		    <seg>Event date to</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha hasta del evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="usesqlformat">
+		  <tuv xml:lang="en_US">
+		    <seg>Please, use Year - month - date</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Por favor, use A&#241;o - mes - d&#247;a</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createEvent">
+		  <tuv xml:lang="en_US">
+		    <seg>Create Event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear Evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="startTime">
+		  <tuv xml:lang="en_US">
+		    <seg>Time this event starts</seg>
+		</tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha de inicio de este evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="endTime">
+		  <tuv xml:lang="en_US">
+		    <seg>Time this event ends</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha de finalizaci&#243;n de este evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="isArecrusiveEventDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>Fill the number of days,months,weeks or years this event happens</seg>
+                  </tuv>
+                  <tuv xml:lang="es_AR">
+                    <seg>Llene el numero de d&#247;as, a&#241;os,meses o semanas que este evento occure</seg>
+                  </tuv>
+		</tu>
+		<tu tuid="attendees">
+                  <tuv xml:lang="en_US">
+		    <seg>Guests</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Invitados</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="noattendees">
+		  <tuv xml:lang="en_US">
+		    <seg>You do not have guests</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Usted no tiene Invitados</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="attendeesDescription">
+		  <tuv xml:lang="en_US">
+		    <seg>Select users from the list</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Seleccione usuarios de la lista</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="dayView">
+		  <tuv xml:lang="en_US">
+		    <seg>Day</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Dia</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="weekView">
+		  <tuv xml:lang="en_US">
+		    <seg>Week</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Semana</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="monthView">
+		  <tuv xml:lang="en_US">
+		    <seg>Month</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Mes</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="dailyview">
+		  <tuv xml:lang="en_US">
+		    <seg>Daily View</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Vista Diaria</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="notvalidtime">
+		  <tuv xml:lang="en_US">
+		    <seg>Is not a valid time entry</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No es una entrada de tiempo valida</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="notvalidtimerange">
+			<tuv xml:lang="en_US">
+				<seg>Is not a valid time range</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No es un rango de tiempo valido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="eventTitle">
+			<tuv xml:lang="en_US">
+				<seg>Event title</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Titulo del evento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="allDayEventLbl">
+			<tuv xml:lang="en_US">
+				<seg>All Day Event</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Todo el d&#247;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rolename">
+			<tuv xml:lang="en_US">
+				<seg>Role Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre del rol</seg>
+			</tuv>
+		</tu>
+		<tu tuid="notprotected">
+			<tuv xml:lang="en_US">
+				<seg>Not protected</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No protegido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="protected">
+			<tuv xml:lang="en_US">
+				<seg>Protected</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Protegido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewEventTitle">
+			<tuv xml:lang="en_US">
+				<seg>View Event</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Evento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yes">
+                  <tuv xml:lang="en_US">
+                    <seg>Yes</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Si</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="no">
+		  <tuv xml:lang="en_US">
+		    <seg>No</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="noaccess">
+		  <tuv xml:lang="en_US">
+		    <seg>You can't view this resource</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No puede acceder a este recurso</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="occurrences">
+		  <tuv xml:lang="en_US">
+		    <seg>Time Schedule</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Horarios</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="eventDate">
+		  <tuv xml:lang="en_US">
+		    <seg>Date of this event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Fecha de este evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="eventTime">
+		  <tuv xml:lang="en_US">
+		    <seg>Time of this event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Horario de este evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="to">
+		  <tuv xml:lang="en_US">
+		    <seg>To</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Hasta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="event">
+		  <tuv xml:lang="en_US">
+		    <seg>Event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Evento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="paginationControls">
+		  <tuv xml:lang="en_US">
+		    <seg>Pagination control</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Controles de paginaci&#243;n</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="updateEvent">
+		  <tuv xml:lang="en_US">
+		    <seg>Update event</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+				<seg>Actualizar evento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteEvent">
+			<tuv xml:lang="en_US">
+				<seg>Delete event</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar evento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateEventTime">
+			<tuv xml:lang="en_US">
+				<seg>Update event time</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar horario del evento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteAllGuests">
+			<tuv xml:lang="en_US">
+				<seg>Delete all guests</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar a todos los invitados</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteUserGuest">
+			<tuv xml:lang="en_US">
+				<seg>Delete guest</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar invitado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteEventTime">
+			<tuv xml:lang="en_US">
+				<seg>Delete event occurence</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar esta ocurrencia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteeventconfirm">
+			<tuv xml:lang="en_US">
+				<seg>Are you sure you want to eliminate this event?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Esta seguro que desea borrar este evento?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteEventTimeConfirm">
+			<tuv xml:lang="en_US">
+				<seg>Are you sure you want to eliminate this occurrence?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Esta seguro que desea borrar esta ocurrencia?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteEventGuestConfirm">
+			<tuv xml:lang="en_US">
+				<seg>Are you sure you want to eliminate this guest?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Esta seguro que desea borrar a este invitado?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteAllGuestConfirm">
+			<tuv xml:lang="en_US">
+				<seg>Are you sure you want to eliminate all the guests?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Esta seguro que desea borrar a todos los invitados?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="eventGuestDeleted">
+			<tuv xml:lang="en_US">
+				<seg>Guest deleted</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El invitado a sido borrado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="eventGuestDeleted">
+			<tuv xml:lang="en_US">
+				<seg>Guests deleted</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Los invitados fueron borrados</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createNewApartment">
+			<tuv xml:lang="en_US">
+				<seg>Create New Apartment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear Nuevo Departamento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="apartmentName">
+			<tuv xml:lang="en_US">
+				<seg>Apartment Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre del departamento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="addressOne">
+			<tuv xml:lang="en_US">
+				<seg>Address One</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Primera direcci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="addressTwo">
+			<tuv xml:lang="en_US">
+				<seg>Address Two</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Segunda direcci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="city">
+			<tuv xml:lang="en_US">
+				<seg>City</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ciudad</seg>
+			</tuv>
+		</tu>
+		<tu tuid="state">
+			<tuv xml:lang="en_US">
+				<seg>State</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Provincia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="zip">
+			<tuv xml:lang="en_US">
+				<seg>Zip</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>C&#243;digo postal</seg>
+			</tuv>
+		</tu>
+		<tu tuid="country">
+			<tuv xml:lang="en_US">
+				<seg>Country</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pa&#237;s</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="apartments">
+			<tuv xml:lang="en_US">
+				<seg>Apartments</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Apartments</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="createnewunittitle">
+			<tuv xml:lang="en_US">
+				<seg>Create a new unit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear nueva unidad</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="viewDetails">
+			<tuv xml:lang="en_US">
+				<seg>View Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>View Details</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="apartment">
+			<tuv xml:lang="en_US">
+				<seg>Apartment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Departamento</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="viewApartmentUnits">
+			<tuv xml:lang="en_US">
+				<seg>View Apartment Units</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>View Apartment Units</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="apartmentDetails">
+                  <tuv xml:lang="en_US">
+		    <seg>Apartment Details</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Detalles del departamento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="updateApartment">
+                  <tuv xml:lang="en_US">
+		    <seg>Update Apartment</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Update Apartment</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="noRows">
+		  <tuv xml:lang="en_US">
+		    <seg>No Rows</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>No Rows</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="units">
+		  <tuv xml:lang="en_US">
+		    <seg>Units</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Units</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="for">
+		  <tuv xml:lang="en_US">
+		    <seg>for</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>para</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createOneUnit">
+                  <tuv xml:lang="en_US">
+		    <seg>Create One Unit</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear una unidad</seg>
+                  </tuv>
+		</tu>
+		<tu tuid="createMultipleUnits">
+                  <tuv xml:lang="en_US">
+		    <seg>Create Multiple Units</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear multiples unidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitModel">
+                  <tuv xml:lang="en_US">
+		    <seg>Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Modelo de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitNumber">
+                  <tuv xml:lang="en_US">
+		    <seg>Unit Number</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>N&#250;mero de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="size">
+                  <tuv xml:lang="en_US">
+		    <seg>Feet</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Pies</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="sizeHeight">
+                  <tuv xml:lang="en_US">
+		    <seg>Square feet height</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Metros cuadrados</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="sizeBytes">
+		  <tuv xml:lang="en_US">
+		    <seg>Size in bytes</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Tama&#241;o en bytes</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="beds">
+                  <tuv xml:lang="en_US">
+                    <seg>&#035; Beds</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>&#035; Camas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="bedsLabel">
+                  <tuv xml:lang="en_US">
+		    <seg>Beds</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Camas</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="baths">
+		  <tuv xml:lang="en_US">
+		    <seg>&#035; Baths</seg>
+		  </tuv>
+                  <tuv xml:lang="es_AR">
+                    <seg>&#035; Ba&#241;os</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="bathLabel">
+		  <tuv xml:lang="en_US">
+		    <seg>Amount of baths</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Cantidad de ba&#241;o</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="bath">
+		  <tuv xml:lang="en_US">
+		    <seg>Bath&#40;s&#41;</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ba&#241;o&#40;s&#41;</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="numFloors">
+		  <tuv xml:lang="en_US">
+		    <seg>Floor</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>&#035; Pisos</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="floorLabel">
+		  <tuv xml:lang="en_US">
+		    <seg>Stories height</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Cantidad de pisos</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="yearBuilt">
+		  <tuv xml:lang="en_US">
+		    <seg>Year Built</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Year Built</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="yearRenovated">
+		  <tuv xml:lang="en_US">
+		    <seg>Year Renovated</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Year Renovated</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="isAvailableForRenting">
+		  <tuv xml:lang="en_US">
+		    <seg>Is Available for Renting?</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>&#191; Est&#225; disponible para alquilar &#256;</seg>
+                  </tuv>
+		</tu>
+		<tu tuid="amenities">
+		  <tuv xml:lang="en_US">
+		    <seg>Amenities</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Comodidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createNewUnit">
+		  <tuv xml:lang="en_US">
+		    <seg>Create New Unit</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear una nueva unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitFor">
+		  <tuv xml:lang="en_US">
+		    <seg>Unit for</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Unit for</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createUnitModel">
+		  <tuv xml:lang="en_US">
+		    <seg>Create Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear modelo de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createunitmodel">
+                  <tuv xml:lang="en_US">
+		    <seg>Create Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear model de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitModels">
+                  <tuv xml:lang="en_US">
+		    <seg>Unit Models</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Unit Models</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitModelName">
+		  <tuv xml:lang="en_US">
+		    <seg>Unit Model Name</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Nombre de modelo de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="updateUnitModel">
+		  <tuv xml:lang="en_US">
+		    <seg>Update Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Actualizar modelo de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createRentSchedule">
+                  <tuv xml:lang="en_US">
+		    <seg>Create Rent Schedule</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear itinerario de renta</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="rentSchedulesForUnitModel">
+		  <tuv xml:lang="en_US">
+		    <seg>Rent Schedules for Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Rent Schedules for Unit Model</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="rentScheduleForUnitModel">
+		  <tuv xml:lang="en_US">
+		    <seg>Rent Schedule for Unit Model</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Rent Schedule for Unit Model</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="viewModelRentSchedules">
+		  <tuv xml:lang="en_US">
+		    <seg>View Model Rent Schedules</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>View Model Rent Schedules</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="viewModelRentSchedule">
+		  <tuv xml:lang="en_US">
+		    <seg>View Model Rent Schedule</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver Modelo De Renta Planificado</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createamenity">
+		  <tuv xml:lang="en_US">
+		    <seg>Create Amenity</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Crear facilidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="updateAmenity">
+		  <tuv xml:lang="en_US">
+		    <seg>Update Amenity</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Actualizar facilidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="amenities">
+		  <tuv xml:lang="en_US">
+		    <seg>Amenities</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Facilidades</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="amenityName">
+		  <tuv xml:lang="en_US">
+		    <seg>Amenity Name</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Nombre Facilidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="viewLeaseList">
+		  <tuv xml:lang="en_US">
+		    <seg>View Lease List</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Ver lista de contratos de arrendamiento</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="updateUnit">
+		  <tuv xml:lang="en_US">
+		    <seg>Update Unit</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Actualizar unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="createBulkUnit">
+                  <tuv xml:lang="en_US">
+		    <seg>Create Multiple Units</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Create Multiple Units</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="numUnitsToCreate">
+		  <tuv xml:lang="en_US">
+		    <seg>&#035; Units to Create</seg>
+		  </tuv>
+                  <tuv xml:lang="es_AR">
+		    <seg>Cantidad de unidades a crear</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="unitDetails">
+                  <tuv xml:lang="en_US">
+		    <seg>Unit Details</seg>
+		  </tuv>
+		  <tuv xml:lang="es_AR">
+		    <seg>Detalles de unidad</seg>
+		  </tuv>
+		</tu>
+		<tu tuid="accounts">
+			<tuv xml:lang="en_US">
+				<seg>Accounts</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Accounts</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createAccount">
+			<tuv xml:lang="en_US">
+				<seg>Create Account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Create Account</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateAccount">
+			<tuv xml:lang="en_US">
+				<seg>Update Account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Update Account</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createAccountTransaction">
+			<tuv xml:lang="en_US">
+				<seg>Create Account Transaction</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Create Account Transaction</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewAccount">
+			<tuv xml:lang="en_US">
+				<seg>View Account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>View Account</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewAccountTransactions">
+			<tuv xml:lang="en_US">
+				<seg>View Account Transactions</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>View Account Transactions</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountName">
+			<tuv xml:lang="en_US">
+				<seg>Account Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountNumber">
+			<tuv xml:lang="en_US">
+				<seg>Account Number</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Number</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountOrientation">
+			<tuv xml:lang="en_US">
+				<seg>Account Orientation</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Orientation</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountDetails">
+			<tuv xml:lang="en_US">
+				<seg>Account Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Details</seg>
+			</tuv>
+		</tu>
+		<tu tuid="datePosted">
+			<tuv xml:lang="en_US">
+				<seg>Date Posted</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Date Posted</seg>
+			</tuv>
+		</tu>
+		<tu tuid="debit">
+			<tuv xml:lang="en_US">
+				<seg>Debit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Debit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="credit">
+			<tuv xml:lang="en_US">
+				<seg>Credit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Credit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="debitAccount">
+			<tuv xml:lang="en_US">
+				<seg>Debit Account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cuenta de d&#233;bito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="creditAccount">
+			<tuv xml:lang="en_US">
+				<seg>Credit Account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cuenta de cr&#233;dito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="amount">
+			<tuv xml:lang="en_US">
+				<seg>Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountingTransactions">
+			<tuv xml:lang="en_US">
+				<seg>Accounting Transaction</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Accounting Transaction</seg>
+			</tuv>
+		</tu>
+		<tu tuid="balance">
+			<tuv xml:lang="en_US">
+				<seg>Balance</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Balance</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createAccountLink">
+			<tuv xml:lang="en_US">
+				<seg>Create Account Link</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Create Account Link</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountLink">
+			<tuv xml:lang="en_US">
+				<seg>Account Link</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Link</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accountLinks">
+			<tuv xml:lang="en_US">
+				<seg>Account Links</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Account Links</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createFee">
+			<tuv xml:lang="en_US">
+				<seg>Create Fee</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear Inscripci&#250;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="feeName">
+			<tuv xml:lang="en_US">
+				<seg>Fee Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Identificador inscripci&#250;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="fees">
+			<tuv xml:lang="en_US">
+				<seg>Fees</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Inscripci&#250;nes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateFee">
+			<tuv xml:lang="en_US">
+				<seg>Update Fee</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar Inscripci&#250;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createDeposit">
+			<tuv xml:lang="en_US">
+				<seg>Create Deposit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Crear Dep&#243;sito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unitsAvailable">
+			<tuv xml:lang="en_US">
+				<seg>Units Available for Rent</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Unidades Disponibles Para Alquilar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateDeposit">
+			<tuv xml:lang="en_US">
+				<seg>Update Deposit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Update Deposit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deposits">
+			<tuv xml:lang="en_US">
+				<seg>Deposits</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Deposits</seg>
+			</tuv>
+		</tu>
+		<tu tuid="depositName">
+			<tuv xml:lang="en_US">
+				<seg>Deposit Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre Deposito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="feeAccountLinks">
+			<tuv xml:lang="en_US">
+				<seg>Fee / Deposit Account Links</seg>
+			</tuv>
+		</tu>		
+		<tu tuid="updateAccountLink">
+			<tuv xml:lang="en_US">
+				<seg>Update Account Link</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentPendingLease">
+			<tuv xml:lang="en_US">
+				<seg>Current / Pending Lease</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="next">
+			<tuv xml:lang="en_US">
+				<seg>Next</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Siguiente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="previous">
+			<tuv xml:lang="en_US">
+				<seg>Previous</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Previos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseWizard">
+			<tuv xml:lang="en_US">
+				<seg>Lease Wizard</seg>
+			</tuv>
+		</tu>
+		<tu tuid="startInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Welcome to the lease wizard! The following screens will guide
+					you in creating a lease for your unit. Press Next to start the
+					wizard.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="moveInInstructions">
+			<tuv xml:lang="en_US">
+				<seg>The effective date chooses the rent model schedule to use.  A schedule must exist prior to or on the date of the effective date.  The move in date is the start date of the lease and is used to calculate the rent bill due dates.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentScheduleInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Select the lease term and monthly amount. Available selections
+					are based on the unit's model type</seg>
+			</tuv>
+		</tu>
+		<tu tuid="monthRentsFor">
+			<tuv xml:lang="en_US">
+				<seg>month rents for</seg>
+			</tuv>
+		</tu>
+		<tu tuid="enterDiscountInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Enter a discount for each month. Zero is assumed if no discount
+					is entered for the month</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentAmount">
+			<tuv xml:lang="en_US">
+				<seg>Rent Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="searchAddTenantInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Select one or more users to add to the lease</seg>
+			</tuv>
+		</tu>
+		<tu tuid="searchForUser">
+			<tuv xml:lang="en_US">
+				<seg>Search For User</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentTenantList">
+			<tuv xml:lang="en_US">
+				<seg>Current Tenant List</seg>
+			</tuv>
+		</tu>
+		<tu tuid="addPictures">
+			<tuv xml:lang="en_US">
+				<seg>Add Photos</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Agregar Fotos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="userSearchResults">
+			<tuv xml:lang="en_US">
+				<seg>User Search Results</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noUsersFound">
+			<tuv xml:lang="en_US">
+				<seg>No Users Found</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No se encontraron usuarios</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deposit">
+			<tuv xml:lang="en_US">
+				<seg>Deposit</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Dep&#243;sito</seg>
+			</tuv>
+		</tu>
+		<tu tuid="fee">
+			<tuv xml:lang="en_US">
+				<seg>Fee</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewPictures">
+			<tuv xml:lang="en_US">
+				<seg>View Photos</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Fotos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectFeeDepositInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Select any new fees or deposits to add that are not from prelease or lease.  The due date is set to today.  If additional fees
+					or deposits are needed, please use the
+					individual fee creator after completing the lease.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deletePictures">
+			<tuv xml:lang="en_US">
+				<seg>Delete Photos</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar Fotos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseWizardConfirmationInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Please review the information from the wizard. If it looks
+					correct, click 'Finish' to create the lease. If any corrections
+					need to be made, click the previous button to return to the prior
+					pages. Once the lease is created it cannot be undone. It will need
+					to be cancelled and a new lease created.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="finish">
+			<tuv xml:lang="en_US">
+				<seg>Finish</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Finalizar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updatePictures">
+			<tuv xml:lang="en_US">
+				<seg>Update Photos</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Actualizar Fotos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseGeneralDetail">
+			<tuv xml:lang="en_US">
+				<seg>Lease General Detail</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseDetails">
+			<tuv xml:lang="en_US">
+				<seg>Lease Details</seg>
+			</tuv>
+		</tu>
+		<tu tuid="discounts">
+			<tuv xml:lang="en_US">
+				<seg>Discounts</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Descuentos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="month">
+			<tuv xml:lang="en_US">
+				<seg>Month</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Mes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noFeesSelected">
+			<tuv xml:lang="en_US">
+				<seg>No Fees Selected</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noDepositsSelected">
+			<tuv xml:lang="en_US">
+				<seg>No Deposits Selected</seg>
+			</tuv>
+		</tu>
+		<tu tuid="tenants">
+			<tuv xml:lang="en_US">
+				<seg>Tenants</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Inquilinos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="discountAmount">
+			<tuv xml:lang="en_US">
+				<seg>Discount Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noTenantsSelected">
+			<tuv xml:lang="en_US">
+				<seg>No Tenants Selected</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noDiscountsEntered">
+			<tuv xml:lang="en_US">
+				<seg>No Discounts Entered</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseLastDay">
+			<tuv xml:lang="en_US">
+				<seg>Lease Last Day</seg>
+			</tuv>
+		</tu>
+		<tu tuid="baseRentAmount">
+			<tuv xml:lang="en_US">
+				<seg>Base Rent Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="numberOfMonths">
+			<tuv xml:lang="en_US">
+				<seg>Number of Months</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseLastDay">
+			<tuv xml:lang="en_US">
+				<seg>Lease Last Day</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentSchedule">
+			<tuv xml:lang="en_US">
+				<seg>Rent Schedule</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createLeaseDeposit">
+			<tuv xml:lang="en_US">
+				<seg>Create Lease Deposit</seg>
+			</tuv>
+		</tu>		
+		<tu tuid="billDetails">
+			<tuv xml:lang="en_US">
+				<seg>Bill Details</seg>
+			</tuv>
+		</tu>
+		<tu tuid="originalAmount">
+			<tuv xml:lang="en_US">
+				<seg>Original Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_US">
+				<seg>Monto Original</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dueDate">
+			<tuv xml:lang="en_US">
+				<seg>Due Date</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha de vencimiento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentAmountDue">
+			<tuv xml:lang="en_US">
+				<seg>Current Amount Due</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto actual vence</seg>
+			</tuv>
+		</tu>
+		<tu tuid="payments">
+			<tuv xml:lang="en_US">
+				<seg>Payments</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pagos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateOfPayment">
+			<tuv xml:lang="en_US">
+				<seg>Date of Payment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha de pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentAmount">
+			<tuv xml:lang="en_US">
+				<seg>Payment Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Total del pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="fileAdd">
+			<tuv xml:lang="en_US">
+				<seg>Add File</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Agregar Archivo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="add">
+			<tuv xml:lang="en_US">
+				<seg>Add</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Agregar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="description">
+			<tuv xml:lang="en_US">
+				<seg>Description</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Descripci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="metadataDescription">
+			<tuv xml:lang="en_US">
+				<seg>Description of the uploaded file</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Descripci&#243;n del archivo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createLeaseDeposit">
+			<tuv xml:lang="en_US">
+				<seg>Create Lease Deposit</seg>
+			</tuv>
+
+		</tu>
+		<tu tuid="prorationAmount">
+			<tuv xml:lang="en_US">
+				<seg>Proration Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="numMonths">
+			<tuv xml:lang="en_US">
+				<seg>Number of Months</seg>
+			</tuv>
+		</tu>
+		<tu tuid="prorationMonth">
+			<tuv xml:lang="en_US">
+				<seg>Proration Month</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewUnitPictures">
+			<tuv xml:lang="en_US">
+				<seg>View unit pictures and videos</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver fotos y videos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applyForm">
+			<tuv xml:lang="en_US">
+				<seg>Apply</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>aplicar</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="viewAllApplicants">
+			<tuv xml:lang="en_US">
+				<seg>View all applicants</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver todos los concursantes</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="captchainstruction">
+			<tuv xml:lang="en_US">
+				<seg>Please type the following text in the input below</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Por favor escriba el siguiente texto en elemento debajo de la
+					imagen</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="join">
+			<tuv xml:lang="en_US">
+				<seg>Join</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Unirse</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="haveaccount">
+			<tuv xml:lang="en_US">
+				<seg>Do you have an account?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Tiene una cuenta?</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="continue">
+			<tuv xml:lang="en_US">
+				<seg>Continue</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Continuar</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="erroroccured">
+			<tuv xml:lang="en_US">
+				<seg>An error occurred</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ocurrio un error</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="details">
+			<tuv xml:lang="en_US">
+				<seg>Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Detalles</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="searchUnits">
+			<tuv xml:lang="en_US">
+				<seg>Search Units</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Buscar departamentos</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="lowerthan">
+			<tuv xml:lang="en_US">
+				<seg>Lower than</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Menor que</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="equalto">
+			<tuv xml:lang="en_US">
+				<seg>Equal to</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Igual que</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="greaterthan">
+			<tuv xml:lang="en_US">
+				<seg>Greater than</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Mayor que</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="anyOption">
+			<tuv xml:lang="en_US">
+				<seg>Any Option</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cualquier opci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="unitModelDetails">
+			<tuv xml:lang="en_US">
+				<seg>Unit Model Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Unit Model Details</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="waitlistresult">
+			<tuv xml:lang="en_US">
+				<seg>Wait List Result</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Resultado de la lista de espera</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="noAmenities">
+			<tuv xml:lang="en_US">
+				<seg>No amenities registered</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No hay extras</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="applyUser">
+			<tuv xml:lang="en_US">
+				<seg>Add user to wait list</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Agregar usuario a lista de espera</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="provideReferredUserData">
+			<tuv xml:lang="en_US">
+				<seg>Provide the following user information</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ingrese la siguiente informaci&#243;n del usuario</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="apply">
+			<tuv xml:lang="en_US">
+				<seg>Apply</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Agregar</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="bulkUploadFinancialInstructions">
+			<!-- Provide instructions here -->
+			<tuv xml:lang="en_US">
+				<seg>Upload a CSV file.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Subir un archivo CSV.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="parseCsvResults">
+			<tuv xml:lang="en_US">
+				<seg>Results from the batch job</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Resultados del proceso</seg>
+			</tuv>
+		</tu>
+		<tu tuid="aboutYou">
+			<tuv xml:lang="en_US">
+				<seg>About You</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Acerca de usted</seg>
+			</tuv>
+		</tu>
+		<tu tuid="fullName">
+			<tuv xml:lang="en_US">
+				<seg>Full name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre completo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="fullNameDescription">
+			<tuv xml:lang="en_US">
+				<seg>&#40;exactly as on driver&#180;s license or govt. IDcard&#41;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#40;id&#233;ntico a como figura en la licencia de conducir
+					&#243; c&#233;dula de identificaci&#243;n del gobierno&#41;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="streetAddress">
+			<tuv xml:lang="en_US">
+				<seg>Your street address</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Su direcci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="streetAddressDescription">
+			<tuv xml:lang="en_US">
+				<seg>&#40;as shown on your driver&#180;s license or government
+					IDcard&#41;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#40;como se muestra en su licencia de conducir &#243;
+					c&#233;dula de identificaci&#243;n del gobierno&#41;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="driversLicense">
+			<tuv xml:lang="en_US">
+				<seg>Driver&#39;s license #</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Licencia de conducir</seg>
+			</tuv>
+		</tu>
+		<tu tuid="andState">
+			<tuv xml:lang="en_US">
+				<seg>and state</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>y estado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="govLicense">
+			<tuv xml:lang="en_US">
+				<seg>Goverment License</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Licencia de identificaci&#243;n del gobierno</seg>
+			</tuv>
+		</tu>
+		<tu tuid="formerLastName">
+			<tuv xml:lang="en_US">
+				<seg>Former last names</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Apellido&#40;s&#41; anteriores</seg>
+			</tuv>
+		</tu>
+		<tu tuid="formerLastNameDescription">
+			<tuv xml:lang="en_US">
+				<seg>&#40;maiden and married&#41;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#40;soltero&#47;a y casado&#47;a&#41;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ssn">
+			<tuv xml:lang="en_US">
+				<seg>Your social security &#35;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Su n&#250; de seguridad social</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ssnDescription">
+			<tuv xml:lang="en_US">
+				<seg>Do not add spaces or dashes</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No ingrese espacios o guiones, solamente el numero</seg>
+			</tuv>
+		</tu>
+		<tu tuid="height">
+			<tuv xml:lang="en_US">
+				<seg>Height</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Estatura</seg>
+			</tuv>
+		</tu>
+		<tu tuid="sex">
+			<tuv xml:lang="en_US">
+				<seg>Sex</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Sexo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectSexEmpty">
+			<tuv xml:lang="en_US">
+				<seg>-Choose gender-</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>-Genero-</seg>
+			</tuv>
+		</tu>
+		<tu tuid="eyeColor">
+			<tuv xml:lang="en_US">
+				<seg>Eye Color</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Color de ojos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="hairColor">
+			<tuv xml:lang="en_US">
+				<seg>Hair Color</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Color de cabello</seg>
+			</tuv>
+		</tu>
+		<tu tuid="maritalStatus">
+			<tuv xml:lang="en_US">
+				<seg>Marital Status</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Estado Civil</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="maritalStatusEmpty">
+			<tuv xml:lang="en_US">
+				<seg>--Marital Status--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Estado Civil--</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="areyouAUsCitizen">
+			<tuv xml:lang="en_US">
+				<seg>Are you a US citizen&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Es usted un ciudadno norteamericano&#63;</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="usCitizenEmpty">
+			<tuv xml:lang="en_US">
+				<seg>--Choose an option--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Seleccione una opci&#243;n--</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="doYouSmoke">
+			<tuv xml:lang="en_US">
+				<seg>Do you or any occupant smoke&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Usted &#243; alguno de sus acompa&#209;ates fuma&#63;</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="doYouSmokeEmpty">
+			<tuv xml:lang="en_US">
+				<seg>--Answer please--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Seleccion una opci&#243;n--</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="havePets">
+			<tuv xml:lang="en_US">
+				<seg>Will you or any occupant have an animal&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Usted &#243; alguno de sus acompa&#209;ntes piensa tener
+					&#243; tiene una mascota&#63;</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="havePetsEmpty">
+			<tuv xml:lang="en_US">
+				<seg>--Answer please--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Seleccion una opci&#243;n--</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="petDetails">
+			<tuv xml:lang="en_US">
+				<seg>Kind,weight,breed,age</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Tipo,peso,raza,edad</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="selectStateEmptyOption">
+			<tuv xml:lang="en_US">
+				<seg>--Choose a state--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Seleccione un Estado--</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="driverandstatefail">
+			<tuv xml:lang="en_US">
+				<seg>Driver license selected and State option is missing</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Licencia de conducir fue seleccionada y Estado no fue
+					seleccionado</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="missingalltheoptionsforid">
+			<tuv xml:lang="en_US">
+				<seg>Neither the driver license or the govertment license has been
+					selected.Please, choose one</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No fue seleccionada la licencia del gobierno ni la licencia de
+					conducir.Por favor, seleccione una</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="chooseIdMethod">
+			<tuv xml:lang="en_US">
+				<seg>--Choose identification method--</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>--Seleccione un metodo de identificaci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="identification">
+			<tuv xml:lang="en_US">
+				<seg>Identification</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Identificaci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="invalidgovtcard">
+			<tuv xml:lang="en_US">
+				<seg>Invalid government id</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>La cc&#233;dula de gobierno es erronea</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="invaliddriverslicense">
+			<tuv xml:lang="en_US">
+				<seg>Invalid drivers license</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>La cc&#233;dula de conducir es erronea</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="noDescriptionForPets">
+			<tuv xml:lang="en_US">
+				<seg>Pets was included, but there is no description</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Mascotas fue seleccionada, pero no hay ninguna descripci&#243;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="bulkRentPayment">
+			<tuv xml:lang="en_US">
+				<seg>Bulk Rent Payment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pago de renta en cantidad</seg>
+			</tuv>
+		</tu>
+		<tu tuid="address">
+			<tuv xml:lang="en_US">
+				<seg>Address</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Direcci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentApplicantAddress">
+			<tuv xml:lang="en_US">
+				<seg>Current Address Information</seg>
+			</tuv>
+		</tu>
+		<tu tuid="previousApplicantAddress">
+			<tuv xml:lang="en_US">
+				<seg>Previous Address Information</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Previous Address Information</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rent">
+			<tuv xml:lang="en_US">
+				<seg>Rent Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Total renta</seg>
+			</tuv>
+		</tu>
+		<tu tuid="apartmentName">
+			<tuv xml:lang="en_US">
+				<seg>Apartment Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre apartamento</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ownerName">
+			<tuv xml:lang="en_US">
+				<seg>Apt. Owner/Manager Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Apt. Due&#241;o/Nombre organizador</seg>
+			</tuv>
+		</tu>
+		<tu tuid="apartmentPhone">
+			<tuv xml:lang="en_US">
+				<seg>Residence Phone</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Telefono residencia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="moveInDate">
+			<tuv xml:lang="en_US">
+				<seg>Date moved in</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha en que se registro en la vivienda</seg>
+			</tuv>
+		</tu>
+		<tu tuid="moveOutDate">
+			<tuv xml:lang="en_US">
+				<seg>Date moved out</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha en que se retiro de la vivienda</seg>
+			</tuv>
+		</tu>
+		<tu tuid="reasonForLeaving">
+			<tuv xml:lang="en_US">
+				<seg>Why did you leave this residence&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191; Por qu&#233; se fue de esta vivienda &#63;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="employerName">
+			<tuv xml:lang="en_US">
+				<seg>Employer Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="employerPhone">
+			<tuv xml:lang="en_US">
+				<seg>Employer Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid="monthlyIncome">
+			<tuv xml:lang="en_US">
+				<seg>Monthly Income</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateStarted">
+			<tuv xml:lang="en_US">
+				<seg>Date Started</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateEnded">
+			<tuv xml:lang="en_US">
+				<seg>Date Ended</seg>
+			</tuv>
+		</tu>
+		<tu tuid="supervisorName">
+			<tuv xml:lang="en_US">
+				<seg>Supervisor Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="supervisorPhone">
+			<tuv xml:lang="en_US">
+				<seg>Supervisor Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid="cityStateZip">
+			<tuv xml:lang="en_US">
+				<seg>City&#47;State&#47;Zip</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ciudad&#47;Estado&#47;C&#243;digo Postal</seg>
+			</tuv>
+		</tu>
+		<tu tuid="cellPhone">
+			<tuv xml:lang="en_US">
+				<seg>Cell-Phone</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Telefono Celular</seg>
+			</tuv>
+		</tu>
+		<tu tuid="workPhone">
+			<tuv xml:lang="en_US">
+				<seg>Work Phone</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Telefono Trabajo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="position">
+			<tuv xml:lang="en_US">
+				<seg>Position</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Posici&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateBeganJob">
+			<tuv xml:lang="en_US">
+				<seg>Date Began Job</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha inicio trabajo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="income">
+			<tuv xml:lang="en_US">
+				<seg>Gross monthly income is over</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ingreso bruto es mayor a</seg>
+			</tuv>
+		</tu>
+		<tu tuid="superVisorName">
+			<tuv xml:lang="en_US">
+				<seg>Supervisor&#39;s name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre supervisor</seg>
+			</tuv>
+		</tu>
+		<tu tuid="superVisorPhone">
+			<tuv xml:lang="en_US">
+				<seg>Supervisor&#39;s phone</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Telefono supervisor</seg>
+			</tuv>
+		</tu>
+		<tu tuid="spouseForm">
+			<tuv xml:lang="en_US">
+				<seg>Your Spouse</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Su c&#243;nyugue</seg>
+			</tuv>
+		</tu>
+		<tu tuid="numOtherOccupantsForm">
+			<tuv xml:lang="en_US">
+				<seg># Other Occupants</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg># Otros ocupantes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="otherOccupantsLabel">
+			<tuv xml:lang="en_US">
+				<seg>Names of all persons under 18 and other adults who will occupy
+					the unit without signing the lease.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombres de todas las personas menores de 18 a&#241;os que van a
+					ocupar la unidad sin firmar el contrato.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="otherOccupantsAddLabel">
+			<tuv xml:lang="en_US">
+				<seg>Click on add to add people.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Haga click en agregar para agregar personas.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="relationship">
+			<tuv xml:lang="en_US">
+				<seg>Relation</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Relaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentWorkHistory">
+			<tuv xml:lang="en_US">
+				<seg>Current Work History</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Trabajo Actual</seg>
+			</tuv>
+		</tu>
+		<tu tuid="previousWorkHistory">
+			<tuv xml:lang="en_US">
+				<seg>Previous Work History</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Trabajo anterior</seg>
+			</tuv>
+		</tu>
+		<tu tuid="skip">
+			<tuv xml:lang="en_US">
+				<seg>Skip</seg>
+			</tuv>
+		</tu>
+		<tu tuid="bankName">
+			<tuv xml:lang="en_US">
+				<seg>Bank Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="creditCards">
+			<tuv xml:lang="en_US">
+				<seg>List major credit cards</seg>
+			</tuv>
+		</tu>
+		<tu tuid="nonWorkIncome">
+			<tuv xml:lang="en_US">
+				<seg>Other non-work income</seg>
+			</tuv>
+		</tu>
+		<tu tuid="creditProblems">
+			<tuv xml:lang="en_US">
+				<seg>Bankruptcy/Past credit problems</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantCreditHistory">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Credit History</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>History crediticia del aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourVehicles">
+			<tuv xml:lang="en_US">
+				<seg>Your vehicles</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Sus vehiculos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourVehiclesLegend">
+			<tuv xml:lang="en_US">
+				<seg>List all vehicles owned or operated by you, your spouse or any
+					occupants including cars, trucks, motorcycles, trailers, etc.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Liste todos los vehiculos que son utilizados por usted, su
+					esposa o acompantes incluyendo autos, camionetas, motos, trailers,
+					etc.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="makeAndVehicle">
+			<tuv xml:lang="en_US">
+				<seg>Make and color of vehicle</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Marca y color de su vehiculo</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="rentalCriminalHistory">
+			<tuv xml:lang="en_US">
+				<seg>Rental and Criminal History</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Historial de renta y criminalistico</seg>
+			</tuv>
+		</tu>
+		<tu tuid="whyYouRentedHere">
+			<tuv xml:lang="en_US">
+				<seg>Why You Rented Here</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Por que alquila aqu&#237;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="wereyoureferred">
+			<tuv xml:lang="en_US">
+				<seg>Were you referred&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Fue usted referrido&#63;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="didYouFindUs">
+			<tuv xml:lang="en_US">
+				<seg>Did you find us on your own&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Nos encontro por su cuenta&#63;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantEmergencyContact">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Emergency Contact</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Persona de contacto en caso de emergencia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="contactName">
+			<tuv xml:lang="en_US">
+				<seg>Contact Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mainPhone">
+			<tuv xml:lang="en_US">
+				<seg>Main Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid="abovePerson">
+			<tuv xml:lang="en_US">
+				<seg>above person</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourSpouse">
+			<tuv xml:lang="en_US">
+				<seg>your spouse</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>su esposa</seg>
+			</tuv>
+		</tu>
+		<tu tuid="parentChild">
+			<tuv xml:lang="en_US">
+				<seg>your parent or child</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>su pariente o hijo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="choiceCheckboxInstructionsOne">
+			<tuv xml:lang="en_US">
+				<seg>Emergency contact person over age 18 who will not be living
+					with
+					you:</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="authorizeLegal">
+			<tuv xml:lang="en_US">
+				<seg>
+					I authorize to&#58; &#40;1&#41; share the above information
+					with owner's electric provider, and &#40;2&#41; verify,
+					by all
+					available means, the above, including reports from consumer
+					reporting
+					agencies before, during and after tenancy on matters
+					relating to my lease,
+					and income history and other information
+					reported by
+					employer&#40;s&#41; to
+					any state employment security
+					agency &#40;e.g., Texas Workforce
+					Commission&#41;.
+					Work history
+					information may be used only for this Rental Application.
+					Authority
+					to obtain work history information expires 365 days from
+					the date of
+					this
+					Application.If I click no all my information provided will be
+					deleted.
+   				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Yo autorizo a para&#58; &#40;1&#41; compartir la
+					informaci&#243;n con el proveedor de energia electrica y
+					&#40;2&#41; verificar,
+					por todos los medios disponibles, que lo
+					mencionado arriba, incluyendo
+					reportes de agencias de consumo antes,
+					durante y despues de la
+					estadia en
+					relaci&#243;n con mi contrato e
+					historial de ingresos y otra informaci&#243;n
+					reportada por
+					empleadores , para cualquier agencia Estatal
+					de seguridad de empleo
+					&#41;ejemplo, Texas Workforce Comission&#42;.
+					La informaci&#243;
+					puede ser utilizada solamente para esta
+					aplicaci&#243;n de renta.
+					La
+					autoridad para conseguir el historial de trabajo expira en 365
+					d&#237;as de la fecha de esta aplicaci&#243;n.Si selecciono no,
+					toda mi informaci&#243;n
+					va a ser eliminada.
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantSignature">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Signature</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Firma del interesado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantSignatureDescription">
+			<tuv xml:lang="en_US">
+				<seg>Full name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre completo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="spouseSignature">
+			<tuv xml:lang="en_US">
+				<seg>Spouse's Signature</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Firma de la esposa</seg>
+			</tuv>
+		</tu>
+		<tu tuid="spouseSignatureDescription">
+			<tuv xml:lang="en_US">
+				<seg>Full name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre completo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="authorization">
+			<tuv xml:lang="en_US">
+				<seg>Authorization</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Autorizaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicationAgreement">
+			<tuv xml:lang="en_US">
+				<seg>Application Agreement</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Convenio de solicitud</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicationLeaseContractInformation">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Application Lease Contract Information.</strong>
+					The Lease Contract contemplated by the parties is
+					attached or, if no
+					Lease Contract is attached, the Lease
+					Contract will be the current
+					TAA Lease Contract noted above.
+					Special information and conditions
+					must be explicitly noted on an attached.
+					Lease Contract or in the
+					Contemplated Lease Information above.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Informaci&#243;n sobre el contrato de arrendamiento.</strong>
+					El contrato de arrendamiento
+					que las partes piensan celebrar
+					est&#225; adjunto al presente &#243; si no
+					est&#225; adjunto, el
+					contrato ha de ser el contrato de arrendamiento actual de la TAA,
+					tal como
+					se
+					anota arriba. Toda informaci&#243;n o condici&#243;n
+					especial debe ser
+					expl&#237;citamente
+					anotada en el contrato de
+					arrendamiento adjunto o en esta hoja de
+					informaci&#243;n
+					sobre el
+					contrato de arrendamiento contemplado.
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicationFeeLegal">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Application Fee &#40;may or may not be refundable&#41;.</strong>
+					You have delivered to our
+					representative an application fee in the
+					amount indicated in paragraph 14
+					below, and this payment partially
+					defrays the cost of administrative
+					paperwork.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Cuota de solicitud &#40;puede ser reembolsable o no&#41;.</strong>
+					Usted ha entregado a nuestro
+					representante una cuota de solicitud en
+					la cantidad indicada en el p&#225;rrafo
+					14 a
+					continuaci&#243;n, la
+					cual amortiza parcialmente el costo de los tr&#225;mites
+					administrativos.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="applicationDeposit">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Application Deposit &#40;may or may not be refundable&#41;.</strong>
+					In addition to any
+					application fee, you have delivered to our
+					representative an application
+					deposit in the amount indicated in
+					paragraph 14. The application
+					deposit is not
+					a security deposit.
+					However, it will be credited toward the required
+					security
+					deposit
+					when the Lease Contract has been signed by all parties; OR it will
+					be
+					refunded under paragraph 10 if you are not approved; OR it will
+					be retained
+					by us as liquidated damages if you fail to sign or
+					attempt to
+					withdraw under
+					paragraph 6 or 7, or fail to answer any
+					question or give false information.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Dep&#243;sito de solicitud &#40;puede ser reembolsable o
+						no&#41;.</strong>
+					Adem&#225;s de cualquier
+					cuota de solicitud, usted le ha entregado a
+					nuestro representante un
+					dep&#243;sito de
+					solicitud en la cantidad
+					indicada en el p&#225;rrafo 14. El dep&#243;sito de
+					solicitud no es
+					un
+					dep&#243;sito en garant&#237;a Sin embargo, ser&#225; descontado
+					al pago del
+					dep&#243;sito en garant&#237;a
+					cuando el Contrato de
+					arrendamiento haya sido firmado por todas las
+					partes O
+					ser&#225;
+					devuelto, seg&#250;n lo especifica el p&#225;rrafo 10, si su
+					solicitud
+					no es aprobada O
+					ser&#225; retenido como liquidaci&#243;n
+					de da&#241;os si usted no firma el
+					contrato o intenta
+					hacer una
+					revocaci&#243;n, seg&#250;n lo indican los p&#225;rrafos 6 o 7, O
+					si
+					deja de contestar
+					cualquier pregunta o si proporciona
+					informaci&#243;n falsa.
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="approvalLeaseSign">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Approval When Lease Contract Is Signed in Advance.</strong>
+					If you and all co-
+					applicants have already signed the Lease Contract
+					when we approve the
+					Application, our representative will notify you
+					&#40;or one of you
+					if there are co-
+					applicants&#41; of our approval,
+					sign the Lease Contract, and then credit the
+					application
+					deposit of
+					all applicants toward the required security deposit.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Aprobaci&#243;n cuando el contrato de arrendamiento es
+						firmado por adelantado.</strong>
+					Si usted y todos los solicitantes ya han firmado el contrato de
+					arrendamiento
+					cuando aprobamos la Solicitud, nuestro representante
+					le notificar&#225;
+					de la aprobaci&#243;n
+					a usted &#40;o a uno de
+					ustedes si son co-solicitantes&#41;,
+					firmar&#225; el contrato de
+					arrendamiento, y entonces acreditar&#225; el dep&#243;sito de
+					solicitud de todos
+					los
+					solicitantes a cuenta del dep&#243;sito en
+					garant&#237;a.
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="approvalLeaseNotSign">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Approval When Lease Contract Isn&#180;t Yet Signed.</strong>
+					If you and all co-applicants
+					have not signed the Lease Contract when
+					we approve the Application, our
+					representative will notify you
+					&#40;or one of you if there are
+					co-applicants&#41; of the
+					approval,
+					sign the Lease Contract when you and all co-applicants have
+					signed,
+					and then credit the application deposit of all applicants toward
+					the
+					required
+					security deposit.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Aprobaci&#243;n cuando el contrato de arrendamiento no ha
+						sido firmado todav&#237;a.</strong>
+					Si usted y todos los solicitantes no han firmado todav&#237;a el
+					contrato de
+					arrendamiento en el momento en que aprobamos la
+					Solicitud, nuestro
+					representante le notificar&#225; de la
+					aprobaci&#243;n a usted &#40;o a uno de
+					ustedes si son co-
+					solicitantes&#41;, firmar&#225; el contrato de arrendamiento, y,
+					cuando usted y todos
+					los
+					solicitantes han firmado el contrato,
+					entonces acreditar&#225; el dep&#243;sito
+					de solicitud
+					de todos los
+					solicitantes a cuenta del dep&#243;sito en
+					garant&#237;a.
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="approvalLeaseFail">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>If You Fail to Sign Lease After Approval.</strong>
+					Unless we authorize otherwise in
+					writing, you and all co-applicants
+					must sign the Lease Contract within 3
+					days
+					after we give you our
+					approval in person or by telephone, or within 5
+					days after
+					we mail
+					you our approval.
+					<i>If you or any co-applicant fails to sign as required, we
+						may keep
+						the application deposit as liquidated damages, and terminate
+						all
+						further
+						obligations under this Agreement.</i>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Si usted&#40;es&#41; no firma&#40;n&#41; el contrato
+						despu&#233;s de haber sido aprobado&#40;s&#41;.</strong>
+					A menos
+					que autoricemos disposici&#243;n contraria por escrito,
+					usted y todos
+					los solicitantes deben
+					firmar el Contrato de
+					arrendamiento dentro de los 3 d&#237;as posteriores
+					de que
+					le&#40;s&#41;
+					hayamos aprobado en persona o por tel&#233;fono, o
+					dentro de los 5
+					d&#237;as posteriores al env&#237;o
+					de la
+					aprobaci&#243;n por correo.
+					<i>Si usted o cualquiera de los solicitantes no firma el contrato
+						como es debido, guardaremos el dep&#243;sito de solicitud en
+						car&#225;cter de liquidaci&#243;n por da&#241;os
+						y terminaremos
+						toda
+						obligaci&#243;n futura bajo este acuerdo.</i>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="withdrawBeforeApproval">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>If You Withdraw Before Approval.</strong>
+					You and any co-applicants may not
+					withdraw your Application or the
+					application deposit.
+					<i>If, before signing the Lease
+						Contract, you or any co-applicant
+						withdraws an Application or notifies us
+						that you&#180;ve
+						changed
+						your mind about renting the dwelling unit, we&#180;ll be
+						entitled
+						to
+						retain all
+						application deposits as liquidated damages,
+						and the
+						parties will then have no
+						further
+						obligation to each other.</i>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Si usted hace una revocaci&#243;n antes de la
+						aprobaci&#243;n.</strong>
+					Ni usted ni ninguno de los
+					solicitantes puede retirar ni la
+					solicitud ni el dep&#243;sito de solicitud.
+					<i>Si, antes de
+						citud firmar el Contrato de arrendamiento, usted o
+						cualquiera de los
+						solicitantes retira una
+						solicitud o nos avisa de
+						un cambio de opini&#243;n en cuanto al
+						arrendamiento de la
+						vivienda,
+						tendremos derecho a retener todos los dep&#243;sitos de
+						solicitud en
+						car&#225;cter de da&#240;os
+						liquidados y no
+						existir&#225;
+						obligaci&#243;n futura entre las partes.</i>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="completedApplication">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Completed Application.</strong>
+					An Application will not be considered &#34;completed&#34;
+					and
+					will
+					not be processed until all of the following have been
+					provided
+					to us
+					&#40;unless checked&#41;: a separate Application has
+					been fully
+					filled out
+					and signed
+					by you and each co-applicant;
+					an application fee
+					has been paid to
+					us an application deposit has been paid to us.
+					<i>If no item is checked, all are necessary
+						for the Application to
+						be considered completed.</i>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Solicitud completa.</strong>
+					Una solicitud no se considera &#34;completa&#34; ni se procesa
+					hasta que se nos haya dado todo lo listado a continuaci&#243;n
+					&#40;excepto lo marcado&#41;:
+					una solicitud por separado
+					completa y
+					firmada por cada uno de los
+					solicitantes;
+					se nos
+					ha pagado una cuota
+					de solicitud; se nos ha pagado un
+					dep&#243;sito de
+					solicitud.
+					<i>Si no se se&#240;ala ning&#250;n &#237;tem, se requieren todos
+						para
+						que la
+						Solicitud se
+						considere completa.</i>
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="nonApprovalInSevenDays">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Nonapproval in Seven Days.</strong>
+					We will notify you whether you&#180;ve been
+					approved within seven
+					days after the date we receive a completed Applica-
+					tion. Your
+					Application will be considered &#34;disapproved&#34; if we
+					fail
+					to
+					notify
+					you of your approval within seven days after we have
+					received
+					a
+					completed
+					Application. Notification may be in person or by
+					mail or
+					telephone unless you
+					have requested that notification be by
+					mail. You
+					must not assume
+					approval
+					until you receive actual notice of
+					approval.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Falta de aprobaci&#243;n dentro de siete d&#237;as.</strong>
+					Le&#40;s&#41; notificaremos si ha&#40;n&#41; sido
+					aprobado&#40;s&#41; dentro de siete d&#237;as de la fecha en que
+					recibimos una solicitud
+					completa. Su solicitud debe considerarse
+					&#34;desaprobada&#34; si no le&#40;s&#41;
+					avisamos de
+					su
+					aprobaci&#243;n dentro de siete d&#237;as de la fecha en que
+					recibimos la solicitud
+					completa. La notificaci&#243;n puede ser en
+					persona, por correo o por
+					tel&#233;fono, a menos
+					que
+					usted&#40;es&#41; haya&#40;n&#41; solicitado que la
+					notificaci&#243;n sea por correo. No debe&#40;n&#41;
+					usted&#40;es&#41; tomar la solicitud por aprobada hasta recibir la
+					notificaci&#243;n de aprobaci&#243;n.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="refundAfterNonApproval">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Refund after Nonapproval.</strong>
+					If you or any co-applicant is disapproved or
+					deemed disapproved
+					under paragraph 9, we&#180;ll refund all application
+					deposits
+					within
+					<br />
+					_______ days &#40;not to exceed 30 days; 30 days if left blank&#41;
+					of such disapproval.
+					<br />
+					Refund checks may be made payable to all co-applicants and mailed
+					to one applicant.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Reembolso despu&#233;s de la desaprobaci&#243;n.</strong>
+					Si se le desaprueba a usted o a
+					cualquier solicitante o si se
+					le&#40;s&#41; toma por desaprobado&#40;s&#41;
+					conforme al
+					p&#225;rrafo 9,
+					le&#40;s&#41; reembolsaremos todos los
+					dep&#243;sitos de solicitud dentro de
+					________ d&#237;as
+					&#40;no
+					m&#225;s de 30 d&#237;as; 30 d&#237;as si se deja en blanco} de
+					dicha desaprobaci&#243;n. Los
+					cheques de reembolso pueden ser
+					pagaderos a todos los solicitantes y ser
+					enviados a un solicitante.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="extensionOfDeadline">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Extension of Deadlines.</strong>
+					If the deadline for signing, approving, or refunding
+					under
+					paragraphs 6, 9, or 10 falls on a Saturday, Sunday, or a state or
+					federal
+					holiday, the deadline will be extended to the end of the
+					next business day.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Extensi&#243;n de prorroga.</strong>
+					Si el plazo fatal por firmar, aprobar o reembolsar,
+					conforme a los
+					p&#225;rrafos 6, 9 o 10 sea s&#225;bado, domingo o d&#237;a
+					festivo
+					estatal o
+					federal, el plazo fatal se aplazar&#225; hasta el fin del
+					pr&#243;ximo
+					d&#237;a h&#225;bil.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="coApplicantNotice">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Notice to or from Co-applicants.</strong>
+					Any notice we give you or your co-
+					applicant is considered notice to
+					all co-applicants; and any notice from you
+					or your co-applicant is
+					considered notice from all co-applicants.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Avisos para o de los solicitantes.</strong>
+					Cualquier aviso que le damos a usted o a su co-
+					solicitante se
+					deber&#225; considerar un aviso a todos los solicitantes; y
+					cualquier aviso de
+					usted o de su co-solicitante se deber&#225;
+					considerar un aviso de todos
+					los solicitantes.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="keysOrAccess">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Keys or Access Devices.</strong>
+					We&#180;ll furnish keys and/or access devices only after:
+					&#40;1&#41; all parties have signed the contemplated Lease Contract
+					and other
+					rental
+					documents; and &#40;2&#41; all applicable rents and
+					security deposits have
+					been paid in full.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Llaves o dispositivos de acceso. Entregaremos las llaves o
+					dispositivos
+					de
+					acceso s&#243;lo despu&#233;s de que &#40;1&#41;
+					todas las partes hayan
+					firmado el contrato de
+					arrendamiento y otros
+					documentos relacionados y &#40;2&#41; la renta y los
+					correspondientes dep&#243;sitos en garant&#237;a hayan sido pagados
+					en su totalidad.
+			</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="appFee">
+			<tuv xml:lang="en_US">
+				<seg>
+					Application fee &#40;may or may not be refundable&#41;&#36; </seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Cuota de solicitud &#40;puede o no ser reembolsable&#41;:&#36; </seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="appDeposit">
+			<tuv xml:lang="en_US">
+				<seg>
+					Application deposit &#40;may or may not be
+					refundable&#41;:&#36; </seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Dep&#243;sito de solicitud &#40;puede o no ser
+					reembolsable&#41;:&#36; </seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="admFee">
+			<tuv xml:lang="en_US">
+				<seg>
+					Administrative fee &#40;refundable only if not
+					approved&#41;:&#36; </seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Cargo administrativo &#40;reembolsable s&#243;lo si la
+					solicitud no es aprobada&#41;:&#36; </seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="totalFees">
+			<tuv xml:lang="en_US">
+				<seg>
+					Total of above fees and application deposit:&#36; </seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Suma de la cuota de solicitud y el dep&#243;sito de
+					solicitud:&#36; </seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="totalFeesReceived">
+			<tuv xml:lang="en_US">
+				<seg>
+					Total amount of money we&#180;ve received to this date:&#36; </seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Cantidad total que hemos recibido hasta esta fecha:&#36; </seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="readContract">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Acknowledgment.</strong>
+					You declare that all your statements on the first page of this
+					Application are true and complete. You authorize us to verify same
+					through
+					any means, including consumer reporting agencies and other
+					rental
+					housing owners. You acknowledge that you had an opportunity
+					to
+					review our rental
+					selection criteria, which include reasons your
+					application may be denied,
+					such as criminal history, credit history,
+					current income, and
+					rental history.
+					You understand that if you do not
+					meet our rental selection criteria
+					or if you fail to answer any
+					question or give false information, we
+					may reject the
+					application,
+					retain all application fees, administrative fees, and deposits as
+					liquidated damages for our time and expense, and terminate your
+					right
+					of occupancy. Giving false information is a serious criminal
+					offense.
+					In lawsuits relating to the application or Lease Contract,
+					the
+					prevailing party may recover
+					from the non-prevailing party all
+					attorney&#180;s fees and litigation costs.
+					We may at any time
+					furnish information to consumer reporting
+					agencies and other rental
+					housing
+					owners regarding your performance of your legal obligations,
+					including
+					both favorable and unfavorable information about your
+					compliance
+					with the Lease
+					Contract, the rules, and financial
+					obligations. Fax or electronic signatures
+					are legally binding. You
+					acknowledge that our privacy policy is
+					available to you.
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Declaraci&#243;n que la informaci&#243;n es correcta.</strong>
+					Usted&#40;es&#41; afirma&#40;n&#41; que todas sus declaraciones en
+					la primera p&#225;gina de esta solicitud son correctas y completas
+					y
+					nos
+					autoriza&#40;n&#41; a verificarlas
+					por cualquier medio, incluso
+					con agencias crediticias y propietarios
+					de otras unidades
+					arrendadas. Afirma&#40;n&#41; tambi&#233;n que
+					ha&#40;n&#41; tenido
+					la
+					oportunidad de leer nuestros criterios de
+					selecci&#243;n
+					de
+					inquilinos y las razones por las cuales se puede rechazar su
+					solicitud, entre ellas, por antecedentes criminales, historia
+					crediticia, ingresos actuales o historia de rentas.
+					Usted&#40;es&#41;
+					reconoce&#40;n&#41; que si no cumple&#40;n&#41;
+					nuestros criterios de selecci&#243;n o
+					si deja&#40;n&#41; de
+					contestar cualquier pregunta o si
+					proporciona&#40;n&#41;
+					informaci&#243;n falsa, podemos rechazar
+					esta solicitud,
+					retener la
+					totalidad de cuotas, cargos administrativos y dep&#243;sitos
+					asociados a la solicitud como pena convencional por da&#241;os y
+					poner
+					t&#233;rmino a su derecho de ocupaci&#243;n. La provisi&#243;n
+					de datos falsos es un grave delito criminal. En cualquier pleito
+					relacionado a esta solicitud o Contrato de arrendamiento, la parte
+					que predomina tiene derecho a recobrar de la parte que no
+					predomina
+					todos los honorarios de abogado y gastos de litigio. Podemos en
+					cualquier momento proveer a agencias crediticias y a propietarios
+					de otras viviendas arrendadas, informaci&#243;n
+					relacionada a la
+					manera en que usted&#40;es&#41; cumple&#40;n&#41; con las
+					obligaciones de su contrato de arrendamiento, incluso tanto lo
+					favorable como lo desfavorable relacionado con su cumplimiento
+					con
+					el contrato de arrendamiento, los reglamentos y sus obligaciones
+					financieras. Las firmas recibidas por fax o v&#237;a
+					electr&#243;nica son obligatorias. Usted&#40;es&#41;
+					reconoce&#40;n&#41; que nuestra pol&#237;tica
+					de privacidad se
+					encuentra a su disposici&#243;n.
+				</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="iAcceptThisContract">
+			<tuv xml:lang="en_US">
+				<seg>Acknowledgment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Declaraci&#243;n que la informaci&#243;n es correcta</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="settingName">
+			<tuv xml:lang="en_US">
+				<seg>Setting Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre opci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="settingDescription">
+			<tuv xml:lang="en_US">
+				<seg>Please, provide a descriptive name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Por favor utilize un nombre descriptivo</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="valueName">
+			<tuv xml:lang="en_US">
+				<seg>Setting Value</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Valor opci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="valueDescription">
+			<tuv xml:lang="en_US">
+				<seg>Fill in the value of this option</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Llene el valor de esta opci&#243;n</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="settingTitle">
+			<tuv xml:lang="en_US">
+				<seg>Settings</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Opci&#243;nes</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="settingInfo">
+			<tuv xml:lang="en_US">
+				<seg>This section provides all the settings that are available on
+					the system at global level.This are not module specific</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Esta secci&#243;n contiene todas las opci&#243;nes que estan
+					disponibles en el sistema a nivel global.No son especificas a los
+					modulos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createMaintenanceRequest">
+			<tuv xml:lang="en_US">
+				<seg>Create Maintenance Request</seg>
+			</tuv>
+		</tu>
+		<tu tuid="title">
+			<tuv xml:lang="en_US">
+				<seg>Request Title</seg>
+			</tuv>
+		</tu>
+		<tu tuid="permissionToEnter">
+			<tuv xml:lang="en_US">
+				<seg>Permission To Enter?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="lastUpdated">
+			<tuv xml:lang="en_US">
+				<seg>Last Updated</seg>
+			</tuv>
+		</tu>
+		<tu tuid="myMaintenanceRequests">
+			<tuv xml:lang="en_US">
+				<seg>My Maintenance Requests</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewMaintenanceRequests">
+			<tuv xml:lang="en_US">
+				<seg>View Maintenance Request</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateSubmitted">
+			<tuv xml:lang="en_US">
+				<seg>Date Submitted</seg>
+			</tuv>
+		</tu>
+		<tu tuid="requestorName">
+			<tuv xml:lang="en_US">
+				<seg>Requestor Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="status">
+			<tuv xml:lang="en_US">
+				<seg>Status</seg>
+			</tuv>
+		</tu>
+		<tu tuid="assignedTo">
+			<tuv xml:lang="en_US">
+				<seg>Assigned To</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewMaintenanceRequest">
+			<tuv xml:lang="en_US">
+				<seg>View Maintenance Request</seg>
+			</tuv>
+		</tu>
+		<tu tuid="comments">
+			<tuv xml:lang="en_US">
+				<seg>Comments</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Comentarios</seg>
+			</tuv>
+		</tu>
+		<tu tuid="addComment">
+			<tuv xml:lang="en_US">
+				<seg>Add Comment</seg>
+			</tuv>
+		</tu>
+		<tu tuid="changeStatusAssignedTo">
+			<tuv xml:lang="en_US">
+				<seg>Change Status / Assigned To</seg>
+			</tuv>
+		</tu>
+		<tu tuid="remove">
+			<tuv xml:lang="en_US">
+				<seg>Remove</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Remover</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noComments">
+			<tuv xml:lang="en_US">
+				<seg>No Comments</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewAllMaintenanceRequests">
+			<tuv xml:lang="en_US">
+				<seg>View All Maintenance Requests</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewAssignedRequests">
+			<tuv xml:lang="en_US">
+				<seg>View Assigned Requests</seg>
+			</tuv>
+		</tu>
+		<tu tuid="configureMaintenanceSettings">
+			<tuv xml:lang="en_US">
+				<seg>Configure Maintenance Settings</seg>
+			</tuv>
+		</tu>
+		<tu tuid="driverLicenseGov">
+			<tuv xml:lang="en_US">
+				<seg>Driver license or Government Id Card Number</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cedula de conducir &#243; Identificaci&#243;n del gobierno</seg>
+			</tuv>
+		</tu>
+		<tu tuid="maintenanceSettings">
+			<tuv xml:lang="en_US">
+				<seg>Maintenance Settings</seg>
+			</tuv>
+		</tu>
+		<tu tuid="roleId">
+			<tuv xml:lang="en_US">
+				<seg>Role</seg>
+			</tuv>
+		</tu>
+		<tu tuid="defaultAssignedTo">
+			<tuv xml:lang="en_US">
+				<seg>Default Assigned To</seg>
+			</tuv>
+		</tu>
+		<tu tuid="disabled">
+			<tuv xml:lang="en_US">
+				<seg>Disabled</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Deshabilitado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="enabled">
+			<tuv xml:lang="en_US">
+				<seg>Enabled</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Habilitado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="receipt">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Receipt</strong>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Recibo</strong>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="weight">
+			<tuv xml:lang="en_US">
+				<seg>Weight</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Peso</seg>
+			</tuv>
+		</tu>
+		<tu tuid="appFeePayment">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Application Fee Payment</strong>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Pago por el uso de la aplicaci&#243;n</strong>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="digitsOnly">
+			<tuv xml:lang="en_US">
+				<seg>
+					<strong>Please enter numerical digits only</strong>
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					<strong>Por favor ingrese solamente digitos</strong>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantFeeSettingsTitle">
+			<tuv xml:lang="en_US">
+				<seg>
+					Applicant Fee Settings
+				</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>
+					Configuraci&#243;n de T&#225;rifa para postulantes
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="removeApplicantFeeSetting">
+			<tuv xml:lang="en_US">
+				<seg>Remove Applicant Fee Settings</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Eliminar T&#225;rifa para postulantes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="errors">
+			<tuv xml:lang="en_US">
+				<seg>Errors</seg>
+			</tuv>
+		</tu>
+		<tu tuid="row">
+			<tuv xml:lang="en_US">
+				<seg>Row</seg>
+			</tuv>
+		</tu>
+		<tu tuid="column">
+			<tuv xml:lang="en_US">
+				<seg>Column</seg>
+			</tuv>
+		</tu>
+		<tu tuid="value">
+			<tuv xml:lang="en_US">
+				<seg>Value</seg>
+			</tuv>
+		</tu>
+		<tu tuid="messages">
+			<tuv xml:lang="en_US">
+				<seg>Messages</seg>
+			</tuv>
+		</tu>
+		<tu tuid="amountPaid">
+			<tuv xml:lang="en_US">
+				<seg>Amount Paid</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentDueDate">
+			<tuv xml:lang="en_US">
+				<seg>Rent Due Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentType">
+			<tuv xml:lang="en_US">
+				<seg>Payment Type</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Tipo de pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="upload">
+			<tuv xml:lang="en_US">
+				<seg>Upload</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Subir</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unprocessedRows">
+			<tuv xml:lang="en_US">
+				<seg>Unprocessed Rows</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Filas sin procesar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantFeeCashAccount">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Fee Cash Account</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantFeeCashAccountDesc">
+			<tuv xml:lang="en_US">
+				<seg>Account where payments from application fees post</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateFASetting">
+			<tuv xml:lang="en_US">
+				<seg>Update Financial Account Setting</seg>
+			</tuv>
+		</tu>
+		<tu tuid="financialAccountSettings">
+			<tuv xml:lang="en_US">
+				<seg>Financial Account Settings</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createMaintRequestAdmin">
+			<tuv xml:lang="en_US">
+				<seg>Create Maintenance Request (Admin)</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteInfo">
+			<tuv xml:lang="en_US">
+				<seg>Delete provided information</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Borrar informaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="deleteInfoConfirmation">
+			<tuv xml:lang="en_US">
+				<seg>Do you confirm you want to delete all the provided information?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Confirma que desea eliminar toda la informaci&#243;n?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="congratulations">
+			<tuv xml:lang="en_US">
+				<seg>Thank you for applying. Please navigate to the applicant
+					dashboard to pay any fees or deposits required for processing the
+					application.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Felicitaciones, ahora tenemos toda su informaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantDashboard">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Dashboard</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Centro de informaci&#243;n de usuarios que aplican</seg>
+			</tuv>
+		</tu>
+		<tu tuid="takeAlook">
+			<tuv xml:lang="en_US">
+				<seg>Click here to view your</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Vaya a su</seg>
+			</tuv>
+		</tu>
+		<tu tuid="settingsTitle">
+			<tuv xml:lang="en_US">
+				<seg>System Settings</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Opciones de Sistema</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewfeesdue">
+			<tuv xml:lang="en_US">
+				<seg>View Fees Due</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver pagos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewfeespaid">
+			<tuv xml:lang="en_US">
+				<seg>View Paid Fees</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver pagos realizados</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noDueFees">
+			<tuv xml:lang="en_US">
+				<seg>You don't have any due fee</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Usted no tiene pagos pendientes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="onlinePayment">
+			<tuv xml:lang="en_US">
+				<seg>Online Payment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pago Online</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentProrationSettings">
+			<tuv xml:lang="en_US">
+				<seg>Rent Proration Settings</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Opciones de prorateo de renta</seg>
+			</tuv>
+		</tu>
+		<tu tuid="prorationEnabled">
+			<tuv xml:lang="en_US">
+				<seg>Proration Enabled</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Prorateo habilitado</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="rentDueDay">
+			<tuv xml:lang="en_US">
+				<seg>Rent Due Day</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="prorationType">
+			<tuv xml:lang="en_US">
+				<seg>Proration Type</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="prorationApplyMonth">
+			<tuv xml:lang="en_US">
+				<seg>Proration Apply Month</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="secondMonthDue">
+			<tuv xml:lang="en_US">
+				<seg>Second Month Due at Signing</seg>
+			</tuv>
+		</tu>
+		<tu tuid="actual">
+			<tuv xml:lang="en_US">
+				<seg>Actual</seg>
+			</tuv>
+			<!-- No error here, we write it the same -->
+			<tuv xml:lang="es_AR">
+				<seg>Actual</seg>
+			</tuv>
+		</tu>
+		<tu tuid="thirtyday">
+			<tuv xml:lang="en_US">
+				<seg>Thirty Day</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Trig&#233;simo D&#237;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid="year">
+			<tuv xml:lang="en_US">
+				<seg>Year</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>A&#241;o</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourpaidfees">
+			<tuv xml:lang="en_US">
+				<seg>Your Paid Fees</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Sus pagos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updatePermission">
+			<tuv xml:lang="en_US">
+				<seg>Update Permission</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updatePermissionInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Update Permission Instructions</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Instrucciones para actualizar permisos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="sections">
+			<tuv xml:lang="en_US">
+				<seg>Sections</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Secciones</seg>
+			</tuv>
+		</tu>
+		<tu tuid="controllerName">
+			<tuv xml:lang="en_US">
+				<seg>Controller Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre del controlador</seg>
+			</tuv>
+		</tu>
+		<tu tuid="actionName">
+			<tuv xml:lang="en_US">
+				<seg>Action Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre Acci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewModules">
+			<tuv xml:lang="en_US">
+				<seg>View Modules</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Modulos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewControllers">
+			<tuv xml:lang="en_US">
+				<seg>View Controllers</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver Controlladores</seg>
+			</tuv>
+		</tu>
+		<tu tuid="payment">
+			<tuv xml:lang="en_US">
+				<seg>Payment</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="onlinePaymentProcessing">
+			<tuv xml:lang="en_US">
+				<seg>Online Payment Processing</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Procesamiento de pagos online</seg>
+			</tuv>
+		</tu>
+		<tu tuid="recordSaved">
+			<tuv xml:lang="en_US">
+				<seg>Record Saved</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Registro Guardado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourCompletedApplications">
+			<tuv xml:lang="en_US">
+				<seg>Your authorized applications</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Sus aplicaciones autorizadas</seg>
+			</tuv>
+		</tu>
+		<tu tuid="moduleName">
+			<tuv xml:lang="en_US">
+				<seg>Module Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre de Modulo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicant">
+			<tuv xml:lang="en_US">
+				<seg>Applicant</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Applicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="wereyoureferred">
+			<tuv xml:lang="en_US">
+				<seg>Were you referred?</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fue usted referido?</seg>
+			</tuv>
+		</tu>
+		<tu tuid="yourwaitlist">
+			<tuv xml:lang="en_US">
+				<seg>Your Wait List</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Su lista de espera</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unhandledMsg">
+			<tuv xml:lang="en_US">
+				<seg>An unidentified error happened.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Occuri&#243;n un error inesperado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noWorkflowRegistered">
+			<tuv xml:lang="en_US">
+				<seg>There isn't any active workflow running right now</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No hay ninguna aplicaci&#243;n corriendo actualmente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="userNameFailRole">
+			<tuv xml:lang="en_US">
+				<seg>There was an error when your account was created.System
+					administrators had been alerted and your account will be
+					reviewed.We will contact you.</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ocurri&#243; un error cuando su cuenta fue creada.Los
+					administradores del sistema han sido notificados y su
+					informaci&#243; va a ser revisada.Nos pondremos en contacto con
+					usted.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewUnitModelDetails">
+			<tuv xml:lang="en_US">
+				<seg>View Unit Model Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ver caracterist&#237;cas del tipo de unidad</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unitIdNotValid">
+			<tuv xml:lang="en_US">
+				<seg>The given unit is not valid</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El modelo de unidad no es v&#225;lido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="apartmentIdNotValid">
+			<tuv xml:lang="en_US">
+				<seg>The Aparment is not valid</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El departamento no es v&#225;lido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unitIsNotForRent">
+			<tuv xml:lang="en_US">
+				<seg>The unit is not for rent</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>La unidad no esta disponible para alquilar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="modelIdNotValid">
+			<tuv xml:lang="en_US">
+				<seg>The model is not valid</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El tipo de unidad no es valido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="maxRefundAmount">
+			<tuv xml:lang="en_US">
+				<seg>Max Refund Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Devoluci&#243;n m&#225;xima</seg>
+			</tuv>
+		</tu>
+		<tu tuid="refund">
+			<tuv xml:lang="en_US">
+				<seg>Refund</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Devoluci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="filterByStatus">
+			<tuv xml:lang="en_US">
+				<seg>Filter by status</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Filtrar por estado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="filterByUnitNumber">
+			<tuv xml:lang="en_US">
+				<seg>Filter by unit number</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Filtrar por n&#250;mero de unidad</seg>
+			</tuv>
+		</tu>
+		<tu tuid="filterByDates">
+			<tuv xml:lang="en_US">
+				<seg>Filter by dates</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Filtrar por fecha</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateFrom">
+			<tuv xml:lang="en_US">
+				<seg>Date from</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha desde</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateTo">
+			<tuv xml:lang="en_US">
+				<seg>Date to</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha hasta</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createApplicantStatus">
+			<tuv xml:lang="en_US">
+				<seg>Create Applicant Status</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Crear estado de aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="updateApplicantStatus">
+			<tuv xml:lang="en_US">
+				<seg>Update Applicant Status</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Cambiar estado del aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantStatusName">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Status Name</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Nombre del estado del aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantStatuses">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Statuses</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Estados del aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="datesNotSet">
+			<tuv xml:lang="en_US">
+				<seg>Dates are not set</seg>
+			</tuv>
+			<tuv xml:lange="es_AR">
+				<seg>Las fechas no estan presentes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateToLowerThanDateFrom">
+			<tuv xml:lang="en_US">
+				<seg>Date to is before Date from</seg>
+			</tuv>
+			<tuv xml:lange="es_AR">
+				<seg>La fecha hasta es anterior a la fecha desde</seg>
+			</tuv>
+		</tu>
+		<tu tuid="currentStatus">
+			<tuv xml:lang="en_US">
+				<seg>Current Status</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Estado actual</seg>
+			</tuv>
+		</tu>
+		<tu tuid="changeApplicantStatusTo">
+			<tuv xml:lang="en_US">
+				<seg>Change Applicant Status To</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiar estado del aplicante a</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantName">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Name</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Nombre del aplicante</seg>
+			</tuv>
+		</tu>
+		<tu tuid="modelIdIsMissing">
+			<tuv xml:lang="en_US">
+				<seg>The unit model type is not present</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>El modelo de unidad no esta presente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="userDidNotPayYet">
+			<tuv xml:lang="en_US">
+				<seg>The user did not pay yet</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>El usuario no hay abonado todavia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mailThisUser">
+			<tuv xml:lang="en_US">
+				<seg>Mail this user</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Enviar correo electr&#243;nico a este usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewCompletedApp">
+			<tuv xml:lang="en_US">
+				<seg>View Completed Application</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Ver applicaci&#243;n completa</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewHistoryOfStatuses">
+			<tuv xml:lang="en_US">
+				<seg>View history of status changes</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Ver historial de cambi&#243; de estados</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantIdMissing">
+			<tuv xml:lang="en_US">
+				<seg>The applicant id is missing</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>El identificador del aplicante no esta presente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noRecordsToShow">
+			<tuv xml:lang="en_US">
+				<seg>There are no records to show</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>No hay registros para mostrar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="backToSearchResults">
+			<tuv xml:lang="en_US">
+				<seg>Back to search results</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Volver a resultados de la busqueda</seg>
+			</tuv>
+		</tu>
+		<tu tuid="completedApps">
+			<tuv xml:lang="en_US">
+				<seg>Completed Application Forms</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Formularios de aplicaci&#243;n completos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantIdNotValid">
+			<tuv xml:lang="en_US">
+				<seg>The applicant is not valid</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>El identificador del aplicante no es v&#255;lido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="spouse">
+			<tuv xml:lang="en_US">
+				<seg>Spouse</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Esposa</seg>
+			</tuv>
+		</tu>
+		<tu tuid="vehicles">
+			<tuv xml:lang="en_US">
+				<seg>Vehicles</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Vehiculos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="invalidForm">
+			<tuv xml:lang="en_US">
+				<seg>The requested application form is not valid</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>El formulario de aplicaci&#243;n no es v&#255;lido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="previousAddress">
+			<tuv xml:lang="en_US">
+				<seg>Previous Address</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Direcci&#243;n anterior</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewallapartments">
+			<tuv xml:lang="en_US">
+				<seg>View All Apartments</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createunitsingle">
+			<tuv xml:lang="en_US">
+				<seg>Create One Unit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createunitbulk">
+			<tuv xml:lang="en_US">
+				<seg>Create Units in Bulk</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewallunits">
+			<tuv xml:lang="en_US">
+				<seg>View All Units</seg>
+			</tuv>
+		</tu>
+		<tu tuid="regexthreedigits">
+			<tuv xml:lang="en_US">
+				<seg>Please enter a value from 1 to 999</seg>
+			</tuv>
+		</tu>
+		<tu tuid="regexthreedigitstwodecimal">
+			<tuv xml:lang="en_US">
+				<seg>Please enter a value from 1.0 to 99.9</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ecTextareaInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Please enter the name of at least one person and their relation
+					to you that is allowed to enter the dwelling in case of an
+					emergency:</seg>
+			</tuv>
+		</tu>
+		<tu tuid="enterDwelling">
+			<tuv xml:lang="en_US">
+				<seg>Enter person(s) and their relation to you</seg>
+			</tuv>
+		</tu>
+		<tu tuid="propertyInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Please explain in the textarea below if you, your spouse, or
+					any occupant listed in this Application has ever been evicted or
+					asked to move out, moved out of a dwelling before the end of the
+					lease term without the owners consent, or been sued for rent /
+					property damage:</seg>
+			</tuv>
+		</tu>
+		<tu tuid="crimeInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Please explain in the textarea below if you, your spouse, or
+					any occupant listed in this Application has ever been charged,
+					detained, or arrested for a felony or sex crime:</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accept">
+			<tuv xml:lang="en_US">
+				<seg>Accept</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Aceptar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="maxAmount">
+			<tuv xml:lang="en_US">
+				<seg>Max Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="forfeit">
+			<tuv xml:lang="en_US">
+				<seg>Forfeit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="waitList">
+			<tuv xml:lang="en_US">
+				<seg>Wait List</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Lista de espera</seg>
+			</tuv>
+		</tu>
+		<tu tuid="refunds">
+			<tuv xml:lang="en_US">
+				<seg>Refunds</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateOfRefund">
+			<tuv xml:lang="en_US">
+				<seg>Date of Refund</seg>
+			</tuv>
+		</tu>
+		<tu tuid="refundAmount">
+			<tuv xml:lang="en_US">
+				<seg>Refund Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="forfeits">
+			<tuv xml:lang="en_US">
+				<seg>Forfeits</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateOfForfeit">
+			<tuv xml:lang="en_US">
+				<seg>Date of Forfeit</seg>
+			</tuv>
+		</tu>
+		<tu tuid="forfeitAmount">
+			<tuv xml:lang="en_US">
+				<seg>Forfeit Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="preleaseFees">
+			<tuv xml:lang="en_US">
+				<seg>Prelease Fees</seg>
+			</tuv>
+		</tu>
+		<tu tuid="identificationType">
+			<tuv xml:lang="en_US">
+				<seg>Identification type</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Tipo de identificaci&#243;n</seg>
+			</tuv>
+		</tu>
+		<tu tuid="originalAmountDue">
+			<tuv xml:lang="en_US">
+				<seg>Original Amount Due</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto total original</seg>
+			</tuv>
+		</tu>
+		<tu tuid="systemAutomatedAction">
+			<tuv xml:lang="en_US">
+				<seg>Automated system action</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Acci&#243;n automatizada del sistema</seg>
+			</tuv>
+		</tu>
+		<tu tuid="isPaid">
+			<tuv xml:lang="en_US">
+				<seg>Is Paid&#63;</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>&#191;Est&#225; Pago&#63;</seg>
+			</tuv>
+		</tu>
+		<tu tuid="for">
+			<tuv xml:lang="en_US">
+				<seg>for</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>para</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewAllPrelease">
+			<tuv xml:lang="en_US">
+				<seg>View All Prelease Applicants</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentDetails">
+			<tuv xml:lang="en_US">
+				<seg>Payment Details</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Detalles del pago</seg>
+			</tuv>
+		</tu>
+		<tu tuid="addPreleaseFee">
+			<tuv xml:lang="en_US">
+				<seg>Add Prelease Fee</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantFeeToApply">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Fee To Apply</seg>
+			</tuv>
+		</tu>
+		<tu tuid="backToPreviousPage">
+			<tuv xml:lang="en_US">
+				<seg>Back to previous page</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Volver a la p&#225;gina anterior</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantView">
+			<tuv xml:lang="en_US">
+				<seg>Applicant View</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Vista de candidatos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="password2Desc">
+			<tuv xml:lang="en_US">
+				<seg>Write the same password</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Escriba la misma contrase&#241;a</seg>
+			</tuv>
+		</tu>
+		<tu tuid="unableToLogIn">
+			<tuv xml:lang="en_US">
+				<seg>We are unable to authenticate your account</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nos es imposible autenticar su cuenta</seg>
+			</tuv>
+		</tu>
+		<tu tuid="authenticate">
+			<tuv xml:lang="en_US">
+				<seg>Authenticate</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Autenticarse</seg>
+			</tuv>
+		</tu>
+		<tu tuid="emailApplicant">
+			<tuv xml:lang="en_US">
+				<seg>Email applicant</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Enviar email al candidato</seg>
+			</tuv>
+		</tu>
+		<tu tuid="send">
+			<tuv xml:lang="en_US">
+				<seg>Send</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Enviar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="transfersOut">
+			<tuv xml:lang="en_US">
+				<seg>Transfers Out</seg>
+			</tuv>
+		</tu>
+		<tu tuid="dateOfTransfer">
+			<tuv xml:lang="en_US">
+				<seg>Date of Transfer</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Fecha de transferencia</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectApplicantBills">
+			<tuv xml:lang="en_US">
+				<seg>Select Applicant Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="emailFail">
+			<tuv xml:lang="en_US">
+				<seg>The email could not be delivered</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No se pudo enviar el e-mail</seg>
+			</tuv>
+		</tu>
+		<tu tuid="userIdMissing">
+			<tuv xml:lang="en_US">
+				<seg>The user id is not valid</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El identificador de usuario no es valido</seg>
+			</tuv>
+		</tu>
+		<tu tuid="emailUser">
+			<tuv xml:lang="en_US">
+				<seg>Email user</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Enviar email al usuario</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectApplicantBillsInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Select the applicant and/or prelease bills to pay</seg>
+			</tuv>
+		</tu>
+		<tu tuid="passed">
+			<tuv xml:lang="en_US">
+				<seg>Passed</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Aprobado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="payApplicantBills">
+			<tuv xml:lang="en_US">
+				<seg>Pay Applicant Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rejected">
+			<tuv xml:lang="en_US">
+				<seg>Rejected</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Rechazado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="payApplicantBillsInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Enter payment information for the bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="notrun">
+			<tuv xml:lang="en_US">
+				<seg>Not run</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No ejecutado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="totalAmount">
+			<tuv xml:lang="en_US">
+				<seg>Total Amount</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto total</seg>
+			</tuv>
+		</tu>
+		<tu tuid="totalAmountToPay">
+			<tuv xml:lang="en_US">
+				<seg>Total Amount to Pay</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Monto total a pagar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="backgroundCheck">
+			<tuv xml:lang="en_US">
+				<seg>Background Check</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Verificaci&#243;n de antecedentes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="pending">
+			<tuv xml:lang="en_US">
+				<seg>Pending</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Pendiente</seg>
+			</tuv>
+		</tu>
+		<tu tuid="accepted">
+			<tuv xml:lang="en_US">
+				<seg>Accepted</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Aceptado</seg>
+			</tuv>
+		</tu>
+		<tu tuid="change">
+			<tuv xml:lang="en_US">
+				<seg>Change</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Cambiar</seg>
+			</tuv>
+		</tu>
+		<tu tuid="notes">
+			<tuv xml:lang="en_US">
+				<seg>Notes</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Notas</seg>
+			</tuv>
+		</tu>
+		<tu tuid="missingStatusTo">
+			<tuv xml:lang="en_US">
+				<seg>Missing the status you want to update this applicant</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No se encuentra el estado al que quiere cambiar a este
+					candidato</seg>
+			</tuv>
+		</tu>
+		<tu tuid="missingUserId">
+			<tuv xml:lang="en_US">
+				<seg>Missing the user credentials</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No se encuentran las credenciales de su sesion</seg>
+			</tuv>
+		</tu>
+		<tu tuid="applicantBills">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="preleaseBills">
+			<tuv xml:lang="en_US">
+				<seg>Prelease Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="paymentInformation">
+			<tuv xml:lang="en_US">
+				<seg>Payment Information</seg>
+			</tuv>
+		</tu>
+		<tu tuid="invalidCredentials">
+			<tuv xml:lang="en_US">
+				<seg>Invalid credentials</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Credenciales inexistentes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="columns">
+			<tuv xml:lang="en_US">
+				<seg>Columns</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Columnas</seg>
+			</tuv>
+		</tu>
+		<tu tuid="runReport">
+			<tuv xml:lang="en_US">
+				<seg>Run Report</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Ejecutar Reporte</seg>
+			</tuv>
+		</tu>
+		<tu tuid="report">
+			<tuv xml:lang="en_US">
+				<seg>Report</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Reporte</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentRoll">
+			<tuv xml:lang="en_US">
+				<seg>Rent Roll</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Informaci&#243;n de renta</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectLeaseBills">
+			<tuv xml:lang="en_US">
+				<seg>Select Lease Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="selectLeaseBillsInstructions">
+			<tuv xml:lang="en_US">
+				<seg>Select the lease bills to pay</seg>
+			</tuv>
+		</tu>
+		<tu tuid="tenantName">
+			<tuv xml:lang="en_US">
+				<seg>Tenant Name</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Nombre Inquilino</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentBills">
+			<tuv xml:lang="en_US">
+				<seg>Rent Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseEffectiveDate">
+			<tuv xml:lang="en_US">
+				<seg>Lease Effective Date</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Fecha efectiva del contrato</seg>
+			</tuv>
+		</tu>
+		<tu tuid="rentDate">
+			<tuv xml:lang="en_US">
+				<seg>Rent Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseEndDate">
+			<tuv xml:lang="en_US">
+				<seg>Lease End Date</seg>
+			</tuv>
+			<tuv xml:lang="en_AR">
+				<seg>Fecha de finalizaci&#243;n del contrato</seg>
+			</tuv>
+		</tu>
+		<tu tuid="leaseFeeBills">
+			<tuv xml:lang="en_US">
+				<seg>Lease Fee Bills</seg>
+			</tuv>
+		</tu>
+		<tu tuid="viewallamenities">
+			<tuv xml:lang="en_US">
+				<seg>View All Amenities</seg>
+			</tuv>			
+                </tu>
+		<tu tuid="invalidColumnSpecified">
+			<tuv xml:lang="en_US">
+				<seg>The specified column is not valid</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>La columna especificada no es valida</seg>
+			</tuv>
+		</tu>
+		<tu tuid="financialReports">
+			<tuv xml:lang="en_US">
+				<seg>Financial Reports</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Reportes Financieros</seg>
+			</tuv>
+		</tu>
+		<tu tuid="reportName">
+			<tuv xml:lang="en_US">
+				<seg>Report Name</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Nombre del reporte</seg>
+			</tuv>
+		</tu>
+		<tu tuid="reports">
+			<tuv xml:lang="en_US">
+				<seg>Reports</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Reportes</seg>
+			</tuv>
+		</tu>
+		<tu tuid="refundable">
+			<tuv xml:lang="en_US">
+				<seg>Refundable</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="feeDetails">
+			<tuv xml:lang="en_US">
+				<seg>Fee Details</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="viewallunitmodels">
+			<tuv xml:lang="en_US">
+				<seg>View All Unit Models</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="createmodelrentschedule">
+			<tuv xml:lang="en_US">
+				<seg>Create Model Rent Schedule</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="viewallmodelrentschedule">
+			<tuv xml:lang="en_US">
+				<seg>View All Model Rent Schedules</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="createaccount">
+			<tuv xml:lang="en_US">
+				<seg>Create Account</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="viewallaccounts">
+			<tuv xml:lang="en_US">
+				<seg>View All Accounts</seg>
+			</tuv>			
+		</tu>
+
+		<tu tuid="isAvailableDesc">
+			<tuv xml:lang="en_US">
+				<seg>If unchecked, date available will be ignored</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="dateAvailable">
+			<tuv xml:lang="en_US">
+				<seg>Date Available</seg>
+			</tuv>			
+		</tu>	
+		<tu tuid="sortDown">
+			<tuv xml:lang="en_US">
+				<seg>Sort Desc</seg>
+			</tuv>	
+			<tuv xml:lang="es_AR">
+				<seg>Ordenado descendiente</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="sortUp">
+			<tuv xml:lang="en_US">
+				<seg>Sort Up</seg>
+			</tuv>	
+			<tuv xml:lang="es_AR">
+				<seg>Ordenado ascendiente</seg>
+			</tuv>			
+		</tu>
+		<tu tuid="createfee">
+			<tuv xml:lang="en_US">
+				<seg>Create Fee</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="viewallfees">
+			<tuv xml:lang="en_US">
+				<seg>View All Fees</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="maintenanceSetting">
+			<tuv xml:lang="en_US">
+				<seg>Maintenance Setting</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="configureSetting">
+			<tuv xml:lang="en_US">
+				<seg>Configure Setting</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Configurar opciones</seg>
+			</tuv>
+		</tu>
+		<tu tuid="modelIdMissing">
+			<tuv xml:lang="en_US">
+				<seg>The model identifier is missing</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>No se encuentra el identificador de modelo</seg>
+			</tuv>
+		</tu>
+		<tu tuid="createmaintenancerequestadmin">
+			<tuv xml:lang="en_US">
+				<seg>Create Maintenance Request Admin</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="createmaintenancerequest">
+			<tuv xml:lang="en_US">
+				<seg>Create Maintenance Request</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="viewallmaintenancerequests">
+			<tuv xml:lang="en_US">
+				<seg>View All Maintenance Requests</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="viewassignedrequests">
+			<tuv xml:lang="en_US">
+				<seg>View Assigned Requests</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="viewmymaintenancerequests">
+			<tuv xml:lang="en_US">
+				<seg>View My Maintenance Requests</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="ssnregexnotmatch">
+			<tuv xml:lang="en_US">
+				<seg>SSN must be 9 numerical digits</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El n&#250;mero de seguridad social debe tener 9 d&#237;gitos</seg>
+			</tuv>
+		</tu>
+		<tu tuid="exportReport">
+			<tuv xml:lang="en_US">
+				<seg>Export Report</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>Exportar Reporte</seg>
+			</tuv>
+		</tu>
+		<tu tuid="noInfoToExport">		
+			<tuv xml:lang="en_US"> 
+				<seg>The report does not contain information to export</seg>
+			</tuv>
+			<tuv xml:lang="es_AR">
+				<seg>El reporte no continene informaci&#255;n para exportar</seg>
+			</tuv>
+
+		</tu>
+		<tu tuid="recurringFees">
+			<tuv xml:lang="en_US">
+				<seg>Recurring Fees</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="noRecurringFeesSelected">
+			<tuv xml:lang="en_US">
+				<seg>No Recurring Fees Selected</seg>
+			</tuv>						
+		</tu>
+		<tu tuid="selectRecurringFeeInstructions">
+		    <tuv xml:lang="en_US">
+			<seg>Select any recurring fees or deposits for the lease.  A bill will be created for each month of the lease with due date set to the first of the month.  If renewing a lease, recurring fees will not be carried over and need to be readded at this step.</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="expectedMoveInDate">
+		    <tuv xml:lang="en_US">
+			<seg>Expected Move in Date</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="leaseStartDate">
+		    <tuv xml:lang="en_US">
+			<seg>Lease Start Date</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="leaseEndDate">
+		    <tuv xml:lang="en_US">
+			<seg>Lease End Date</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="cancelLease">
+		    <tuv xml:lang="en_US">
+			<seg>Cancel Lease</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="cancellationLastDay">
+		    <tuv xml:lang="en_US">
+			<seg>Cancellation Last Day</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="cancellationDetails">
+		    <tuv xml:lang="en_US">
+			<seg>Cancellation Details</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="cancellationDate">
+		    <tuv xml:lang="en_US">
+			<seg>Cancellation Date</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="cancelledLeaseReport">
+		    <tuv xml:lang="en_US">
+				<seg>Cancelled Lease Report</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="incomingTenantsReport">
+		    <tuv xml:lang="en_US">
+				<seg>Incoming Tenants Report</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="applicantReports">
+		    <tuv xml:lang="en_US">
+				<seg>Applicant Reports</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>Reportes de candidatos</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="applicantReport">
+		    <tuv xml:lang="en_US">
+				<seg>Applicant Report</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>Reporte de candidatos</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="outgoingTenantsReport">
+		    <tuv xml:lang="en_US">
+			<seg>Outgoing Tenants Report</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="dateApplied">
+		    <tuv xml:lang="en_US">
+				<seg>Date Applied</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>Fecha de inscripci&#253;on</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="datePaid">
+		    <tuv xml:lang="en_US">
+				<seg>Paid date</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>Fecha de pago</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="applicantpaidFees">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Paid Fees</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>Inscripciones abonadas por los ingresantes</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="noRecordsToPaginate">
+			<tuv xml:lang="en_US">
+				<seg>No Records</seg>
+		    </tuv>
+		    <tuv xml:lang="es_AR">
+				<seg>No hay registros</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="lateDueRentReport">
+		    <tuv xml:lang="en_US">
+				<seg>Late Due Rent Report</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="rentAmountDue">
+		    <tuv xml:lang="en_US">
+				<seg>Rent Amount Due</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="numDaysLate">
+		    <tuv xml:lang="en_US">
+				<seg>Number Days Late</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="numDaysUntilDue">
+		    <tuv xml:lang="en_US">
+				<seg>Number of Days Until Due</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="dueRentReport">
+		    <tuv xml:lang="en_US">
+				<seg>Due Rent Report</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="lateDueFeeReport">
+		    <tuv xml:lang="en_US">
+				<seg>Late Due Fee Report</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="feeAmountDue">
+		    <tuv xml:lang="en_US">
+				<seg>Fee Amount Due</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="feeDueDate">
+		    <tuv xml:lang="en_US">
+				<seg>Fee Due Date</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="dueFeeReport">
+		    <tuv xml:lang="en_US">
+				<seg>Due Fee Report</seg>
+		    </tuv>		    
+		</tu>
+		<tu tuid="applicantReportPaidFees">
+			<tuv xml:lang="en_US">
+				<seg>Applicant Paid Fees</seg>
+		    </tuv>
+		    <tuv xml:lang="en_AR">
+				<seg>Cuotas pagadas por los ingresantes</seg>
+		    </tuv>
+		</tu>
+		<tu tuid="dueRefundsReport">
+            <tuv xml:lang="en_US">
+                <seg>Due Refunds Report</seg>
+            </tuv>            
+        </tu>
+        <tu tuid="leaseFeeAmount">
+            <tuv xml:lang="en_US">
+                <seg>Lease Fee Amount</seg>
+            </tuv>            
+        </tu>
+        <tu tuid="forfeitedAmount">
+            <tuv xml:lang="en_US">
+                <seg>Forfeited Amount</seg>
+            </tuv>            
+        </tu>
+        <tu tuid="refundedAmount">
+            <tuv xml:lang="en_US">
+                <seg>Refunded Amount</seg>
+            </tuv>            
+        </tu>
+   	<tu tuid="nonpaidFeesReport">
+		<tuv xml:lang="en_US">
+			<seg>Applicant Non Paid Fees Report</seg>
+		</tuv>
+		<tuv xml:lang="en_AR">
+			<seg>Reporte de Ingresantes que no abonaron cuotas a&#250;n</seg>
+		</tuv>
+	</tu>
+	<tu tuid="nonpaidFees">
+		<tuv xml:lang="en_US">
+			<seg>Applicant Non Paid Fees</seg>
+		</tuv>
+		<tuv xml:lang="en_AR">
+			<seg>Ingresantes que no abonaron cuotas a&#250;n</seg>
+		</tuv>
+	</tu>
+	<tu tuid="unoccupiedUnitsReport">
+            <tuv xml:lang="en_US">
+                <seg>Unoccupied Units Report</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="lastOccupiedDay">
+            <tuv xml:lang="en_US">
+                <seg>Last Occupied Day</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="nextOccupiedDay">
+            <tuv xml:lang="en_US">
+                <seg>Next Occupied Day</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="usernameExists">
+            <tuv xml:lang="en_US">
+                <seg>Username Exists</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="accountType">
+            <tuv xml:lang="en_US">
+                <seg>Account Type</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="asset">
+            <tuv xml:lang="en_US">
+                <seg>Asset</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="expense">
+            <tuv xml:lang="en_US">
+                <seg>Expense</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="liability">
+            <tuv xml:lang="en_US">
+                <seg>Liability</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="revenue">
+            <tuv xml:lang="en_US">
+                <seg>Revenue</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="stockholderEquity">
+	    <tuv xml:lang="en_US">
+	        <seg>Stockholder Equity</seg>
+	    </tuv>            
+    </tu>
+	<tu tuid="regexelevendigits">
+            <tuv xml:lang="en_US">
+                <seg>Please enter a number between one and eleven digits long</seg>
+            </tuv>            
+        </tu>
+	<tu tuid="totalExpense">
+            <tuv xml:lang="en_US">
+                <seg>Total Expense</seg>
+            </tuv>
+            <tuv xml:lang="es_AR">
+              <seg>Total Expensas</seg>
+            </tuv>
+        </tu>
+	<tu tuid="totalRevenue">
+            <tuv xml:lang="en_US">
+                <seg>Total Revenue</seg>
+            </tuv>
+            <tuv xml:lang="es_AR">
+                <seg>Total ingresos</seg>
+            </tuv> 
+        </tu>
+	<tu tuid="netIncome">
+            <tuv xml:lang="en_US">
+                <seg>Net Income</seg>
+            </tuv>
+        </tu>     
+    
+    <tu tuid="unitReports">
+ 	   <tuv xml:lang="en_US">
+	        <seg>Unit Reports</seg>
+	    </tuv>
+	    <tuv xml:lang="es_AR">
+	        <seg>Reporte de unidades</seg>
+	    </tuv>
+    </tu>
+    <tu tuid="incomeStatement">
+      <tuv xml:lang="en_US">
+        <seg>Income Statement</seg>
+      </tuv>
+    </tu>
+    <tu tuid="noApplicantSessionDetected">
+      <tuv xml:lang="en_US">
+        <seg>You are not on the process to apply</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Usted no esta en el proceso para aplicar</seg>
+      </tuv>
+    </tu>
+    <tu tuid="noRecordFound">
+      <tuv xml:lang="en_US">
+        <seg>No record found</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>No existe el registro</seg>
+      </tuv>
+    </tu>
+    <tu tuid="balanceSheet">
+      <tuv xml:lang="en_US">
+        <seg>Balance Sheet</seg>
+      </tuv>
+    </tu>
+    <tu tuid="assets">
+      <tuv xml:lang="en_US">
+        <seg>Assets</seg>
+      </tuv>
+    </tu>
+    <tu tuid="liabilities">
+      <tuv xml:lang="en_US">
+        <seg>Liabilities</seg>
+      </tuv>
+    </tu>
+    <tu tuid="equity">
+      <tuv xml:lang="en_US">
+        <seg>Equity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="totalAssets">
+      <tuv xml:lang="en_US">
+        <seg>Total Assets</seg>
+      </tuv>
+    </tu>
+    <tu tuid="totalLiabilities">
+      <tuv xml:lang="en_US">
+        <seg>Total Liabilities</seg>
+      </tuv>
+    </tu>
+    <tu tuid="totalEquity">
+      <tuv xml:lang="en_US">
+        <seg>Total Equity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="sumLiabilityAndEquity">
+      <tuv xml:lang="en_US">
+        <seg>Total Liability and Equity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="selectPreleaseFeesInstructions">
+      <tuv xml:lang="en_US">
+        <seg>Use this page only for new applicant leases.  Select any prelease fees and deposits added during the applicant phase to include on the lease such as deposits like security deposit, pet deposit, etc that were paid prior to signing the lease.  This includes them on the lease for refunding.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="removeUser">
+      <tuv xml:lang="en_US">
+        <seg>Remove User</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Remover Usuario</seg>
+      </tuv>
+    </tu>
+    <tu tuid="addUser">
+      <tuv xml:lang="en_US">
+        <seg>Add User</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Agregar Usuario</seg>
+      </tuv>
+    </tu>
+    <tu tuid="noTenantSelected">
+      <tuv xml:lang="en_US">
+        <seg>No Tenant Selected</seg>
+      </tuv>
+    </tu>    
+    <tu tuid="noModelScheduleExists">
+      <tuv xml:lang="en_US">
+        <seg>No rent model schedule exists for the selected date.  Please go back and select another date.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="errorCancellingLease">
+      <tuv xml:lang="en_US">
+        <seg>Error cancelling lease</seg>
+      </tuv>
+
+    </tu>            
+
+    <tu tuid="userNotFound">
+      <tuv xml:lang="en_US">        
+        <seg>User not found</seg>
+      </tuv>	
+      <tuv xml:lang="es_AR">
+        <seg>No se encuentra el usuario</seg>
+      </tuv>
+    </tu>   
+    <tu tuid="selectLeaseFeesInstructions">
+		<tuv xml:lang="en_US">
+		    <seg>Use this page only for lease renewal.  Please select the fees/deposits from the old lease to use on the new lease.  At minimum, you will want to bring over any deposits from the old lease so they can be refunded properly.</seg>
+		</tuv>
+    </tu>                  
+    <tu tuid="noPreleaseFeesSelected">
+		<tuv xml:lang="en_US">
+        	<seg>No Prelease Fees Selected</seg>       
+      	</tuv>
+    </tu>    
+    <tu tuid="admin">
+		<tuv xml:lang="en_US">
+		    <seg>Admin</seg>
+		</tuv>    
+      	<tuv xml:lang="es_AR">
+        	<seg>Administrador</seg>
+      	</tuv>
+    </tu>
+	<tu tuid="member">
+    	<tuv xml:lang="en_US">
+        	<seg>Member</seg>
+      	</tuv>
+      	<tuv xml:lang="es_AR">
+        	<seg>Miembro</seg>
+      	</tuv>
+    </tu>
+    <tu tuid="viewer">
+    	<tuv xml:lang="en_US">
+        	<seg>Viewer</seg>
+      	</tuv>
+      	<tuv xml:lang="es_AR">
+        	<seg>Visitante</seg>
+      	</tuv>
+    </tu>
+    <tu tuid="guest">
+    	<tuv xml:lang="en_US">
+        	<seg>Guest</seg>
+      	</tuv>
+      	<tuv xml:lang="es_AR">
+        	<seg>Invitado</seg>
+      	</tuv>
+    </tu>
+    <tu tuid="leaseagent">
+	      <tuv xml:lang="en_US">
+	        <seg>Lease Agent</seg>
+	      </tuv>
+	      <tuv xml:lang="es_AR">
+	        <seg>Agente Arrendador</seg>
+	      </tuv>
+    </tu>
+    <tu tuid="propertymanager">
+      <tuv xml:lang="en_US">
+        <seg>Property Manager</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Administrador de propiedad</seg>
+      </tuv>
+    </tu>
+    <tu tuid="businessservicesspecialist">
+      <tuv xml:lang="en_US">
+        <seg>Business services specialist</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Especialista en operaciones monetarias</seg>
+      </tuv>
+    </tu>
+    <tu tuid="unabletosaveuser">
+      <tuv xml:lang="en_US">
+        <seg>We are sorry , the user could not be saved</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Lo sentimos , no se pudo guardar su usuario</seg>
+      </tuv>
+    </tu>
+    <tu tuid="viewUserInfo">
+      <tuv xml:lang="en_US">
+        <seg>View User Information</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Ver informaci&#243;n de usuarios</seg>
+      </tuv>
+    </tu>
+     <tu tuid="leaseFees">
+      <tuv xml:lang="en_US">
+        <seg>Lease Fees</seg>
+      </tuv>
+    </tu>     
+     <tu tuid="leaseWizardEntermoveindate">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Move In Date - Step 1 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardSelectrentschedule">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Select Rent Schedule - Step 2 of 9</seg>
+      </tuv>
+    </tu>
+     <tu tuid="leaseWizardEnterdiscounts">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Enter Discounts - Step 3 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardSearchAddTenant">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Add Tenants - Step 4 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardLeaseFees">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Retain Lease Fees - Step 5 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardPreleaseFees">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Retain Prelease Fees - Step 6 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardSelectfeedeposit">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Add New Fees - Step 7 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardRecurringfees">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Recurring Fees - Step 8 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseWizardConfirmation">
+      <tuv xml:lang="en_US">
+        <seg>Lease Wizard - Confirmation - Step 9 of 9</seg>
+      </tuv>
+    </tu>
+    <tu tuid="newFees">
+      <tuv xml:lang="en_US">
+        <seg>New Fees</seg>
+      </tuv>
+    </tu>
+    <tu tuid="noNewFeesSelected">
+      <tuv xml:lang="en_US">
+        <seg>No New Fees Selected</seg>
+      </tuv>
+    </tu>    
+    <tu tuid="noLeaseFeesSelected">
+      <tuv xml:lang="en_US">
+        <seg>No Lease Fees Selected</seg>
+      </tuv>
+    </tu>
+    <tu tuid="createUserPage">
+      <tuv xml:lang="en_US">
+        <seg>Create user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="viewLease">
+      <tuv xml:lang="en_US">
+        <seg>View Lease</seg>
+      </tuv>
+    </tu>
+    <tu tuid="cloneLease">
+      <tuv xml:lang="en_US">
+        <seg>Clone Lease</seg>
+      </tuv>
+    </tu>
+    <tu tuid="leaseDocuments">
+      <tuv xml:lang="en_US">
+        <seg>Lease Documents</seg>
+      </tuv>
+    </tu>
+    <tu tuid="unableToDeleteUser">
+      <tuv xml:lang="en_US">
+      	<seg>The user couldn't be deleted</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>No fue posible eliminar al usuario</seg>
+	  </tuv>
+    </tu>
+    <tu tuid="fileExists">
+      <tuv xml:lang="en_US">
+        <seg>The file already exists</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>El archivo ya existe</seg>
+      </tuv>
+    </tu>
+    <tu tuid="notWrittableError">
+      <tuv xml:lang="en_US">
+        <seg>There seems to be a problem in our application. The system administration has been alerted</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Hay un error en nuestra aplicaci&#243;n. La administraci&#243;n del s&#237;stema ha sido alertada</seg>
+      </tuv>
+    </tu>   
+    <tu tuid="fileCreated">
+      <tuv xml:lang="en_US">
+        <seg>The file was uploaded successfully</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>El archivo se subi&#243; correctamente</seg>
+      </tuv>
+    </tu>
+    <tu tuid="fileCreatedError">
+      <tuv xml:lang="en_US">
+        <seg>There was an error saving your file</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Ocurrio un error mientras se subia el archivo</seg>
+      </tuv>
+    </tu>
+    <tu tuid="fileNotFound">
+      <tuv xml:lang="en_US">
+        <seg>File Not Found</seg>
+      </tuv>
+    </tu>
+    <tu tuid="addDocument">
+      <tuv xml:lang="en_US">
+        <seg>Add Document</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Agregar Documento</seg>
+      </tuv>
+    </tu>
+    <tu tuid="cancelComment">
+      <tuv xml:lang="en_US">
+        <seg>Cancellation Reason/Comment</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Motivos cancelaci&#243;n/Comentarios</seg>
+      </tuv>
+    </tu>
+     <tu tuid="viewMyUnit">
+      <tuv xml:lang="en_US">
+        <seg>View My Unit</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Ver mi unidad</seg>
+      </tuv>
+    </tu>
+    <tu tuid="deleteUser">
+      <tuv xml:lang="en_US">
+        <seg>Delete User</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Borrar usuario</seg>
+      </tuv>
+    </tu>
+    <tu tuid="confirmDelete">
+      <tuv xml:lang="en_US">
+        <seg>Do you want to delete this user?</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>&#191;Desea borrar a este usuario&#202;</seg>
+      </tuv>
+    </tu>
+    <tu tuid="userDeleted">
+      <tuv xml:lang="en_US">
+        <seg>User Deleted Correctly</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Usuario eliminado correctamente</seg>
+      </tuv>
+    </tu>
+    <tu tuid="missingConfirm">
+      <tuv xml:lang="en_US">
+        <seg>The confirm option wasn't answered</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>La confirmaci&#243; para eliminar al usuario no fue recibida</seg>
+      </tuv>
+    </tu>
+    <tu tuid='updateUserLabel'>
+		<tuv xml:lang="en_US">
+			<seg>Update User</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Actualizar usuario</seg>
+		</tuv>
+	</tu>
+	<tu tuid='myAccount'>
+		<tuv xml:lang="en_US">
+			<seg>My Account</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Mi Cuenta</seg>
+		</tuv>
+	</tu>
+	<tu tuid='updateMyAccount'>
+		<tuv xml:lang="en_US">
+			<seg>Update my account</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Actualizar mi cuenta</seg>
+		</tuv>
+	</tu>
+	 <tu tuid="userUpdated">
+      <tuv xml:lang="en_US">
+        <seg>User Updated</seg>
+      </tuv>
+      <tuv xml:lang="es_AR">
+        <seg>Usuario actualizado</seg>
+      </tuv>
+    </tu>
+    <tu tuid="createLease">
+      <tuv xml:lang="en_US">
+        <seg>Create Lease</seg>
+      </tuv>
+    </tu>
+    <tu tuid="createleasefee">
+	<tuv xml:lang="en_US">
+		<seg>Create Lease Fee</seg>
+	</tuv>
+    </tu>
+    <tu tuid="forgotUsername">
+		<tuv xml:lang="en_US">
+			<seg>Forgot your username&#63;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>&#191;Olvid&#243; su usuario &#63;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="forgotPassword">
+		<tuv xml:lang="en_US">
+			<seg>Forgot your password&#63;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>&#191;Olvid&#243; su contrase&#241;a &#63;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="forgotInfo">
+		<tuv xml:lang="en_US">
+			<seg>Forgot your information&#63;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>&#191;Olvid&#243; su informaci&#243;n &#63;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="passwordRecoverTitle">
+		<tuv xml:lang="en_US">
+			<seg>Recover your password</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recupere su contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="userRecoverTitle">
+		<tuv xml:lang="en_US">
+			<seg>Recover your username</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recupere su usuario</seg>
+		</tuv>
+    </tu>
+    <tu tuid="recoverInfoInfo">
+		<tuv xml:lang="en_US">
+			<seg>In this page , you will find the links to recover your username or password.</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>En esta p&#225;gina usted podr&#225; encontrar links para recuperar su usuario &#243; contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="contactUs">
+		<tuv xml:lang="en_US">
+			<seg>If you need help , contact us !</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Si necesita ayuda , contactenos !</seg>
+		</tuv>
+    </tu>
+    <tu tuid="recover">
+		<tuv xml:lang="en_US">
+			<seg>Recover</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recuperar</seg>
+		</tuv>
+    </tu>
+    <tu tuid="createLeaseFee">
+		<tuv xml:lang="en_US">
+			<seg>Create Lease Fee</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="noEmailFound">
+		<tuv xml:lang="en_US">				
+			<seg>The given email wasn't found.</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El email ingresado no fue encontrado</seg>
+		</tuv>
+    </tu>
+    <tu tuid="tenant">
+		<tuv xml:lang="en_US">
+			<seg>Tenant</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="userRecoverSubject">
+		<tuv xml:lang="en_US">
+			<seg>User Name Recovery</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recuperaci&#243;n de nombre de usuario</seg>
+		</tuv>
+    </tu>
+    <tu tuid="userRecoverEmailBody">
+		<tuv xml:lang="en_US">
+			<seg>We received a request to remind you of your username.\nIf you didn't send the request , please disregard this email.\nYour username is</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recibimos un pedido para recordarle su nombre de usuario.\nSi usted no envi&#243; el pedido , por favor no le preste atenci&#243;n a este mensaje.\nSu nombre de usuario es</seg>
+		</tuv>
+    </tu>
+    <tu tuid="rentRevenue">
+	<tuv xml:lang="en_US">
+		<seg>Rent Revenue</seg>
+	</tuv>		
+    </tu>
+    <tu tuid="rentDiscount">
+	<tuv xml:lang="en_US">
+		<seg>Rent Discount</seg>
+	</tuv>		
+    </tu>
+    <tu tuid="leaseCancellationRentPortion">
+	<tuv xml:lang="en_US">
+		<seg>Lease Cancellation - Rent Portion</seg>
+	</tuv>		
+    </tu>
+    <tu tuid="leaseCancellationDiscountPortion">
+		<tuv xml:lang="en_US">
+			<seg>Lease Cancellation - Discount Portion</seg>
+		</tuv>
+    </tu>
+    <tu tuid="missingUsername">
+		<tuv xml:lang="en_US">
+			<seg>Missing username</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Falta el nombre de usuario</seg>
+		</tuv>
+    </tu>
+    <tu tuid="missingEmail">
+		<tuv xml:lang="en_US">
+			<seg>Missing email address</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Falta la direcci&#243;n de correo</seg>
+		</tuv>
+    </tu>
+    <tu tuid="passwordRecoverSubject">
+		<tuv xml:lang="en_US">
+			<seg>Password Recovery</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recuperaci&#243;n de contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="passwordRecoverBody">
+		<tuv xml:lang="en_US">
+			<seg>We received a request to reset your password.\nIf you did not send this request , please ignore this email.\nHere is your link to begin with the password reset: </seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recibimos un request para cambiar su contrase&#241;a\n.Si usted no envi&#243; este pedido , por favor ignore este email.\nAqu&#237; esta su link para comenzar con el cambio de contrase&#241;a: </seg>
+		</tuv>
+    </tu>
+    <tu tuid="passwordRecoverBodyEndDate">
+		<tuv xml:lang="en_US">
+			<seg>\nThis link is valid until </seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>\nEste link es valido hasta </seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewEvictions">
+		<tuv xml:lang="en_US">
+			<seg>View Evictions</seg>
+		</tuv>
+    </tu>
+    <tu tuid="evictions">
+		<tuv xml:lang="en_US">
+			<seg>Evictions</seg>
+		</tuv>
+    </tu>
+    <tu tuid="createEviction">
+		<tuv xml:lang="en_US">
+			<seg>Create Eviction</seg>
+		</tuv>
+    </tu>
+    <tu tuid="isEvicted">
+		<tuv xml:lang="en_US">
+			<seg>Is Evicted?</seg>
+		</tuv>
+    </tu>
+    <tu tuid="instructionsSent">
+		<tuv xml:lang="en_US">
+			<seg>The instructions to restore your password had been sent!</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Las instrucciones para restaurar su contrase&#241;a a sido enviado</seg>
+		</tuv>
+    </tu>
+     <tu tuid="passwordRecoverBody">
+		<tuv xml:lang="en_US">
+			<seg>We received a request to reset your password.\nIf you did not send this request , please ignore this email.\nHere is your link to begin with the password reset: </seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Recibimos un request para cambiar su contrase&#241;a\n.Si usted no envi&#243; este pedido , por favor ignore este email.\nAqu&#237; esta su link para comenzar con el cambio de contrase&#241;a: </seg>
+		</tuv>
+    </tu>
+    <tu tuid="passwordRecoverBodyEndDate">
+		<tuv xml:lang="en_US">
+			<seg>\nThis link is valid until </seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>\nEste link es valido hasta </seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewEviction">
+		<tuv xml:lang="en_US">
+			<seg>View Eviction</seg>
+		</tuv>
+    </tu>
+    <tu tuid="evictionDocuments">
+		<tuv xml:lang="en_US">
+			<seg>Eviction Documents</seg>
+		</tuv>
+    </tu>
+    <tu tuid="addEvictionDocument">
+		<tuv xml:lang="en_US">
+			<seg>Add Eviction Document</seg>
+		</tuv>
+    </tu>
+    <tu tuid="evictionIdNotValid">
+		<tuv xml:lang="en_US">
+			<seg>Eviction Id Not Valid</seg>
+		</tuv>
+    </tu>
+    <tu tuid="startleasewizard">
+		<tuv xml:lang="en_US">
+			<seg>Create Lease</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewleaselist">
+		<tuv xml:lang="en_US">
+			<seg>View Lease List</seg>
+		</tuv>
+    </tu>
+    <tu tuid="noFeesFound">
+		<tuv xml:lang="en_US">
+			<seg>No Fees Found</seg>
+		</tuv>
+    </tu>
+    <tu tuid="errorCreatingRecord">
+		<tuv xml:lang="en_US">
+			<seg>Error Creating Record</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Error Creando Registro</seg>
+		</tuv>
+    </tu>
+    <tu tuid="reset">
+		<tuv xml:lang="en_US">
+			<seg>Reset Password</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Resetear Contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="resetPassword">
+		<tuv xml:lang="en_US">
+			<seg>Reset Password Form</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Formulario para resetear contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="resetPasswordTitle">
+		<tuv xml:lang="en_US">
+			<seg>Reset your password</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Resetear su contrase&#241;a</seg>
+		</tuv>
+    </tu>
+    <tu tuid="missingToken">
+		<tuv xml:lang="en_US">
+			<seg>Missing the token</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Falta el token</seg>
+		</tuv>
+    </tu>
+    <tu tuid="multipleAccountsWarning">
+		<tuv xml:lang="en_US">
+			<seg>If you have multiple accounts with the same email , all of your passwords will be reset to what you set</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Si usted pose&#233; multiples cuentas con el mismo correo , todas sus contrase&#241;as seran cambiadas</seg>
+		</tuv>
+    </tu>
+    <tu tuid="selectleasebills">
+	<tuv xml:lang="en_US">
+			<seg>Make a Payment</seg>
+	</tuv>
+    </tu> 	
+
+    <tu tuid="tokenIsDisabled">
+		<tuv xml:lang="en_US">			
+			<seg>The provided token is no longer valid</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El token recibido no es valido</seg>
+		</tuv>
+    </tu>
+    <tu tuid="missingBillSelection">
+        <tuv xml:lang="en_US">
+			<seg>Please select at least one rent or lease fee bill to pay</seg>
+	</tuv>
+    </tu>	
+    <tu tuid="passwordReseted">
+		<tuv xml:lang="en_US">
+			<seg>The password has been changed succesfully</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>La contrase&#241;a fue cambiada correctamente</seg>
+		</tuv>
+    </tu>
+
+    <tu tuid="viewlease">
+		<tuv xml:lang="en_US">
+			<seg>View Lease</seg>
+		</tuv>
+    </tu>
+    <tu tuid="createeviction">
+		<tuv xml:lang="en_US">
+			<seg>Create Eviction</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewevictions">
+		<tuv xml:lang="en_US">
+			<seg>View Evictions</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewalldocuments">
+		<tuv xml:lang="en_US">
+			<seg>View Lease Documents</seg>
+		</tuv>
+    </tu>
+    <tu tuid="addevictiondocument">
+		<tuv xml:lang="en_US">
+			<seg>Add Eviction Document</seg>
+		</tuv>
+    </tu>
+    <tu tuid="adddocument">
+		<tuv xml:lang="en_US">
+			<seg>Add Document</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Agregar Documento</seg>
+		</tuv>
+    </tu>
+    <tu tuid="disableEnableDescription">
+		<tuv xml:lang="en_US">
+			<seg>Add a description explaining why you are enabling / disabling this user</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Agregue una descripci&#243;n que explique porque activa / desactiva a este usuario</seg>
+		</tuv>
+    </tu>
+    <tu tuid="missingdisableEnableDescription">
+		<tuv xml:lang="en_US">
+			<seg>The description that explains why you are enabling / disabling an account is missing</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>La  descripci&#243;n que explica porque activa / desactiva a este usuario no se encuentra</seg>
+		</tuv>
+    </tu>
+    <tu tuid="myunit">
+		<tuv xml:lang="en_US">
+			<seg>My Unit</seg>
+		</tuv>
+    </tu>
+    <tu tuid="myleaselist">
+		<tuv xml:lang="en_US">
+			<seg>My Lease List</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewBill">
+		<tuv xml:lang="en_US">
+			<seg>View Bill</seg>
+		</tuv>
+    </tu>
+    <tu tuid="errorSaving">
+		<tuv xml:lang="en_US">
+			<seg>Error saving.  Please contact support.</seg>
+		</tuv>
+    </tu>
+     <tu tuid="mylease">
+		<tuv xml:lang="en_US">
+			<seg>My Lease</seg>
+		</tuv>
+    </tu>
+    <tu tuid="maintReqNoUnit">
+		<tuv xml:lang="en_US">
+			<seg>You are not assigned to a current lease so you cannot open any maintenance requests.</seg>
+		</tuv>
+    </tu>
+    <tu tuid="transaction">
+		<tuv xml:lang="en_US">
+			<seg>Transaction</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewaccounttransactions">
+		<tuv xml:lang="en_US">
+			<seg>View Account Transactions</seg>
+		</tuv>
+    </tu>
+     <tu tuid="createaccounttransaction">
+		<tuv xml:lang="en_US">
+			<seg>Create Account Transaction</seg>
+		</tuv>
+    </tu>
+     <tu tuid="leaseRentCashAccount">
+		<tuv xml:lang="en_US">
+			<seg>Lease Rent Cash Account</seg>
+		</tuv>
+    </tu>
+     <tu tuid="incomingTenantsReport">
+		<tuv xml:lang="en_US">
+			<seg>Incoming Tenants Report</seg>
+		</tuv>
+    </tu>
+     <tu tuid="outgoingTenantsReport">
+		<tuv xml:lang="en_US">
+			<seg>Outgoing Tenants Report</seg>
+		</tuv>
+    </tu>
+     <tu tuid="serviceRequests">
+		<tuv xml:lang="en_US">
+			<seg>Service Requests</seg>
+		</tuv>
+    </tu>
+    <tu tuid="serviceRequestsReport">
+		<tuv xml:lang="en_US">
+			<seg>Service Requests Report</seg>
+		</tuv>
+    </tu>
+    <tu tuid="info">
+		<tuv xml:lang="en_US">
+			<seg>My Info</seg>
+		</tuv>
+    </tu>
+    <tu tuid="index">
+		<tuv xml:lang="en_US">
+			<seg>Edit My Info</seg>
+		</tuv>
+    </tu>
+    <tu tuid="financial">
+		<tuv xml:lang="en_US">
+			<seg>Financial</seg>
+		</tuv>
+    </tu>
+    <tu tuid="maintenance">
+		<tuv xml:lang="en_US">
+			<seg>Maintenance</seg>
+		</tuv>
+    </tu>
+     <tu tuid="unit">
+		<tuv xml:lang="en_US">
+			<seg>Unit</seg>
+		</tuv>
+    </tu>
+      <tu tuid="user">
+		<tuv xml:lang="en_US">
+			<seg>User</seg>
+		</tuv>
+    </tu>
+    <tu tuid="create">
+		<tuv xml:lang="en_US">
+			<seg>Create</seg>
+		</tuv>
+    </tu>
+    <tu tuid="unitmodel">
+		<tuv xml:lang="en_US">
+			<seg>Unit Model</seg>
+		</tuv>
+    </tu>
+    <tu tuid="amenity">
+		<tuv xml:lang="en_US">
+			<seg>Amenity</seg>
+		</tuv>
+    </tu>
+    <tu tuid="setting">
+		<tuv xml:lang="en_US">
+			<seg>Setting</seg>
+		</tuv>
+    </tu>
+    <tu tuid="bulk">
+		<tuv xml:lang="en_US">
+			<seg>Bulk Rent Upload</seg>
+		</tuv>
+    </tu>
+    <tu tuid="account">
+		<tuv xml:lang="en_US">
+			<seg>Account</seg>
+		</tuv>
+    </tu>
+    <tu tuid="accountlink">
+		<tuv xml:lang="en_US">
+			<seg>Account Link</seg>
+		</tuv>
+    </tu>
+    <tu tuid="financialaccountsetting">
+		<tuv xml:lang="en_US">
+			<seg>Financial Account Setting</seg>
+		</tuv>
+    </tu>
+    <tu tuid="dashboard">
+		<tuv xml:lang="en_US">
+			<seg>Applicant Dashboard</seg>
+		</tuv>
+    </tu>
+    <tu tuid="maintenenceReports">
+		<tuv xml:lang="en_US">
+			<seg>Maintenance Reports</seg>
+		</tuv>
+    </tu>
+    <tu tuid="waitlist">
+		<tuv xml:lang="en_US">
+			<seg>Waitlist</seg>
+		</tuv>
+    </tu>
+    <tu tuid="application">
+		<tuv xml:lang="en_US">
+			<seg>Application</seg>
+		</tuv>
+    </tu>
+    <tu tuid="noUnitModels">
+		<tuv xml:lang="en_US">
+			<seg>No unit models found.  Please create unit models first and return to this page.</seg>
+		</tuv>
+    </tu>
+    <tu tuid="numberExists">
+		<tuv xml:lang="en_US">
+			<seg>Please enter a different unit number.</seg>
+		</tuv>
+    </tu>
+    <tu tuid="noApartment">
+		<tuv xml:lang="en_US">
+			<seg>No apartment found.  Please create an apartment.</seg>
+		</tuv>
+		<tuv xml:lang="en_AR">
+			<seg>No se encontro ningun departamento. Por favor , cree un departamento</seg>
+		</tuv>
+    </tu>
+    <tu tuid="emptyDateAvailable">
+		<tuv xml:lang="en_US">
+			<seg>Is Available is checked but Date Available is empty.  Please select a date.</seg>
+		</tuv>
+    </tu>
+    <tu tuid="recordUpdatedSuccessfully">
+		<tuv xml:lang="en_US">
+			<seg>Record updated successfully</seg>
+		</tuv>
+    </tu>
+    <tu tuid="usernotfound">
+		<tuv xml:lang="en_US">
+			<seg>User not found</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>No se encuentra el usuario</seg>
+		</tuv>
+    </tu>
+    <tu tuid="otherOccupantInstructions">
+		<tuv xml:lang="en_US">
+			<seg>Please enter anyone under 18 and other adults who will occupy the unit without signing the lease.
+Click on 'Add' to add more occupants.</seg>
+		</tuv>
+    </tu>
+    <tu tuid="unitDoesNotHasPictures">
+		<tuv xml:lang="en_US">
+			<seg>The specified unit doesn't has pictures</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>La unidad seleccionada no posee imagenes</seg>
+		</tuv>
+    </tu>
+    <tu tuid="createUser">
+		<tuv xml:lang="en_US">
+			<seg>Create User</seg>
+		</tuv>
+    </tu>
+    <tu tuid="applicantLogin">
+		<tuv xml:lang="en_US">
+			<seg>Applicant Login</seg>
+		</tuv>
+    </tu>
+    <tu tuid="yourfeesdue">
+		<tuv xml:lang="en_US">
+			<seg>Your Fees Due</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewallapplicants">
+		<tuv xml:lang="en_US">
+			<seg>View All Applicants</seg>
+		</tuv>
+    </tu>
+    <tu tuid="unableToTransferFile">
+		<tuv xml:lang="en_US">
+			<seg>The file could not be transfered.</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El archivo no se pudo transmitir</seg>
+		</tuv>
+    </tu>
+    <tu tuid="emailMessage">
+		<tuv xml:lang="en_US">
+			<seg>Email Message</seg>
+		</tuv>
+    </tu>
+    <tu tuid="wereYouReferred">
+		<tuv xml:lang="en_US">
+			<seg>Were you referred?</seg>
+		</tuv>
+    </tu>
+    <tu tuid="howDidYouFindUs">
+		<tuv xml:lang="en_US">
+			<seg>How did you find us?</seg>
+		</tuv>
+    </tu>
+    <tu tuid="systemAutomatedAction">
+		<tuv xml:lang="en_US">
+			<seg>System Generated Status</seg>
+		</tuv>
+    </tu>    
+    <tu tuid="quotaLimit">
+		<tuv xml:lang="en_US">
+			<seg>The limit of allowed files has been reached</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El limite de archivos permitidos esta al maximo</seg>
+		</tuv>
+    </tu>
+    <tu tuid="unitmetadatadeleted">
+		<tuv xml:lang="en_US">
+			<seg>Picture marked for deletion</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Archivo listado para eliminar</seg>
+		</tuv>
+    </tu>
+    <tu tuid="prospectsAdd">
+		<tuv xml:lang="en_US">
+			<seg>Add prospects</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Agregar posible cliente</seg>
+		</tuv>
+    </tu>
+    <tu tuid="contactMode">
+		<tuv xml:lang="en_US">
+			<seg>Contact Mode</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Modo de contacto</seg>
+		</tuv>
+    </tu>
+    <tu tuid="howDidYouHearAboutUs">
+		<tuv xml:lang="en_US">
+			<seg>How did you hear about us &#63;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>&#191;C&#243;mo nos encontr&#243; &#63;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="rentRangeFrom">
+		<tuv xml:lang="en_US">
+			<seg>Rent From &#36;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Alquilar desde &#36;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="rentRangeTo">
+		<tuv xml:lang="en_US">
+			<seg>Rent To &#36;</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Alquilar hasta &#36;</seg>
+		</tuv>
+    </tu>
+    <tu tuid="possibleMoveInDate">
+		<tuv xml:lang="en_US">
+			<seg>Possible Move In Date</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Posible fecha de ocupaci&#243;n</seg>
+		</tuv>
+    </tu>
+    <tu tuid="new">
+		<tuv xml:lang="en_US">
+			<seg>New</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Nuevo</seg>
+		</tuv>
+    </tu>
+    <tu tuid="appointment">
+		<tuv xml:lang="en_US">
+			<seg>Appointment</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Cita</seg>
+		</tuv>
+    </tu>
+    <tu tuid="applied">
+		<tuv xml:lang="en_US">
+			<seg>Applied</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Aplicado</seg>
+		</tuv>
+    </tu>
+    <tu tuid="notInterested">
+		<tuv xml:lang="en_US">
+			<seg>Not Interested</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>No Interesado</seg>
+		</tuv>
+    </tu>
+    <tu tuid="walkin">
+		<tuv xml:lang="en_US">
+			<seg>Walk in</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Ingreso al establecimiento</seg>
+		</tuv>
+    </tu>
+    <tu tuid="prospects">
+		<tuv xml:lang="en_US">
+			<seg>Prospects</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Cliente</seg>
+		</tuv>
+    </tu>
+    <tu tuid="modelType">
+		<tuv xml:lang="en_US">
+			<seg>Model Type</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Tipo de modelo</seg>
+		</tuv>
+    </tu>
+    <tu tuid="modelTypeIsRequired">
+		<tuv xml:lang="en_US">
+			<seg>Model Type is a required field</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El tipo de modelo es un campo requerido</seg>
+		</tuv>
+    </tu>
+    <tu tuid="phoneIsRequired">
+		<tuv xml:lang="en_US">
+			<seg>Phone is a required field</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Telefono es un campo requerido</seg>
+		</tuv>
+    </tu>
+    <tu tuid="viewprospect">
+		<tuv xml:lang="en_US">
+			<seg>View Prospect Details</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Ver detalles del cliente</seg>
+		</tuv>
+    </tu>
+    <tu tuid="prospectNotFound">
+		<tuv xml:lang="en_US">
+			<seg>The prospect wasn't found</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El cliente no fue encontrado</seg>
+		</tuv>
+    </tu>
+    <tu tuid="prospectRecordDamaged">
+		<tuv xml:lang="en_US">
+			<seg>The current prospect did not select any kind of unit model.Record corrupted</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>El cliente no tiene asociado ningun tipo de modelo de unidad. Registro da&#241;ado</seg>
+		</tuv>
+    </tu>
+    <tu tuid="prospectDetails">
+		<tuv xml:lang="en_US">
+			<seg>Details of the prospect</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Detalles del cliente</seg>
+		</tuv>
+    </tu>
+    <tu tuid="pets">
+		<tuv xml:lang="en_US">
+			<seg>Pets</seg>
+		</tuv>
+		<tuv xml:lang="es_AR">
+			<seg>Mascotas</seg>
+		</tuv>
+    </tu>
+    <tu tuid="userAppliedToWaitlist">
+		<tuv xml:lang="en_US">
+			<seg>You have been successfully applied to the waitlist</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="zipregexnotmatch">
+		<tuv xml:lang="en_US">
+			<seg>Please enter five digits for the zip code</seg>
+		</tuv>		
+    </tu>
+     <tu tuid="regexrentamount">
+		<tuv xml:lang="en_US">
+			<seg>Please enter an amount between 0.00 and 9999.99</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="role">
+		<tuv xml:lang="en_US">
+			<seg>Role</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="prospectSaveFail">
+		<tuv xml:lang="en_US">
+			<seg>Prospect Save Failed.  Please contact customer support.</seg>
+		</tuv>		
+    </tu>
+    <tu tuid="occregexnotmatch">
+		<tuv xml:lang="en_US">
+			<seg>Enter the number of occupants between 0 and 9</seg>
+		</tuv>		
+    </tu>        
+    </body>
+</tmx>

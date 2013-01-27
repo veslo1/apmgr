@@ -1,0 +1,3 @@
+ALTER TABLE `leaseWizard`
+CHANGE `recurringFee` `deposit` VARCHAR( 300 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+CHANGE `fee` `fee` VARCHAR( 300 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL; 

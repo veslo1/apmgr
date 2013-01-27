@@ -1,0 +1,42 @@
+<?php
+/**
+ * Created on Sep 19, 2009
+ * index.phtml
+ * @author jvazquez
+ * @package application.modules.role.views.scripts.view
+ */
+echo $this->headScript()->appendFile('/javascript/scriptaculous/lib/prototype.js');
+?>
+<script type="text/javascript">
+	function deleteElement(roleId) {
+  	var confirmResponse = confirm("You are going to delete the role.This will destroy the application. If you click on Ok, this application will stop working ASAP, because you are killing a vital part of the application.If you know what this means, click yes and deal with it ,else, click on no");
+  	if ( confirmResponse == true ) {
+  		alert("Do not fill a bug due to this, you are really stupid");
+  		new Ajax.Request("<?php echo $this->url( array('module'=>'role', 'controller'=>'delete', 'action'=>'delete'  ) )?>", {
+									method:'post',
+									parameters: { roleId: roleId },
+									onSuccess: function(transport) {
+      									var response = transport.responseText || "no response text";
+      										alert("Congratulations, you have proven your stupidity.Now, restore the role moron" );
+    								 },
+    								onFailure: function() {
+										alert('You were very lucky. Delete a role *means* that you are killing the access, so any user with that role, will have seen an error page as you')
+    								}
+  								} );
+  	} else {
+  		alert("well done");
+  	}
+  }
+</script>
+<h1><i18n>roleTitle</i18n></h1>
+<h2><i18n>viewAllRoles</i18n></h2>
+<h5 class="alert"><img src="/images/alert.gif" /><i18n>warningAcl</i18n></h5>
+<br />
+<div class="results"><contentcheck> <?php foreach($this->record as $role ) { ?>
+<dl class='parent'>
+	<p class='transform'><?=$role->getName();?></p>
+	<dt class='child'><a href="#" class="cleanlink"><img
+		src="/images/delete.gif" title="Delete Role" alt="Delete Role"
+		onclick="deleteElement(<?=$role->getId();?>);" /></a></dt>
+</dl>
+<?php }?> </contentcheck>

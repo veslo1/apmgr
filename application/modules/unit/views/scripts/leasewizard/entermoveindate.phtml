@@ -1,0 +1,37 @@
+<?php
+/**
+ * Created on Mar 10, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.models
+ * <p>
+ * The view in the lease wizard for entering the move in date (page 2 of wizard)
+ *
+ * Stole the css and calendar from jorge  :P
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css')
+                      ->appendStylesheet('/css/ui-lightness/jquery-ui-1.8.custom.css');
+
+echo $this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+           ->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+?>
+
+<script type="text/javascript">
+    $(function() {
+        $("#effectiveDate").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+<script type="text/javascript">
+    $(function() {
+        $("#moveInDate").datepicker({dateFormat: 'yy-mm-dd'} );                
+    });
+</script>
+
+<?
+
+if( !empty($this->messages) ) {    
+    echo $this->Message($this->messages);
+}
+echo $this->form;
+?>

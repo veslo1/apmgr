@@ -1,0 +1,51 @@
+<?php
+/**
+ * Created on Sep 21, 2009 by jvazquez
+ * @name datesite
+ * @package application.modules.region.views.scripts.view
+ * <p>
+ * View page for region.This page displays all the regions
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/panel.css');
+echo $this->headLink()->appendStylesheet('/css/records.css');
+?>
+
+<div id="content">
+<h1>Province</h1>
+<div><?php echo $this->crudBar('province');?></div>
+</div>
+
+<?php
+
+$fields = array( 'Id' => 'ID',
+                     'Name' => 'Province Name',
+                     'Country.Name' => 'Country Name'                            
+                     );
+
+                     echo $this->testGrid(  'grd',
+                     $fields,
+                     $this->paginator,
+                     true,
+                     array( 'Edit' => array(
+                                                           'column'=>'Id',
+                                                           'module'=>'province',
+                                                           'controller'=>'update',
+                                                           'action'=>'index',
+                                                           'image'=>'onebit_20.png'),
+
+                                      'Delete' => array( 
+                                           'column'=>'Id', 
+                                           'module'=>'province',
+                                           'controller'=>'delete',
+                                           'action'=>'delete', 
+                                           'image'=>'onebit_33.png',
+                                           'js'=>  array( // javascript crap 
+                     // js action => the callback function => ( callback params  )
+                                                            'onClick'=>array(  'deleteElement' => array('id') )
+                     )
+                     )));
+
+
+                     ?>
+

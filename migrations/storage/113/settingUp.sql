@@ -1,0 +1,1 @@
+ALTER TABLE `settings` ADD `description` TEXT NULL AFTER `value`;

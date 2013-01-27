@@ -1,0 +1,44 @@
+<?php
+$this->headLink()->appendStylesheet('/css/roundcorner_16_lightblue.css')
+->headLink()->appendStylesheet('/css/zendform2.css');
+echo $this->headLink();
+$barOptions = array(
+						'type'=>'action',
+						'destination'=>array('module'=>'applicant','controller'=>'view'),
+						'hiddenElements'=>array('index','fees','completedapps','statuschange','bgcheckdetails'),                                             
+);
+$this->bar($barOptions);
+echo $this->results($this->restore,$this->url(array('module'=>'applicant','controller'=>'view','action'=>'viewallapplicants')));
+?>
+<h1><i18n>completedApps</i18n></h1>
+<div style="width: 28%; margin-left: 15%;"><span
+	class="roundcorner_16_lightblue"> <span
+	class="roundcorner_16_lightblue0"></span> <span
+	class="roundcorner_16_lightblue1"></span> <span
+	class="roundcorner_16_lightblue2"></span> <span
+	class="roundcorner_16_lightblue3"></span> <span
+	class="roundcorner_16_lightblue4"></span> <span
+	class="roundcorner_16_lightblue5"></span> <span
+	class="roundcorner_16_lightblue6"></span> <span
+	class="roundcorner_16_lightblue7"></span> <span
+	class="roundcorner_16_lightblue8"></span> <span
+	class="roundcorner_16_lightblue9"></span> </span>
+<div class="roundcorner_16_lightblue_content">
+<div style="display: table;"><?php echo $this->apps($this->appLinks);?>
+</div>
+</div>
+<span class="roundcorner_16_lightblue"> <span
+	class="roundcorner_16_lightblue9"></span> <span
+	class="roundcorner_16_lightblue8"></span> <span
+	class="roundcorner_16_lightblue7"></span> <span
+	class="roundcorner_16_lightblue6"></span> <span
+	class="roundcorner_16_lightblue5"></span> <span
+	class="roundcorner_16_lightblue4"></span> <span
+	class="roundcorner_16_lightblue3"></span> <span
+	class="roundcorner_16_lightblue2"></span> <span
+	class="roundcorner_16_lightblue1"></span> <span
+	class="roundcorner_16_lightblue0"></span> </span></div>
+<?php
+echo $this->internazionalization($this->msg,'error');
+echo $this->form;
+?>

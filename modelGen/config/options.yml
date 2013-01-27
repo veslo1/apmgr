@@ -1,0 +1,7 @@
+options:
+  dbname: Database name
+  dbuser: Database user
+  dbpass: Database password
+  dbhost: localhost
+  target: dest
+  

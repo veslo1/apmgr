@@ -1,0 +1,23 @@
+<?php
+/**
+ * @author Jorge Vazquez <jvazquez@debserverp4.com.ar>
+ * @since 2010/05/30
+ */
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript'); 
+
+echo $this->headLink();
+echo $this->headScript();
+$this->bar( array(
+					'type'=>'action',
+				  	'destination'=>array('module'=>'applicant','controller'=>'dashboard'),
+				  	'hiddenElements'=>array('paymentconfirmation','payment','viewfeesdue','viewfeespaid'),
+					'displayHiddenIcons'=>false 
+)
+);
+?>
+<h1><i18n>waitlistresult</i18n></h1>
+<?php
+//echo $this->message($this->msg);
+echo $this->internazionalization($this->msg,$this->type);
+?>

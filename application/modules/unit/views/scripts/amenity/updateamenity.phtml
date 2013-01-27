@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created on Apr 15, 2010 by rnelson
+ * @name apmgr
+ * @package application.modules.unit.views.scripts
+ * <p>
+ * Cancels Lease
+ * </p>
+ */
+echo $this->headLink()->appendStylesheet('/css/zendform2.css');
+$this->bar(array('type'=>'action',
+		 'destination'=>array('module'=>'unit','controller'=>'amenity'),
+		 'hiddenElements'=>array('index','updateamenity'),		 
+));
+if( isset($this->msg) ) {
+	echo $this->message($this->msg);
+}
+echo $this->form;
+?>

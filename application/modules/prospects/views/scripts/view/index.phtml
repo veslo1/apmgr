@@ -1,0 +1,78 @@
+<?php
+$this->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-1.4.2.min.js','text/javascript')
+	->headScript()->appendFile('/javascript/jquery-ui_1.8/jquery-ui-1.8.custom.min.js','text/javascript');
+echo $this->headScript();
+if( $this->recordsPopulated ) { ?>
+<table>
+    <thead>
+        <tr>
+            <td><i18n>firstName</i18n>
+            <a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'firstName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+			<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'firstName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+			</a>
+            </td>
+            <td><i18n>lastName</i18n>
+            <a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+			<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'lastName',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+			</a>
+            </td>
+            <td><i18n>expectedMoveInDate</i18n>
+            <a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'possibleMoveInDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::ASCVIEW),null,false);?>">
+			<img src="/images/10/up.png" title="<?php echo $this->translator("sortUp");?>" alt="<?php echo $this->translator("sortUp");?>"/>
+			</a>
+			<a href="<?php echo $this->url(array('module'=>'prospects','controller'=>'view','action'=>'index',ZFInterfaces_Sortable::COLUMN=>'possibleMoveInDate',ZFInterfaces_Sortable::MODE=>ZFInterfaces_Sortable::DESCVIEW),null,false);?>">
+			<img src="/images/10/down.png" title="<?php echo $this->translator("sortDown");?>" alt="<?php echo $this->translator("sortDown");?>"/>
+			</a>
+            </td>
+            <td><i18n>actions</i18n></td>
+        </tr>
+    </thead>
+    <tbody>
+    <?php
+        foreach($this->prospects as $id=>$prospect)
+        {
+    ?>
+        <tr>
+            <td>
+                <?php echo $prospect['firstName'];?>
+            </td>
+            <td>
+                <?php echo $prospect['lastName'];?>
+            </td>
+            <td>
+                <?php echo $prospect['possibleMoveInDate'];?>
+            </td>
+            <td>
+                <a href="
+                <?php
+                    echo $this->url(
+                        array('module'=>'prospects',
+                        'controller'=>'view',
+                        'action'=>'detail',
+                        'id'=>$prospect['id']
+                        )
+                    );
+                ?>
+                "/><img src="/images/24/onebit_02.gif" alt="<?php echo $this->translate('viewprospect');?>"
+                title="<?php echo $this->translate('viewprospect');?>"/></a>
+            </td>
+        </tr>
+    <?php
+        }
+    ?>
+    </tbody>
+</table>
+<?php
+} 
+else
+{
+echo $this->internazionalization('noRows','warning');
+}
+echo $this->paginationControl($this->prospects,'Sliding', 'paginationTemplate.phtml');
+?>

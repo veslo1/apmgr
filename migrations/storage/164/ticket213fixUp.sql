@@ -1,0 +1,2 @@
+ALTER TABLE applicantEmergencyContact
+DROP COLUMN personEnterDwelling;

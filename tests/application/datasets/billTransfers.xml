@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<!-- 14 and 15 used in refund helper test - do not use -->
+<billTransfer id="1" dateCreated="2010-05-01" dateUpdated="2010-05-01" fromBillId="10" toBillId="10" amount="10" transactionId="1"/>
+<billTransfer id="14" dateCreated="2010-05-01" dateUpdated="2010-05-01" amount="50" fromBillId="14" toBillId="14" transactionId="1"/>
+<billTransfer id="15" dateCreated="2010-05-01" dateUpdated="2010-05-01" amount="50" fromBillId="15" toBillId="15" transactionId="1"/>
+</dataset>

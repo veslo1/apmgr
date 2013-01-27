@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>    
+     <maintenanceStatus id="1"
+                   dateCreated="2010-05-01"
+                   dateUpdated="2010-05-01"
+                   status="new" />
+    <maintenanceStatus id="2"
+                   dateCreated="2010-05-01"
+                   dateUpdated="2010-05-01"
+                   status="pending" />
+    <maintenanceStatus id="3"
+                   dateCreated="2010-05-01"
+                   dateUpdated="2010-05-01"
+                   status="rejected" />
+
+    <maintenanceStatus id="4"
+                   dateCreated="2010-05-01"
+                   dateUpdated="2010-05-01"
+                   status="resolved" />
+    <maintenanceStatus id="5"
+                   dateCreated="2010-05-01"
+                   dateUpdated="2010-05-01"
+                   status="feedback" />
+    
+    <maintenanceRequest id="1"
+                    dateCreated="2010-05-01"
+                    dateUpdated="2010-05-01"
+                    unitId="1"
+                    requestorId="1"
+                    title="test"
+                    description="test"
+                    permissionToEnter="1" />
+    
+    <maintenanceRequest id="2"
+                    dateCreated="2010-05-01"
+                    dateUpdated="2010-05-01"
+                    unitId="1"
+                    requestorId="1"
+                    title="test"
+                    description="test"
+                    permissionToEnter="1" />
+    
+    <maintenanceRequestAssignedStatus id="1"
+                                  dateCreated="2010-05-01"
+                                  dateUpdated="2010-05-01"
+                                  maintenanceRequestId="1"
+                                  maintenanceStatusId="1"
+                                  userId="1"
+                                  assignedTo="1"
+                                  currentStatus="1" />
+
+    <maintenanceRequestAssignedStatus id="2"
+                                  dateCreated="2010-05-01"
+                                  dateUpdated="2010-05-01"
+                                  maintenanceRequestId="1"
+                                  maintenanceStatusId="1"
+                                  userId="1"
+                                  assignedTo="1"
+                                  currentStatus="0" />
+
+    <maintenanceRequestAssignedStatus id="3"
+                                  dateCreated="2010-05-01"
+                                  dateUpdated="2010-05-01"
+                                  maintenanceRequestId="2"
+                                  maintenanceStatusId="1"
+                                  userId="2"
+                                  assignedTo="1"
+                                  currentStatus="1" />
+
+    <maintenanceRequestComment id="1"
+                           dateCreated="2010-05-01"
+                           dateUpdated="2010-05-01"
+                           userId="1"
+                           comment="test"
+                           maintenanceRequestId="1" />
+    
+   <maintenanceSettings id="1"
+                           dateCreated="2010-05-01"
+                           dateUpdated="2010-05-01"
+                           roleId="1"
+                           defaultAssignedTo="2" />
+   
+</dataset>

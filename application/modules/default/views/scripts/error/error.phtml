@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created on Sep 13, 2009
+ * error.phtml
+ * jvazquez
+ *
+ */
+?>
+<h1><i18n>erroroccured</i18n></h1>
+<h2><?= $this->message; ?></h2>
+<? if ('development' == APPLICATION_ENV || APPLICATION_ENV=='testing'){ ?>
+<h3>Exception information:</h3>
+<p><b>Message:</b> <?= $this->exception->getMessage() ?></p>
+<h3>Stack trace:</h3>
+<pre><?= $this->exception->getTraceAsString() ?></pre>
+<h3>Request Parameters:</h3>
+<pre><? var_dump($this->request->getParams()) ?></pre>
+<? }?>
